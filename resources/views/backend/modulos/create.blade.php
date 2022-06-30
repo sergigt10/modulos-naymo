@@ -13,7 +13,7 @@
                 <div class="col-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <h2>Insertar nuevo Módulo</h2>
+                            <h2>Insertar Módulo</h2>
                             <p> * Campos obligatoris </p>
                             <br>
                             <form class="forms-sample" method="POST" action="{{ route('backend.modulos.store') }}" enctype="multipart/form-data" novalidate>
