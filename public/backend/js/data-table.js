@@ -9,26 +9,26 @@
         "order": [[ 0, "asc" ]],
         "iDisplayLength": 10,
         "language": {
-          "processing": "Processant...",
-          "lengthMenu": "Mostrant _MENU_ registres",
-          "zeroRecords": "No s'han trobat registres",
-          "emptyTable": "No hi ha registres disponibles en aquesta taula",
-          "info": "Mostrant del _START_ al _END_ d'un total de _TOTAL_ registre/s",
-          "infoEmpty": "No hi ha registres disponibles",
-          "infoFiltered": "(filtrat de _MAX_ registres)",
+          "processing": "Procesando...",
+          "lengthMenu": "Mostrando _MENU_ registros",
+          "zeroRecords": "No se encontraron registros",
+          "emptyTable": "No hay registros disponibles en esta tabla",
+          "info": "Mostrando del _START_ al _END_ de un total de _TOTAL_ registro/s",
+          "infoEmpty": "No hay registros disponibles",
+          "infoFiltered": "(filtrado de _MAX_ registros)",
           "search": "Buscador: ",
           "infoThousands": ".",
           "decimal": ",",
-          "loadingRecords": "Carregant...",
+          "loadingRecords": "Cargando...",
           "paginate": {
-              "first": "Primer",
+              "first": "Primero",
               "previous": "Anterior",
-              "next": "Següent",
-              "last": "Últim"
+              "next": "Siguiente",
+              "last": "Último"
           },
           "aria": {
-              "sortAscending": ": Activa per ordenar la columna de manera ascendent",
-              "sortDescending": ": Activa per ordenar la columna de manera descendent"
+              "sortAscending": ": Activa para ordenar la columna de forma ascendente",
+              "sortDescending": ": Activa para ordenar la columna de forma descendente"
           },
           "buttons": {
               "print": "Imprimeix",
@@ -40,8 +40,8 @@
                   "1": "1 fila copiada"
               },
               "pageLength": {
-                  "-1": "Mostra totes les files",
-                  "_": "Mostra %d files"
+                  "-1": "Muestra todas las filas",
+                  "_": "Muestra %d filas"
               }
           },
           "select": {

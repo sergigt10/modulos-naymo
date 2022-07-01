@@ -46,26 +46,121 @@ class ModuloController extends Controller
     {
         $data = $request->validate([
             'titol' => 'required',
-            'descripcio_cat' => 'required',
-            'descripcio_esp' => 'required',
-            'foto' => 'required|image|max:10240|mimes:jpeg,png,jpg,gif,svg',
-            'data_publicacio' => 'required|date',
-            'embed_spotify' => '',
-            'link_spotify' => '',
-            'link_apple_music' => '',
-            'link_venda_fisica' => '',
-            'generes_id' => '',
-            'artistes_id' => '',
-            'tipus_id' => '',
+            'descripcio' => 'required',
+            'imatge1' => 'image|max:10240|mimes:jpeg,png,jpg,gif,svg',
+            'imatge2' => 'image|max:10240|mimes:jpeg,png,jpg,gif,svg',
+            'imatge3' => 'image|max:10240|mimes:jpeg,png,jpg,gif,svg',
+            'imatge4' => 'image|max:10240|mimes:jpeg,png,jpg,gif,svg',
+            'imatge5' => 'image|max:10240|mimes:jpeg,png,jpg,gif,svg',
+            'imatge6' => 'image|max:10240|mimes:jpeg,png,jpg,gif,svg',
+            'imatge7' => 'image|max:10240|mimes:jpeg,png,jpg,gif,svg',
+            'imatge8' => 'image|max:10240|mimes:jpeg,png,jpg,gif,svg',
+            'imatge9' => 'image|max:10240|mimes:jpeg,png,jpg,gif,svg',
+            'imatge10' => 'image|max:10240|mimes:jpeg,png,jpg,gif,svg',
+            'imatge11' => 'image|max:10240|mimes:jpeg,png,jpg,gif,svg',
+            'imatge12' => 'image|max:10240|mimes:jpeg,png,jpg,gif,svg',
+            'imatge13' => 'image|max:10240|mimes:jpeg,png,jpg,gif,svg',
+            'imatge14' => 'image|max:10240|mimes:jpeg,png,jpg,gif,svg',
+            'imatge15' => 'image|max:10240|mimes:jpeg,png,jpg,gif,svg',
+            'imatge16' => 'image|max:10240|mimes:jpeg,png,jpg,gif,svg',
+            'imatge17' => 'image|max:10240|mimes:jpeg,png,jpg,gif,svg',
+            'imatge18' => 'image|max:10240|mimes:jpeg,png,jpg,gif,svg',
+            'imatge19' => 'image|max:10240|mimes:jpeg,png,jpg,gif,svg',
+            'imatge20' => 'image|max:10240|mimes:jpeg,png,jpg,gif,svg',
+            'marca' => '',
+            'modelo' => '',
+            'medida' => '',
+            'num_hab' => '',
+            'num_plazas' => '',
+            'ano' => '',
+            'precio' => '',
+            'categorias_id' => '',
+            'portada' => '',
+            'ordre' => ''
         ]);/* Max foto 10 MB */
 
-        $ruta_foto = $request['foto']->store('backend/modulos', 'public');
+        $ruta_foto_1 = $request['imatge1']->store('backend/modulos', 'public');
+        $ruta_foto_2 = $request['imatge2']->store('backend/modulos', 'public');
+        $ruta_foto_3 = $request['imatge3']->store('backend/modulos', 'public');
+        $ruta_foto_4 = $request['imatge4']->store('backend/modulos', 'public');
+        $ruta_foto_5 = $request['imatge5']->store('backend/modulos', 'public');
+        $ruta_foto_6 = $request['imatge6']->store('backend/modulos', 'public');
+        $ruta_foto_7 = $request['imatge7']->store('backend/modulos', 'public');
+        $ruta_foto_8 = $request['imatge8']->store('backend/modulos', 'public');
+        $ruta_foto_9 = $request['imatge9']->store('backend/modulos', 'public');
+        $ruta_foto_10 = $request['imatge11']->store('backend/modulos', 'public');
+        $ruta_foto_12 = $request['imatge12']->store('backend/modulos', 'public');
+        $ruta_foto_13 = $request['imatge13']->store('backend/modulos', 'public');
+        $ruta_foto_14 = $request['imatge14']->store('backend/modulos', 'public');
+        $ruta_foto_15 = $request['imatge15']->store('backend/modulos', 'public');
+        $ruta_foto_16 = $request['imatge16']->store('backend/modulos', 'public');
+        $ruta_foto_17 = $request['imatge17']->store('backend/modulos', 'public');
+        $ruta_foto_18 = $request['imatge18']->store('backend/modulos', 'public');
+        $ruta_foto_19 = $request['imatge19']->store('backend/modulos', 'public');
+        $ruta_foto_20 = $request['imatge20']->store('backend/modulos', 'public');
 
-        $foto = Image::make( storage_path("app/public/{$ruta_foto}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-        $foto->save();
+        $imatge1 = Image::make( storage_path("app/public/{$ruta_foto_1}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge1->save();
+        $imatge2 = Image::make( storage_path("app/public/{$ruta_foto_2}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge2->save();
+        $imatge3 = Image::make( storage_path("app/public/{$ruta_foto_3}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge3->save();
+        $imatge4 = Image::make( storage_path("app/public/{$ruta_foto_4}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge4->save();
+        $imatge5 = Image::make( storage_path("app/public/{$ruta_foto_5}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge5->save();
+        $imatge6 = Image::make( storage_path("app/public/{$ruta_foto_6}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge6->save();
+        $imatge7 = Image::make( storage_path("app/public/{$ruta_foto_7}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge7->save();
+        $imatge8 = Image::make( storage_path("app/public/{$ruta_foto_8}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge8->save();
+        $imatge9 = Image::make( storage_path("app/public/{$ruta_foto_9}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge9->save();
+        $imatge10 = Image::make( storage_path("app/public/{$ruta_foto_10}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge10->save();
+        $imatge11 = Image::make( storage_path("app/public/{$ruta_foto_11}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge11->save();
+        $imatge12 = Image::make( storage_path("app/public/{$ruta_foto_12}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge12->save();
+        $imatge13 = Image::make( storage_path("app/public/{$ruta_foto_13}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge13->save();
+        $imatge14 = Image::make( storage_path("app/public/{$ruta_foto_14}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge14->save();
+        $imatge15 = Image::make( storage_path("app/public/{$ruta_foto_15}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge15->save();
+        $imatge16 = Image::make( storage_path("app/public/{$ruta_foto_16}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge16->save();
+        $imatge17 = Image::make( storage_path("app/public/{$ruta_foto_17}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge17->save();
+        $imatge18 = Image::make( storage_path("app/public/{$ruta_foto_18}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge18->save();
+        $imatge19 = Image::make( storage_path("app/public/{$ruta_foto_19}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge19->save();
+        $imatge20 = Image::make( storage_path("app/public/{$ruta_foto_20}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge20->save();
 
         $modulo = new Modulo($data);
-        $modulo->foto = $ruta_foto;
+        $modulo->imatge1 = $ruta_foto_1;
+        $modulo->imatge2 = $ruta_foto_2;
+        $modulo->imatge3 = $ruta_foto_3;
+        $modulo->imatge4 = $ruta_foto_4;
+        $modulo->imatge5 = $ruta_foto_5;
+        $modulo->imatge6 = $ruta_foto_6;
+        $modulo->imatge7 = $ruta_foto_7;
+        $modulo->imatge8 = $ruta_foto_8;
+        $modulo->imatge9 = $ruta_foto_9;
+        $modulo->imatge10 = $ruta_foto_10;
+        $modulo->imatge11 = $ruta_foto_11;
+        $modulo->imatge12 = $ruta_foto_12;
+        $modulo->imatge13 = $ruta_foto_13;
+        $modulo->imatge14 = $ruta_foto_14;
+        $modulo->imatge15 = $ruta_foto_15;
+        $modulo->imatge16 = $ruta_foto_16;
+        $modulo->imatge17 = $ruta_foto_17;
+        $modulo->imatge18 = $ruta_foto_18;
+        $modulo->imatge19 = $ruta_foto_19;
+        $modulo->imatge20 = $ruta_foto_20;
         $modulo->save();
 
         // Redireccionar
@@ -91,9 +186,9 @@ class ModuloController extends Controller
      */
     public function edit(Modulo $modulo)
     {
-        $tipus = Tipu::all();
+        $categorias = Categoria::all();
 
-        return view('backend.modulos.edit', compact('modulo'))->with('tipus', $tipus);
+        return view('backend.modulos.edit', compact('modulo'))->with('categorias', $categorias);
     }
 
     /**
@@ -108,44 +203,312 @@ class ModuloController extends Controller
         // Validació
         $data = $request->validate([
             'titol' => 'required',
-            'descripcio_cat' => 'required',
-            'descripcio_esp' => 'required',
-            'data_publicacio' => 'required|date',
-            'embed_spotify' => '',
-            'link_spotify' => '',
-            'link_apple_music' => '',
-            'link_venda_fisica' => '',
-            'generes_id' => '',
-            'artistes_id' => '',
-            'tipus_id' => '',
+            'descripcio' => 'required',
+            'marca' => '',
+            'modelo' => '',
+            'medida' => '',
+            'num_hab' => '',
+            'num_plazas' => '',
+            'ano' => '',
+            'precio' => '',
+            'categorias_id' => '',
+            'portada' => '',
+            'ordre' => ''
         ]);
 
         // Asignar los valores
         $modulo->titol = $data['titol'];
-        $modulo->embed_spotify = $data['embed_spotify'];
-        $modulo->descripcio_cat = $data['descripcio_cat'];
-        $modulo->descripcio_esp = $data['descripcio_esp'];
-        $modulo->data_publicacio = $data['data_publicacio'];
-        $modulo->link_spotify = $data['link_spotify'];
-        $modulo->link_apple_music = $data['link_apple_music'];
-        $modulo->link_venda_fisica = $data['link_venda_fisica'];
-        $modulo->generes_id = $data['generes_id'];
-        $modulo->artistes_id = $data['artistes_id'];
-        $modulo->tipus_id = $data['tipus_id'];
+        $modulo->descripcio = $data['descripcio'];
+        $modulo->marca = $data['marca'];
+        $modulo->modelo = $data['modelo'];
+        $modulo->medida = $data['medida'];
+        $modulo->num_hab = $data['num_hab'];
+        $modulo->num_plazas = $data['num_plazas'];
+        $modulo->ano = $data['ano'];
+        $modulo->precio = $data['precio'];
+        $modulo->categorias_id = $data['categorias_id'];
+        $modulo->portada = $data['portada'];
+        $modulo->ordre = $data['ordre'];
 
         // Si el usuario sube una nueva imagen
-        if($request['foto']) {
+        if($request['imatge1']) {
 
-            $ruta_foto = $request['foto']->store('backend/modulos', 'public');
+            $ruta_foto_1 = $request['imatge1']->store('backend/modulos', 'public');
 
-            $img = Image::make( storage_path("app/public/{$ruta_foto}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $img->save();
+            $imatge1 = Image::make( storage_path("app/public/{$ruta_foto_1}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge1->save();
 
             // Eliminamos la imagen anterior
-            if (File::exists(storage_path("app/public/$modulo->foto"))) {
-                File::delete(storage_path("app/public/$modulo->foto"));
+            if (File::exists(storage_path("app/public/$modulo->imatge1"))) {
+                File::delete(storage_path("app/public/$modulo->imatge1"));
                 // Asignar al objeto
-                $modulo->foto = $ruta_foto;
+                $modulo->imatge1 = $ruta_foto_1;
+            }  
+        }
+        if($request['imatge2']) {
+
+            $ruta_foto_2 = $request['imatge2']->store('backend/modulos', 'public');
+
+            $imatge2 = Image::make( storage_path("app/public/{$ruta_foto_2}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge2->save();
+
+            // Eliminamos la imagen anterior
+            if (File::exists(storage_path("app/public/$modulo->imatge2"))) {
+                File::delete(storage_path("app/public/$modulo->imatge2"));
+                // Asignar al objeto
+                $modulo->imatge2 = $ruta_foto_2;
+            }  
+        }
+        if($request['imatge3']) {
+
+            $ruta_foto_3 = $request['imatge3']->store('backend/modulos', 'public');
+
+            $imatge3 = Image::make( storage_path("app/public/{$ruta_foto_3}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge3->save();
+
+            // Eliminamos la imagen anterior
+            if (File::exists(storage_path("app/public/$modulo->imatge3"))) {
+                File::delete(storage_path("app/public/$modulo->imatge3"));
+                // Asignar al objeto
+                $modulo->imatge3 = $ruta_foto_3;
+            }  
+        }
+        if($request['imatge4']) {
+
+            $ruta_foto_4 = $request['imatge4']->store('backend/modulos', 'public');
+
+            $imatge4 = Image::make( storage_path("app/public/{$ruta_foto_4}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge4->save();
+
+            // Eliminamos la imagen anterior
+            if (File::exists(storage_path("app/public/$modulo->imatge4"))) {
+                File::delete(storage_path("app/public/$modulo->imatge4"));
+                // Asignar al objeto
+                $modulo->imatge4 = $ruta_foto_4;
+            }  
+        }
+        if($request['imatge5']) {
+
+            $ruta_foto_5 = $request['imatge5']->store('backend/modulos', 'public');
+
+            $imatge5 = Image::make( storage_path("app/public/{$ruta_foto_5}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge5->save();
+
+            // Eliminamos la imagen anterior
+            if (File::exists(storage_path("app/public/$modulo->imatge5"))) {
+                File::delete(storage_path("app/public/$modulo->imatge5"));
+                // Asignar al objeto
+                $modulo->imatge5 = $ruta_foto_5;
+            }  
+        }
+        if($request['imatge6']) {
+
+            $ruta_foto_6 = $request['imatge6']->store('backend/modulos', 'public');
+
+            $imatge6 = Image::make( storage_path("app/public/{$ruta_foto_6}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge6->save();
+
+            // Eliminamos la imagen anterior
+            if (File::exists(storage_path("app/public/$modulo->imatge6"))) {
+                File::delete(storage_path("app/public/$modulo->imatge6"));
+                // Asignar al objeto
+                $modulo->imatge6 = $ruta_foto_6;
+            }  
+        }
+        if($request['imatge7']) {
+
+            $ruta_foto_7 = $request['imatge7']->store('backend/modulos', 'public');
+
+            $imatge7 = Image::make( storage_path("app/public/{$ruta_foto_7}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge7->save();
+
+            // Eliminamos la imagen anterior
+            if (File::exists(storage_path("app/public/$modulo->imatge7"))) {
+                File::delete(storage_path("app/public/$modulo->imatge7"));
+                // Asignar al objeto
+                $modulo->imatge7 = $ruta_foto_7;
+            }  
+        }
+        if($request['imatge8']) {
+
+            $ruta_foto_8 = $request['imatge8']->store('backend/modulos', 'public');
+
+            $imatge8 = Image::make( storage_path("app/public/{$ruta_foto_8}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge8->save();
+
+            // Eliminamos la imagen anterior
+            if (File::exists(storage_path("app/public/$modulo->imatge8"))) {
+                File::delete(storage_path("app/public/$modulo->imatge8"));
+                // Asignar al objeto
+                $modulo->imatge8 = $ruta_foto_8;
+            }  
+        }
+        if($request['imatge9']) {
+
+            $ruta_foto_9 = $request['imatge9']->store('backend/modulos', 'public');
+
+            $imatge9 = Image::make( storage_path("app/public/{$ruta_foto_9}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge9->save();
+
+            // Eliminamos la imagen anterior
+            if (File::exists(storage_path("app/public/$modulo->imatge9"))) {
+                File::delete(storage_path("app/public/$modulo->imatge9"));
+                // Asignar al objeto
+                $modulo->imatge9 = $ruta_foto_9;
+            }  
+        }
+        if($request['imatge10']) {
+
+            $ruta_foto_10 = $request['imatge10']->store('backend/modulos', 'public');
+
+            $imatge10 = Image::make( storage_path("app/public/{$ruta_foto_10}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge10->save();
+
+            // Eliminamos la imagen anterior
+            if (File::exists(storage_path("app/public/$modulo->imatge10"))) {
+                File::delete(storage_path("app/public/$modulo->imatge10"));
+                // Asignar al objeto
+                $modulo->imatge10 = $ruta_foto_10;
+            }  
+        }
+        if($request['imatge11']) {
+
+            $ruta_foto_11 = $request['imatge11']->store('backend/modulos', 'public');
+
+            $imatge11 = Image::make( storage_path("app/public/{$ruta_foto_11}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge11->save();
+
+            // Eliminamos la imagen anterior
+            if (File::exists(storage_path("app/public/$modulo->imatge11"))) {
+                File::delete(storage_path("app/public/$modulo->imatge11"));
+                // Asignar al objeto
+                $modulo->imatge11 = $ruta_foto_11;
+            }  
+        }
+        if($request['imatge12']) {
+
+            $ruta_foto_12 = $request['imatge12']->store('backend/modulos', 'public');
+
+            $imatge12 = Image::make( storage_path("app/public/{$ruta_foto_12}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge12->save();
+
+            // Eliminamos la imagen anterior
+            if (File::exists(storage_path("app/public/$modulo->imatge12"))) {
+                File::delete(storage_path("app/public/$modulo->imatge12"));
+                // Asignar al objeto
+                $modulo->imatge12 = $ruta_foto_12;
+            }  
+        }
+        if($request['imatge13']) {
+
+            $ruta_foto_13 = $request['imatge13']->store('backend/modulos', 'public');
+
+            $imatge13 = Image::make( storage_path("app/public/{$ruta_foto_13}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge13->save();
+
+            // Eliminamos la imagen anterior
+            if (File::exists(storage_path("app/public/$modulo->imatge13"))) {
+                File::delete(storage_path("app/public/$modulo->imatge13"));
+                // Asignar al objeto
+                $modulo->imatge13 = $ruta_foto_13;
+            }  
+        }
+        if($request['imatge14']) {
+
+            $ruta_foto_14 = $request['imatge14']->store('backend/modulos', 'public');
+
+            $imatge14 = Image::make( storage_path("app/public/{$ruta_foto_14}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge14->save();
+
+            // Eliminamos la imagen anterior
+            if (File::exists(storage_path("app/public/$modulo->imatge14"))) {
+                File::delete(storage_path("app/public/$modulo->imatge14"));
+                // Asignar al objeto
+                $modulo->imatge14 = $ruta_foto_14;
+            }  
+        }
+        if($request['imatge15']) {
+
+            $ruta_foto_15 = $request['imatge15']->store('backend/modulos', 'public');
+
+            $imatge15 = Image::make( storage_path("app/public/{$ruta_foto_15}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge15->save();
+
+            // Eliminamos la imagen anterior
+            if (File::exists(storage_path("app/public/$modulo->imatge15"))) {
+                File::delete(storage_path("app/public/$modulo->imatge15"));
+                // Asignar al objeto
+                $modulo->imatge15 = $ruta_foto_15;
+            }  
+        }
+        if($request['imatge16']) {
+
+            $ruta_foto_16 = $request['imatge16']->store('backend/modulos', 'public');
+
+            $imatge16 = Image::make( storage_path("app/public/{$ruta_foto_16}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge16->save();
+
+            // Eliminamos la imagen anterior
+            if (File::exists(storage_path("app/public/$modulo->imatge16"))) {
+                File::delete(storage_path("app/public/$modulo->imatge16"));
+                // Asignar al objeto
+                $modulo->imatge16 = $ruta_foto_16;
+            }  
+        }
+        if($request['imatge17']) {
+
+            $ruta_foto_17 = $request['imatge17']->store('backend/modulos', 'public');
+
+            $imatge17 = Image::make( storage_path("app/public/{$ruta_foto_17}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge17->save();
+
+            // Eliminamos la imagen anterior
+            if (File::exists(storage_path("app/public/$modulo->imatge17"))) {
+                File::delete(storage_path("app/public/$modulo->imatge17"));
+                // Asignar al objeto
+                $modulo->imatge17 = $ruta_foto_17;
+            }  
+        }
+        if($request['imatge18']) {
+
+            $ruta_foto_18 = $request['imatge18']->store('backend/modulos', 'public');
+
+            $imatge18 = Image::make( storage_path("app/public/{$ruta_foto_18}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge18->save();
+
+            // Eliminamos la imagen anterior
+            if (File::exists(storage_path("app/public/$modulo->imatge18"))) {
+                File::delete(storage_path("app/public/$modulo->imatge18"));
+                // Asignar al objeto
+                $modulo->imatge18 = $ruta_foto_18;
+            }  
+        }
+        if($request['imatge19']) {
+
+            $ruta_foto_19 = $request['imatge19']->store('backend/modulos', 'public');
+
+            $imatge19 = Image::make( storage_path("app/public/{$ruta_foto_19}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge19->save();
+
+            // Eliminamos la imagen anterior
+            if (File::exists(storage_path("app/public/$modulo->imatge19"))) {
+                File::delete(storage_path("app/public/$modulo->imatge19"));
+                // Asignar al objeto
+                $modulo->imatge19 = $ruta_foto_19;
+            }  
+        }
+        if($request['imatge20']) {
+
+            $ruta_foto_20 = $request['imatge20']->store('backend/modulos', 'public');
+
+            $imatge20 = Image::make( storage_path("app/public/{$ruta_foto_20}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge20->save();
+
+            // Eliminamos la imagen anterior
+            if (File::exists(storage_path("app/public/$modulo->imatge20"))) {
+                File::delete(storage_path("app/public/$modulo->imatge20"));
+                // Asignar al objeto
+                $modulo->imatge20 = $ruta_foto_20;
             }  
         }
 
@@ -164,8 +527,65 @@ class ModuloController extends Controller
     public function destroy(Modulo $modulo)
     {
         // Eliminar imatges
-        if (File::exists(storage_path("app/public/$modulo->foto"))) {
-            File::delete(storage_path("app/public/$modulo->foto"));
+        if (File::exists(storage_path("app/public/$modulo->imatge1"))) {
+            File::delete(storage_path("app/public/$modulo->imatge1"));
+        }
+        if (File::exists(storage_path("app/public/$modulo->imatge2"))) {
+            File::delete(storage_path("app/public/$modulo->imatge2"));
+        }
+        if (File::exists(storage_path("app/public/$modulo->imatge3"))) {
+            File::delete(storage_path("app/public/$modulo->imatge3"));
+        }
+        if (File::exists(storage_path("app/public/$modulo->imatge4"))) {
+            File::delete(storage_path("app/public/$modulo->imatge4"));
+        }
+        if (File::exists(storage_path("app/public/$modulo->imatge5"))) {
+            File::delete(storage_path("app/public/$modulo->imatge5"));
+        }
+        if (File::exists(storage_path("app/public/$modulo->imatge6"))) {
+            File::delete(storage_path("app/public/$modulo->imatge6"));
+        }
+        if (File::exists(storage_path("app/public/$modulo->imatge7"))) {
+            File::delete(storage_path("app/public/$modulo->imatge7"));
+        }
+        if (File::exists(storage_path("app/public/$modulo->imatge8"))) {
+            File::delete(storage_path("app/public/$modulo->imatge8"));
+        }
+        if (File::exists(storage_path("app/public/$modulo->imatge9"))) {
+            File::delete(storage_path("app/public/$modulo->imatge9"));
+        }
+        if (File::exists(storage_path("app/public/$modulo->imatge10"))) {
+            File::delete(storage_path("app/public/$modulo->imatge10"));
+        }
+        if (File::exists(storage_path("app/public/$modulo->imatge11"))) {
+            File::delete(storage_path("app/public/$modulo->imatge11"));
+        }
+        if (File::exists(storage_path("app/public/$modulo->imatge12"))) {
+            File::delete(storage_path("app/public/$modulo->imatge12"));
+        }
+        if (File::exists(storage_path("app/public/$modulo->imatge13"))) {
+            File::delete(storage_path("app/public/$modulo->imatge13"));
+        }
+        if (File::exists(storage_path("app/public/$modulo->imatge14"))) {
+            File::delete(storage_path("app/public/$modulo->imatge14"));
+        }
+        if (File::exists(storage_path("app/public/$modulo->imatge15"))) {
+            File::delete(storage_path("app/public/$modulo->imatge15"));
+        }
+        if (File::exists(storage_path("app/public/$modulo->imatge16"))) {
+            File::delete(storage_path("app/public/$modulo->imatge16"));
+        }
+        if (File::exists(storage_path("app/public/$modulo->imatge17"))) {
+            File::delete(storage_path("app/public/$modulo->imatge17"));
+        }
+        if (File::exists(storage_path("app/public/$modulo->imatge18"))) {
+            File::delete(storage_path("app/public/$modulo->imatge18"));
+        }
+        if (File::exists(storage_path("app/public/$modulo->imatge19"))) {
+            File::delete(storage_path("app/public/$modulo->imatge19"));
+        }
+        if (File::exists(storage_path("app/public/$modulo->imatge20"))) {
+            File::delete(storage_path("app/public/$modulo->imatge20"));
         }
 
         $modulo->delete();

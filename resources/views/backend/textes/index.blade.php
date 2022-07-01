@@ -59,13 +59,13 @@
                                                             </button>
                                                         </div>
                                                     <div class="modal-body">
-                                                        Segur que vols esborrar: {{ $noticia->nom }}
+                                                        Segur que vols Eliminar: {{ $noticia->nom }}
                                                     </div>
                                                         <div class="modal-footer">
                                                             <form class="pull-right" action="{{ route('backend.noticies.destroy', ['noticia' => $noticia->id]) }}" method="POST">
                                                                 @csrf
                                                                 @method('DELETE')
-                                                                <input type="submit" value="Esborrar" class="btn btn-danger">
+                                                                <input type="submit" value="Eliminar" class="btn btn-danger">
                                                             </form>
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel·lar</button>
                                                         </div>

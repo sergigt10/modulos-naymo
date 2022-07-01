@@ -26,6 +26,8 @@
                                     <thead>
                                         <tr>
                                             <th>Título</th>
+                                            <th>Orden</th>
+                                            <th>Portada</th>
                                             <th data-orderable="false">Editar</th>
                                             <th data-orderable="false">Eliminar</th>
                                         </tr>
@@ -36,6 +38,16 @@
                                                 <td>
                                                     <a href="{{ route('backend.modulos.edit', ['modulo' => $modulo->id]) }}" style="color: black;">
                                                         {{ $modulo->titol }}
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="{{ route('backend.modulos.edit', ['modulo' => $modulo->id]) }}" style="color: black;">
+                                                        {{ $modulo->ordre }}
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="{{ route('backend.modulos.edit', ['modulo' => $modulo->id]) }}" style="color: black;">
+                                                        {{ $modulo->portada }}
                                                     </a>
                                                 </td>
                                                 <td>
@@ -65,7 +77,7 @@
                                                             <form class="pull-right" action="{{ route('backend.modulos.destroy', ['modulo' => $modulo->id]) }}" method="POST">
                                                                 @csrf
                                                                 @method('DELETE')
-                                                                <input type="submit" value="Esborrar" class="btn btn-danger">
+                                                                <input type="submit" value="Eliminar" class="btn btn-danger">
                                                             </form>
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                                                         </div>

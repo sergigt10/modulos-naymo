@@ -13,10 +13,10 @@
             <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h2>Modificar Single, EP, Àlbum o Pack</h2>
-                        <p> * Camps obligatoris </p>
+                        <h2>Modificar módulo</h2>
+                        <p> * Campos obligatorios </p>
                         <br>
-                        <form class="forms-sample" method="post" action="{{ route('backend.discs.update', ['disc' => $disc->id]) }}" enctype="multipart/form-data">
+                        <form class="forms-sample" method="post" action="{{ route('backend.modulos.update', ['modulo' => $modulo->id]) }}" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             @error('titol')
@@ -24,124 +24,522 @@
                                     <strong>{{ $message }}</strong>
                                 </div>
                             @enderror
-                            @error('descripcio_cat')
+                            @error('descripcio')
                                 <div class='alert alert-danger' role='alert'>
                                     <strong>{{ $message }}</strong>
                                 </div>
                             @enderror
-                            @error('descripcio_esp')
-                                <div class='alert alert-danger' role='alert'>
-                                    <strong>{{ $message }}</strong>
-                                </div>
-                            @enderror
-                            @error('data_publicacio')
+                            @error('imatge1')
                                 <div class='alert alert-danger' role='alert'>
                                     <strong>{{ $message }}</strong>
                                 </div>
                             @enderror
 
                             <div class="form-group">
-                                <label for="exampleInputEmail3">Títol *:</label>
-                                <input name="titol" type="text" class="form-control @error('titol') is-invalid @enderror" id="exampleInputEmail3" placeholder="Títol" value="{{ $disc->titol }}">
+                                <label for="exampleInputEmail3">Título *:</label>
+                                <input name="titol" type="text" class="form-control @error('titol') is-invalid @enderror" id="exampleInputEmail3" placeholder="Título" value="{{ $modulo->titol }}">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail3">Descripció CAT *:</label>
-                                <input id="descripcio_cat" type="hidden" name="descripcio_cat" value="{{ $disc->descripcio_cat }}">
+                                <label for="exampleInputEmail3">Descripción *:</label>
+                                <input id="descripcio" type="hidden" name="descripcio" value="{{ $modulo->descripcio }}">
                                 <trix-editor 
-                                    class="form-control @error('descripcio_cat') is-invalid @enderror "
-                                    input="descripcio_cat">
+                                    class="form-control @error('descripcio') is-invalid @enderror "
+                                    input="descripcio">
                                 </trix-editor>
                             </div>
+                            
                             <div class="form-group">
-                                <label for="exampleInputEmail3">Descripció ESP *:</label>
-                                <input id="descripcio_esp" type="hidden" name="descripcio_esp" value="{{ $disc->descripcio_esp }}">
-                                <trix-editor 
-                                    class="form-control @error('descripcio_esp') is-invalid @enderror "
-                                    input="descripcio_esp">
-                                </trix-editor>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail3">Data de publicació *:</label>
-                                <input name="data_publicacio" id="data_publicacio" type="date" class="form-control @error('data_publicacio') is-invalid @enderror" id="exampleInputEmail3" value="{{ $disc->data_publicacio }}">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail3">Tipus *:</label>
-                                <select id="tipus_id" name="tipus_id" class="form-control js-example-basic-single w-100">
-                                    @foreach ($tipus as $tipu)
+                                <label for="exampleInputEmail3">Categoría:</label>
+                                <select id="categorias_id" name="categorias_id" class="form-control js-example-basic-single w-100">
+                                    @foreach ($categorias as $categoria)
                                         <option 
-                                            value="{{ $tipu->id }}"
-                                            {{ $disc->tipus_id == $tipu->id ? 'selected' : '' }}
+                                            value="{{ $categoria->id }}"
+                                            {{ $categoria->categoria_id == $categoria->id ? 'selected' : '' }}
                                         >
-                                            {{ $tipu->nom_cat }}
+                                            {{ $categoria->titol }}
                                         </option>
                                     @endforeach
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail3">Gènere *:</label>
-                                <select id="generes_id" name="generes_id" class="form-control js-example-basic-single w-100">
-                                    @foreach ($generes as $genere)
-                                        <option 
-                                            value="{{ $genere->id }}"
-                                            {{ $disc->generes_id == $genere->id ? 'selected' : '' }}
+
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail3">Marca:</label>
+                                    <input name="marca" type="text" class="form-control @error('marca') is-invalid @enderror" id="exampleInputEmail3" placeholder="Marca" value="{{ $modulo->marca }}">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail3">Modelo:</label>
+                                    <input name="modelo" type="text" class="form-control @error('modelo') is-invalid @enderror" id="exampleInputEmail3" placeholder="Modelo" value="{{ $modulo->modelo }}">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail3">Medidas:</label>
+                                    <input name="medida" type="text" class="form-control @error('medida') is-invalid @enderror" id="exampleInputEmail3" placeholder="Medida" value="{{ $modulo->medida }}">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail3">Núm. habitaciones:</label>
+                                    <input name="num_hab" type="text" class="form-control @error('num_hab') is-invalid @enderror" id="exampleInputEmail3" placeholder="Núm. habitacions" value="{{ $modulo->num_hab }}">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail3">Núm. plazas:</label>
+                                    <input name="num_plazas" type="text" class="form-control @error('num_plazas') is-invalid @enderror" id="exampleInputEmail3" placeholder="Núm. plazas" value="{{ $modulo->num_plazas }}">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail3">Año:</label>
+                                    <input name="ano" type="text" class="form-control @error('ano') is-invalid @enderror" id="exampleInputEmail3" placeholder="Año" value="{{ $modulo->ano }}">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail3">Precio:</label>
+                                    <input name="precio" type="text" class="form-control @error('precio') is-invalid @enderror" id="exampleInputEmail3" placeholder="Precio" value="{{ $modulo->precio }}">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail3">Orden (ej: 1):</label>
+                                    <input name="ordre" type="text" class="form-control" id="exampleInputEmail3" placeholder="Orden" value="{{ $modulo->ordre }}">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail3">Portada:</label>
+                                    <select id="portada" name="portada" class="form-control w-100">
+                                        <option value="Si"
+                                            {{ $modulo->portada == "Si" ? 'selected' : '' }}
                                         >
-                                            {{ $genere->nom_cat }}
+                                            Si
                                         </option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail3">Artista *:</label>
-                                <select id="artistes_id" name="artistes_id" class="form-control js-example-basic-single w-100">
-                                    @foreach ($artistes as $artista)
-                                        <option 
-                                            value="{{ $artista->id }}"
-                                            {{ $disc->artistes_id == $artista->id ? 'selected' : '' }}
+                                        <option value="No"
+                                            {{ $modulo->portada == "No" ? 'selected' : '' }}
                                         >
-                                            {{ $artista->nom }}
+                                            No
                                         </option>
-                                    @endforeach
-                                </select>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail3"><i class="mdi mdi-spotify"></i> Embed Spotify:</label>
-                                <input name="embed_spotify" type="text" class="form-control" id="exampleInputEmail3" placeholder="Embed Spotify" value="{{ $disc->embed_spotify }}">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail3"><i class="mdi mdi-spotify"></i> Link Spotify:</label>
-                                <input name="link_spotify" type="text" class="form-control" id="exampleInputEmail3" placeholder="Link Spotify" value="{{ $disc->link_spotify }}">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail3"><i class="mdi mdi-apple"></i> Link Apple Music:</label>
-                                <input name="link_apple_music" type="text" class="form-control" id="exampleInputEmail3" placeholder="Link Apple Music" value="{{ $disc->link_apple_music }}">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail3"><i class="mdi mdi-shopping"></i> URL venda física:</label>
-                                <input name="link_venda_fisica" type="text" class="form-control" id="exampleInputEmail3" placeholder="URL venda física" value="{{ $disc->link_venda_fisica }}">
-                            </div>
+                            
                             <div class="row grid-margin">
                                 <div class="col-lg-12">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h4 style="color:red">Pujar imatges en format: jpg, png o gif</h4>
+                                            <h4 style="color:red">Subir imagenes en formato: jpg, png o gif</h4>
                                             <br>
                                             <div class="form-row">
                                                 <div class="form-group col-md-9">
                                                     <div class="form-group">
-                                                        <label>Imatge Single, EP, Àlbum o Pack</label>
-                                                        <input name="foto" type="file" class="file-upload-default">
+                                                        <label>Imagen 1</label>
+                                                        <input name="imatge1" type="file" class="file-upload-default">
                                                         <div class="input-group col-xs-12">
-                                                            <input name="foto" type="text" class="form-control @error('foto') is-invalid @enderror file-upload-info" readonly="readonly" placeholder="Foto" value="{{ old('foto') }}">
+                                                            <input name="imatge1" type="text" class="form-control @error('imatge1') is-invalid @enderror file-upload-info" readonly="readonly" placeholder="Imagen 1" value="{{ old('imatge1') }}">
                                                             <span class="input-group-append">
-                                                                <button class="file-upload-browse btn btn-primary" type="button">Cercar imatge</button>
+                                                                <button class="file-upload-browse btn btn-primary" type="button">Buscar imagen 1</button>
                                                             </span>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group col-md-3">
                                                     <div class="form-check form-check-danger" style="float:right;">
-                                                        <img src="{{env('APP_URL')}}/storage/thumb_img/thumb.php?src=../{{$disc->foto}}&size=200x92&crop=0&trim=1">
+                                                        <img src='{{ asset("/storage/$modulo->imatge1") }}' alt="Módulos Naymo" with=200 height=92>
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Imagen 2</label>
+                                                        <input name="imatge2" type="file" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                            <input name="imatge2" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 2" value="{{ old('imatge2') }}">
+                                                            <span class="input-group-append">
+                                                                <button class="file-upload-browse btn btn-primary" type="button">Buscar imagen 2</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    @if($modulo->imatge2)   
+                                                        <div class="form-check form-check-danger" style="float:right;">
+                                                            <img src='{{ asset("/storage/$modulo->imatge2") }}' alt="Módulos Naymo" with=200 height=92>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Imagen 3</label>
+                                                        <input name="imatge3" type="file" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                            <input name="imatge3" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 3" value="{{ old('imatge3') }}">
+                                                            <span class="input-group-append">
+                                                                <button class="file-upload-browse btn btn-primary" type="button">Buscar imagen 3</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    @if($modulo->imatge3)   
+                                                        <div class="form-check form-check-danger" style="float:right;">
+                                                            <img src='{{ asset("/storage/$modulo->imatge3") }}' alt="Módulos Naymo" with=200 height=92>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Imagen 4</label>
+                                                        <input name="imatge4" type="file" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                            <input name="imatge4" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 4" value="{{ old('imatge4') }}">
+                                                            <span class="input-group-append">
+                                                                <button class="file-upload-browse btn btn-primary" type="button">Buscar imagen 4</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    @if($modulo->imatge4)   
+                                                        <div class="form-check form-check-danger" style="float:right;">
+                                                            <img src='{{ asset("/storage/$modulo->imatge4") }}' alt="Módulos Naymo" with=200 height=92>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Imagen 5</label>
+                                                        <input name="imatge5" type="file" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                            <input name="imatge5" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 5" value="{{ old('imatge5') }}">
+                                                            <span class="input-group-append">
+                                                                <button class="file-upload-browse btn btn-primary" type="button">Buscar imagen 5</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    @if($modulo->imatge5)   
+                                                        <div class="form-check form-check-danger" style="float:right;">
+                                                            <img src='{{ asset("/storage/$modulo->imatge5") }}' alt="Módulos Naymo" with=200 height=92>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Imagen 6</label>
+                                                        <input name="imatge6" type="file" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                            <input name="imatge6" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 6" value="{{ old('imatge6') }}">
+                                                            <span class="input-group-append">
+                                                                <button class="file-upload-browse btn btn-primary" type="button">Buscar imagen 6</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    @if($modulo->imatge6)   
+                                                        <div class="form-check form-check-danger" style="float:right;">
+                                                            <img src='{{ asset("/storage/$modulo->imatge6") }}' alt="Módulos Naymo" with=200 height=92>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Imagen 7</label>
+                                                        <input name="imatge7" type="file" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                            <input name="imatge7" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 7" value="{{ old('imatge7') }}">
+                                                            <span class="input-group-append">
+                                                                <button class="file-upload-browse btn btn-primary" type="button">Buscar imagen 7</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    @if($modulo->imatge7)   
+                                                        <div class="form-check form-check-danger" style="float:right;">
+                                                            <img src='{{ asset("/storage/$modulo->imatge7") }}' alt="Módulos Naymo" with=200 height=92>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Imagen 8</label>
+                                                        <input name="imatge8" type="file" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                            <input name="imatge8" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 8" value="{{ old('imatge8') }}">
+                                                            <span class="input-group-append">
+                                                                <button class="file-upload-browse btn btn-primary" type="button">Buscar imagen 8</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    @if($modulo->imatge8)   
+                                                        <div class="form-check form-check-danger" style="float:right;">
+                                                            <img src='{{ asset("/storage/$modulo->imatge8") }}' alt="Módulos Naymo" with=200 height=92>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Imagen 9</label>
+                                                        <input name="imatge9" type="file" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                            <input name="imatge9" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 9" value="{{ old('imatge9') }}">
+                                                            <span class="input-group-append">
+                                                                <button class="file-upload-browse btn btn-primary" type="button">Buscar imagen 9</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    @if($modulo->imatge9)   
+                                                        <div class="form-check form-check-danger" style="float:right;">
+                                                            <img src='{{ asset("/storage/$modulo->imatge9") }}' alt="Módulos Naymo" with=200 height=92>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Imagen 10</label>
+                                                        <input name="imatge10" type="file" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                            <input name="imatge10" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 10" value="{{ old('imatge10') }}">
+                                                            <span class="input-group-append">
+                                                                <button class="file-upload-browse btn btn-primary" type="button">Buscar imagen 10</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    @if($modulo->imatge10)   
+                                                        <div class="form-check form-check-danger" style="float:right;">
+                                                            <img src='{{ asset("/storage/$modulo->imatge10") }}' alt="Módulos Naymo" with=200 height=92>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Imagen 11</label>
+                                                        <input name="imatge11" type="file" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                            <input name="imatge11" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 11" value="{{ old('imatge11') }}">
+                                                            <span class="input-group-append">
+                                                                <button class="file-upload-browse btn btn-primary" type="button">Buscar imagen 11</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    @if($modulo->imatge11)   
+                                                        <div class="form-check form-check-danger" style="float:right;">
+                                                            <img src='{{ asset("/storage/$modulo->imatge11") }}' alt="Módulos Naymo" with=200 height=92>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Imagen 12</label>
+                                                        <input name="imatge12" type="file" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                            <input name="imatge12" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 12" value="{{ old('imatge12') }}">
+                                                            <span class="input-group-append">
+                                                                <button class="file-upload-browse btn btn-primary" type="button">Buscar imagen 12</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    @if($modulo->imatge12)   
+                                                        <div class="form-check form-check-danger" style="float:right;">
+                                                            <img src='{{ asset("/storage/$modulo->imatge12") }}' alt="Módulos Naymo" with=200 height=92>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Imagen 13</label>
+                                                        <input name="imatge13" type="file" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                            <input name="imatge13" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 13" value="{{ old('imatge13') }}">
+                                                            <span class="input-group-append">
+                                                                <button class="file-upload-browse btn btn-primary" type="button">Buscar imagen 13</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    @if($modulo->imatge13)   
+                                                        <div class="form-check form-check-danger" style="float:right;">
+                                                            <img src='{{ asset("/storage/$modulo->imatge13") }}' alt="Módulos Naymo" with=200 height=92>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Imagen 14</label>
+                                                        <input name="imatge14" type="file" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                            <input name="imatge14" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 14" value="{{ old('imatge14') }}">
+                                                            <span class="input-group-append">
+                                                                <button class="file-upload-browse btn btn-primary" type="button">Buscar imagen 14</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    @if($modulo->imatge14)   
+                                                        <div class="form-check form-check-danger" style="float:right;">
+                                                            <img src='{{ asset("/storage/$modulo->imatge14") }}' alt="Módulos Naymo" with=200 height=92>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Imagen 15</label>
+                                                        <input name="imatge15" type="file" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                            <input name="imatge15" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 15" value="{{ old('imatge15') }}">
+                                                            <span class="input-group-append">
+                                                                <button class="file-upload-browse btn btn-primary" type="button">Buscar imagen 15</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    @if($modulo->imatge15)   
+                                                        <div class="form-check form-check-danger" style="float:right;">
+                                                            <img src='{{ asset("/storage/$modulo->imatge15") }}' alt="Módulos Naymo" with=200 height=92>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Imagen 16</label>
+                                                        <input name="imatge16" type="file" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                            <input name="imatge16" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 16" value="{{ old('imatge16') }}">
+                                                            <span class="input-group-append">
+                                                                <button class="file-upload-browse btn btn-primary" type="button">Buscar imagen 16</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    @if($modulo->imatge16)   
+                                                        <div class="form-check form-check-danger" style="float:right;">
+                                                            <img src='{{ asset("/storage/$modulo->imatge16") }}' alt="Módulos Naymo" with=200 height=92>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Imagen 17</label>
+                                                        <input name="imatge17" type="file" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                            <input name="imatge17" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 17" value="{{ old('imatge17') }}">
+                                                            <span class="input-group-append">
+                                                                <button class="file-upload-browse btn btn-primary" type="button">Buscar imagen 17</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    @if($modulo->imatge317)   
+                                                        <div class="form-check form-check-danger" style="float:right;">
+                                                            <img src='{{ asset("/storage/$modulo->imatge17") }}' alt="Módulos Naymo" with=200 height=92>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Imagen 18</label>
+                                                        <input name="imatge18" type="file" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                            <input name="imatge18" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 18" value="{{ old('imatge18') }}">
+                                                            <span class="input-group-append">
+                                                                <button class="file-upload-browse btn btn-primary" type="button">Buscar imagen 18</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    @if($modulo->imatge18)   
+                                                        <div class="form-check form-check-danger" style="float:right;">
+                                                            <img src='{{ asset("/storage/$modulo->imatge18") }}' alt="Módulos Naymo" with=200 height=92>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Imagen 19</label>
+                                                        <input name="imatge19" type="file" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                            <input name="imatge19" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 19" value="{{ old('imatge19') }}">
+                                                            <span class="input-group-append">
+                                                                <button class="file-upload-browse btn btn-primary" type="button">Buscar imagen 19</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    @if($modulo->imatge19)   
+                                                        <div class="form-check form-check-danger" style="float:right;">
+                                                            <img src='{{ asset("/storage/$modulo->imatge19") }}' alt="Módulos Naymo" with=200 height=92>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Imagen 20</label>
+                                                        <input name="imatge20" type="file" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                            <input name="imatge20" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 20" value="{{ old('imatge20') }}">
+                                                            <span class="input-group-append">
+                                                                <button class="file-upload-browse btn btn-primary" type="button">Buscar imagen 20</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    @if($modulo->imatge20)   
+                                                        <div class="form-check form-check-danger" style="float:right;">
+                                                            <img src='{{ asset("/storage/$modulo->imatge20") }}' alt="Módulos Naymo" with=200 height=92>
+                                                        </div>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>

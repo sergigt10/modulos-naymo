@@ -4,10 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Portada extends Model
+class Texte extends Model
 {
     public $timestamps = false;
-    protected $table = 'portada';
+    protected $table = 'textes';
 
     protected $fillable = [
         'descripcio',

@@ -10,7 +10,7 @@ class Modulo extends Model
     protected $table = 'modulos';
 
     protected $fillable = [
-        'titols',
+        'titol',
         'descripcio',
         'imatge1',
         'imatge2',
