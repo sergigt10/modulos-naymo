@@ -17,7 +17,7 @@
                         </div>
                     @endif
                     <br>
-                    <h2>Notícies</h2>
+                    <h2>Textos portada</h2>
                     <br>
                     <div class="row">
                         <div class="col-12">
@@ -25,7 +25,7 @@
                                 <table id="order-listing" class="table table-hover table-bordered">
                                     <thead>
                                         <tr>
-                                            <th>Títol</th>
+                                            <th>Titulo</th>
                                             <th data-orderable="false">Editar</th>
                                         </tr>
                                     </thead>
