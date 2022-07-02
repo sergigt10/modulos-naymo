@@ -13,104 +13,27 @@
             <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h2>Modificar noticia</h2>
-                        <p> * Camps obligatoris </p>
+                        <h2>Modificar textos</h2>
+                        <p> * Campos obligatorios </p>
                         <br>
-                        <form class="forms-sample" method="post" action="{{ route('backend.noticies.update', ['noticia' => $noticia->id]) }}" enctype="multipart/form-data">
+                        <form class="forms-sample" method="post" action="{{ route('backend.textes.update', ['texte' => $texte->id]) }}" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
-                            @error('titol_cat')
-                                <div class='alert alert-danger' role='alert'>
-                                    <strong>{{ $message }}</strong>
-                                </div>
-                            @enderror
-                            @error('titol_esp')
-                                <div class='alert alert-danger' role='alert'>
-                                    <strong>{{ $message }}</strong>
-                                </div>
-                            @enderror
-                            @error('descripcio_cat')
-                                <div class='alert alert-danger' role='alert'>
-                                    <strong>{{ $message }}</strong>
-                                </div>
-                            @enderror
-                            @error('descripcio_esp')
-                                <div class='alert alert-danger' role='alert'>
-                                    <strong>{{ $message }}</strong>
-                                </div>
-                            @enderror
-                            @error('foto')
+                            @error('descripcio')
                                 <div class='alert alert-danger' role='alert'>
                                     <strong>{{ $message }}</strong>
                                 </div>
                             @enderror
 
                             <div class="form-group">
-                                <label for="exampleInputEmail3">Títol CAT *:</label>
-                                <input name="titol_cat" type="text" class="form-control @error('titol_cat') is-invalid @enderror" id="exampleInputEmail3" placeholder="Títol CAT" value="{{ $noticia->titol_cat }}">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail3">Títol ESP *:</label>
-                                <input name="titol_esp" type="text" class="form-control @error('titol_esp') is-invalid @enderror" id="exampleInputEmail3" placeholder="Títol ESP" value="{{ $noticia->titol_esp }}">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail3">Descripció CAT *:</label>
-                                <input id="descripcio_cat" type="hidden" name="descripcio_cat" value="{{ $noticia->descripcio_cat }}">
+                                <label for="exampleInputEmail3">Textos portada *:</label>
+                                <input id="descripcio" type="hidden" name="descripcio" value="{{ $texte->descripcio }}">
                                 <trix-editor 
-                                    class="form-control @error('descripcio_cat') is-invalid @enderror "
-                                    input="descripcio_cat">
+                                    class="form-control @error('descripcio') is-invalid @enderror"
+                                    input="descripcio">
                                 </trix-editor>
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail3">Descripció ESP *:</label>
-                                <input id="descripcio_esp" type="hidden" name="descripcio_esp" value="{{ $noticia->descripcio_esp }}">
-                                <trix-editor 
-                                    class="form-control @error('descripcio_esp') is-invalid @enderror "
-                                    input="descripcio_esp">
-                                </trix-editor>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail3">Artista *:</label>
-                                <select id="artistes_id" name="artistes_id" class="form-control js-example-basic-single w-100">
-                                    @foreach ($artistes as $artista)
-                                        <option 
-                                            value="{{ $artista->id }}"
-                                            {{ $noticia->artistes_id == $artista->id ? 'selected' : '' }}
-                                        >
-                                            {{ $artista->nom }}
-                                        </option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="row grid-margin">
-                                <div class="col-lg-12">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h4 style="color:red">Pujar imatges en format: jpg, png o gif</h4>
-                                            <br>
-                                            <div class="form-row">
-                                                <div class="form-group col-md-9">
-                                                    <div class="form-group">
-                                                        <label>Imatge noticia</label>
-                                                        <input name="foto" type="file" class="file-upload-default">
-                                                        <div class="input-group col-xs-12">
-                                                            <input name="foto" type="text" class="form-control @error('foto') is-invalid @enderror file-upload-info" readonly="readonly" placeholder="Foto" value="{{ old('foto') }}">
-                                                            <span class="input-group-append">
-                                                                <button class="file-upload-browse btn btn-primary" type="button">Cercar imatge</button>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <div class="form-check form-check-danger" style="float:right;">
-                                                        <img src="{{env('APP_URL')}}/storage/thumb_img/thumb.php?src=../{{$noticia->foto}}&size=200x92&crop=0&trim=1">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
                             <button type="submit" name="funcioBoto" class="btn btn-primary mr-2" value="Guardar">Guardar</button>
                         </form>
                     </div>

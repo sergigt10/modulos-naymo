@@ -122,7 +122,7 @@
                                 <div class="col-lg-12">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h4 style="color:red">Subir imagenes en formato: jpg, png o gif</h4>
+                                            <h4 style="color:red">Subir imágenes en formato: jpg, png o gif</h4>
                                             <br>
                                             <div class="form-row">
                                                 <div class="form-group col-md-9">
@@ -159,6 +159,9 @@
                                                 <div class="form-group col-md-3">
                                                     @if($modulo->imatge2)   
                                                         <div class="form-check form-check-danger" style="float:right;">
+                                                            <input type="checkbox" class="form-check-input" name="del_img2" value="1">
+                                                            ¿Eliminar imagen 2?
+                                                            <br><br>
                                                             <img src='{{ asset("/storage/$modulo->imatge2") }}' alt="Módulos Naymo" with=200 height=92>
                                                         </div>
                                                     @endif
@@ -180,6 +183,9 @@
                                                 <div class="form-group col-md-3">
                                                     @if($modulo->imatge3)   
                                                         <div class="form-check form-check-danger" style="float:right;">
+                                                            <input type="checkbox" class="form-check-input" name="del_img3" value="1">
+                                                            ¿Eliminar imagen 3?
+                                                            <br><br>
                                                             <img src='{{ asset("/storage/$modulo->imatge3") }}' alt="Módulos Naymo" with=200 height=92>
                                                         </div>
                                                     @endif
@@ -201,6 +207,9 @@
                                                 <div class="form-group col-md-3">
                                                     @if($modulo->imatge4)   
                                                         <div class="form-check form-check-danger" style="float:right;">
+                                                            <input type="checkbox" class="form-check-input" name="del_img4" value="1">
+                                                            ¿Eliminar imagen 4?
+                                                            <br><br>
                                                             <img src='{{ asset("/storage/$modulo->imatge4") }}' alt="Módulos Naymo" with=200 height=92>
                                                         </div>
                                                     @endif
@@ -222,6 +231,9 @@
                                                 <div class="form-group col-md-3">
                                                     @if($modulo->imatge5)   
                                                         <div class="form-check form-check-danger" style="float:right;">
+                                                            <input type="checkbox" class="form-check-input" name="del_img5" value="1">
+                                                            ¿Eliminar imagen 5?
+                                                            <br><br>
                                                             <img src='{{ asset("/storage/$modulo->imatge5") }}' alt="Módulos Naymo" with=200 height=92>
                                                         </div>
                                                     @endif
@@ -243,6 +255,9 @@
                                                 <div class="form-group col-md-3">
                                                     @if($modulo->imatge6)   
                                                         <div class="form-check form-check-danger" style="float:right;">
+                                                            <input type="checkbox" class="form-check-input" name="del_img6" value="1">
+                                                            ¿Eliminar imagen 6?
+                                                            <br><br>
                                                             <img src='{{ asset("/storage/$modulo->imatge6") }}' alt="Módulos Naymo" with=200 height=92>
                                                         </div>
                                                     @endif
@@ -264,6 +279,9 @@
                                                 <div class="form-group col-md-3">
                                                     @if($modulo->imatge7)   
                                                         <div class="form-check form-check-danger" style="float:right;">
+                                                            <input type="checkbox" class="form-check-input" name="del_img7" value="1">
+                                                            ¿Eliminar imagen 7?
+                                                            <br><br>
                                                             <img src='{{ asset("/storage/$modulo->imatge7") }}' alt="Módulos Naymo" with=200 height=92>
                                                         </div>
                                                     @endif
@@ -285,6 +303,9 @@
                                                 <div class="form-group col-md-3">
                                                     @if($modulo->imatge8)   
                                                         <div class="form-check form-check-danger" style="float:right;">
+                                                            <input type="checkbox" class="form-check-input" name="del_img8" value="1">
+                                                            ¿Eliminar imagen 8?
+                                                            <br><br>
                                                             <img src='{{ asset("/storage/$modulo->imatge8") }}' alt="Módulos Naymo" with=200 height=92>
                                                         </div>
                                                     @endif
@@ -306,6 +327,9 @@
                                                 <div class="form-group col-md-3">
                                                     @if($modulo->imatge9)   
                                                         <div class="form-check form-check-danger" style="float:right;">
+                                                            <input type="checkbox" class="form-check-input" name="del_img9" value="1">
+                                                            ¿Eliminar imagen 9?
+                                                            <br><br>
                                                             <img src='{{ asset("/storage/$modulo->imatge9") }}' alt="Módulos Naymo" with=200 height=92>
                                                         </div>
                                                     @endif
@@ -327,6 +351,9 @@
                                                 <div class="form-group col-md-3">
                                                     @if($modulo->imatge10)   
                                                         <div class="form-check form-check-danger" style="float:right;">
+                                                            <input type="checkbox" class="form-check-input" name="del_img10" value="1">
+                                                            ¿Eliminar imagen 10?
+                                                            <br><br>
                                                             <img src='{{ asset("/storage/$modulo->imatge10") }}' alt="Módulos Naymo" with=200 height=92>
                                                         </div>
                                                     @endif
@@ -348,6 +375,9 @@
                                                 <div class="form-group col-md-3">
                                                     @if($modulo->imatge11)   
                                                         <div class="form-check form-check-danger" style="float:right;">
+                                                            <input type="checkbox" class="form-check-input" name="del_img11" value="1">
+                                                            ¿Eliminar imagen 11?
+                                                            <br><br>
                                                             <img src='{{ asset("/storage/$modulo->imatge11") }}' alt="Módulos Naymo" with=200 height=92>
                                                         </div>
                                                     @endif
@@ -369,6 +399,9 @@
                                                 <div class="form-group col-md-3">
                                                     @if($modulo->imatge12)   
                                                         <div class="form-check form-check-danger" style="float:right;">
+                                                            <input type="checkbox" class="form-check-input" name="del_img12" value="1">
+                                                            ¿Eliminar imagen 12?
+                                                            <br><br>
                                                             <img src='{{ asset("/storage/$modulo->imatge12") }}' alt="Módulos Naymo" with=200 height=92>
                                                         </div>
                                                     @endif
@@ -390,6 +423,9 @@
                                                 <div class="form-group col-md-3">
                                                     @if($modulo->imatge13)   
                                                         <div class="form-check form-check-danger" style="float:right;">
+                                                            <input type="checkbox" class="form-check-input" name="del_img13" value="1">
+                                                            ¿Eliminar imagen 13?
+                                                            <br><br>
                                                             <img src='{{ asset("/storage/$modulo->imatge13") }}' alt="Módulos Naymo" with=200 height=92>
                                                         </div>
                                                     @endif
@@ -411,6 +447,9 @@
                                                 <div class="form-group col-md-3">
                                                     @if($modulo->imatge14)   
                                                         <div class="form-check form-check-danger" style="float:right;">
+                                                            <input type="checkbox" class="form-check-input" name="del_img14" value="1">
+                                                            ¿Eliminar imagen 14?
+                                                            <br><br>
                                                             <img src='{{ asset("/storage/$modulo->imatge14") }}' alt="Módulos Naymo" with=200 height=92>
                                                         </div>
                                                     @endif
@@ -432,6 +471,9 @@
                                                 <div class="form-group col-md-3">
                                                     @if($modulo->imatge15)   
                                                         <div class="form-check form-check-danger" style="float:right;">
+                                                            <input type="checkbox" class="form-check-input" name="del_img15" value="1">
+                                                            ¿Eliminar imagen 15?
+                                                            <br><br>
                                                             <img src='{{ asset("/storage/$modulo->imatge15") }}' alt="Módulos Naymo" with=200 height=92>
                                                         </div>
                                                     @endif
@@ -453,6 +495,9 @@
                                                 <div class="form-group col-md-3">
                                                     @if($modulo->imatge16)   
                                                         <div class="form-check form-check-danger" style="float:right;">
+                                                            <input type="checkbox" class="form-check-input" name="del_img16" value="1">
+                                                            ¿Eliminar imagen 16?
+                                                            <br><br>
                                                             <img src='{{ asset("/storage/$modulo->imatge16") }}' alt="Módulos Naymo" with=200 height=92>
                                                         </div>
                                                     @endif
@@ -474,6 +519,9 @@
                                                 <div class="form-group col-md-3">
                                                     @if($modulo->imatge317)   
                                                         <div class="form-check form-check-danger" style="float:right;">
+                                                            <input type="checkbox" class="form-check-input" name="del_img17" value="1">
+                                                            ¿Eliminar imagen 17?
+                                                            <br><br>
                                                             <img src='{{ asset("/storage/$modulo->imatge17") }}' alt="Módulos Naymo" with=200 height=92>
                                                         </div>
                                                     @endif
@@ -495,6 +543,9 @@
                                                 <div class="form-group col-md-3">
                                                     @if($modulo->imatge18)   
                                                         <div class="form-check form-check-danger" style="float:right;">
+                                                            <input type="checkbox" class="form-check-input" name="del_img18" value="1">
+                                                            ¿Eliminar imagen 18?
+                                                            <br><br>
                                                             <img src='{{ asset("/storage/$modulo->imatge18") }}' alt="Módulos Naymo" with=200 height=92>
                                                         </div>
                                                     @endif
@@ -516,6 +567,9 @@
                                                 <div class="form-group col-md-3">
                                                     @if($modulo->imatge19)   
                                                         <div class="form-check form-check-danger" style="float:right;">
+                                                            <input type="checkbox" class="form-check-input" name="del_img19" value="1">
+                                                            ¿Eliminar imagen 19?
+                                                            <br><br>
                                                             <img src='{{ asset("/storage/$modulo->imatge19") }}' alt="Módulos Naymo" with=200 height=92>
                                                         </div>
                                                     @endif
@@ -537,6 +591,9 @@
                                                 <div class="form-group col-md-3">
                                                     @if($modulo->imatge20)   
                                                         <div class="form-check form-check-danger" style="float:right;">
+                                                            <input type="checkbox" class="form-check-input" name="del_img20" value="1">
+                                                            ¿Eliminar imagen 20?
+                                                            <br><br>
                                                             <img src='{{ asset("/storage/$modulo->imatge20") }}' alt="Módulos Naymo" with=200 height=92>
                                                         </div>
                                                     @endif

@@ -4,7 +4,7 @@
     <form class="pt-3" method="POST" action="{{ route('login') }}">
         @csrf
         <div class="form-group">
-            <label for="exampleInputEmail">Correu electrònic</label>
+            <label for="exampleInputEmail">Correo electrónico</label>
             <div class="input-group">
                 <div class="input-group-prepend bg-transparent">
                     <span class="input-group-text bg-transparent border-right-0">
@@ -21,7 +21,7 @@
         </div>
 
         <div class="form-group">
-            <label for="exampleInputPassword">Contrasenya</label>
+            <label for="exampleInputPassword">Contraseña</label>
             <div class="input-group">
                 <div class="input-group-prepend bg-transparent">
                     <span class="input-group-text bg-transparent border-right-0">
@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="my-3">
-            <input name="login" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit" value ="Iniciar sessió"/>
+            <input name="login" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit" value ="Iniciar sesión"/>
         </div>
     </form>
 @endsection

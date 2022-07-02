@@ -36,7 +36,7 @@
                             <div class="brand-logo">
                                 <img src="{{ asset('backend/images/logo_login.png') }}" alt="logo">
                             </div>
-                            <h4>Benvingut/da!</h4>
+                            <h4>Bienvenido/da!</h4>
                             <h6>Zona restringida</h6>
                             <!-- Formulari -->
                             @yield('contentFormLogin')

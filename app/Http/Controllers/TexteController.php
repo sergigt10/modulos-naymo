@@ -16,7 +16,7 @@ class TexteController extends Controller
      */
     public function index()
     {
-        $noticies = Texte::all();
+        $textes = Texte::all();
 
         return view('backend.textes.index')
             ->with('textes', $textes);
@@ -41,34 +41,23 @@ class TexteController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'titol_cat' => 'required',
-            'titol_esp' => 'required',
-            'descripcio_cat' => 'required',
-            'descripcio_esp' => 'required',
-            'artistes_id' => '',
-            'foto' => 'required|image|max:10240|mimes:jpeg,png,jpg,gif,svg'
-        ]);/* Max foto 10 MB */
+            'descripcio' => 'required'
+        ]);
 
-        $ruta_foto = $request['foto']->store('backend/noticia', 'public');
-
-        $foto = Image::make( storage_path("app/public/{$ruta_foto}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-        $foto->save();
-
-        $noticia = new Noticia($data);
-        $noticia->foto = $ruta_foto;
-        $noticia->save();
+        $texte = new Texte($data);
+        $texte->save();
 
         // Redireccionar
-        return redirect()->action('NoticiaController@index')->with('estat', 'Noticia inserit correctament.');
+        return redirect()->action('TexteController@index')->with('estat', 'Guardado correctamente.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Noticia  $noticia
+     * @param  \App\Models\Texte  $texte
      * @return \Illuminate\Http\Response
      */
-    public function show(Noticia $noticia)
+    public function show(Texte $texte)
     {
         //
     }
@@ -76,78 +65,47 @@ class TexteController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Noticia  $noticia
+     * @param  \App\Models\Texte  $texte
      * @return \Illuminate\Http\Response
      */
-    public function edit(Noticia $noticia)
+    public function edit(Texte $texte)
     {
-        $artistes = Artista::all();
-
-        return view('backend.noticies.edit', compact('noticia'))->with('artistes', $artistes);
+        return view('backend.textes.edit', compact('texte'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Noticia  $noticia
+     * @param  \App\Models\Texte  $texte
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Noticia $noticia)
+    public function update(Request $request, Texte $texte)
     {
         // Validació
         $data = $request->validate([
-            'titol_cat' => 'required',
-            'titol_esp' => 'required',
-            'descripcio_cat' => 'required',
-            'descripcio_esp' => 'required',
-            'artistes_id' => '',
-        ]);/* Max foto 10 MB */
+            'descripcio' => 'required'
+        ]);
 
         // Asignar los valores
-        $noticia->titol_cat = $data['titol_cat'];
-        $noticia->titol_esp = $data['titol_esp'];
-        $noticia->descripcio_cat = $data['descripcio_cat'];
-        $noticia->descripcio_esp = $data['descripcio_esp'];
-        $noticia->artistes_id = $data['artistes_id'];
+        $texte->descripcio = $data['descripcio'];
 
-        // Si el usuario sube una nueva imagen
-        if($request['foto']) {
-
-            $ruta_foto = $request['foto']->store('backend/noticia', 'public');
-
-            $img = Image::make( storage_path("app/public/{$ruta_foto}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $img->save();
-
-            // Eliminamos la imagen anterior
-            if (File::exists(storage_path("app/public/$noticia->foto"))) {
-                File::delete(storage_path("app/public/$noticia->foto"));
-                // Asignar al objeto
-                $noticia->foto = $ruta_foto;
-            }  
-        }
-
-        $noticia->save();
+        $texte->save();
 
         // Redireccionar
-        return redirect()->action('NoticiaController@index')->with('estat', 'Noticia modificada correctament.');
+        return redirect()->action('TexteController@index')->with('estat', 'Modificada correctamente.');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Noticia  $noticia
+     * @param  \App\Models\Texte  $texte
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Noticia $noticia)
+    public function destroy(Texte $texte)
     {
-        // Eliminar imatges
-        if (File::exists(storage_path("app/public/$noticia->foto"))) {
-            File::delete(storage_path("app/public/$noticia->foto"));
-        }
+        $texte->delete();
 
-        $noticia->delete();
-
-        return redirect()->action('NoticiaController@index');
+        return redirect()->action('TexteController@index');
     }
 }

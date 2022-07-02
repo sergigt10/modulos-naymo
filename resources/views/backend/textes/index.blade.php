@@ -27,51 +27,22 @@
                                         <tr>
                                             <th>Títol</th>
                                             <th data-orderable="false">Editar</th>
-                                            <th data-orderable="false">Eliminar</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($noticies as $noticia)
+                                        @foreach($textes as $texte)
                                             <tr>
                                                 <td>
-                                                    <a href="{{ route('backend.noticies.edit', ['noticia' => $noticia->id]) }}" style="color: black;">
-                                                        {{ $noticia->titol_cat }}
+                                                    <a href="{{ route('backend.textes.edit', ['texte' => $texte->id]) }}" style="color: black;">
+                                                        Textos portada
                                                     </a>
                                                 </td>
                                                 <td>
-                                                    <a href="{{ route('backend.noticies.edit', ['noticia' => $noticia->id]) }}" style="color: black;">
+                                                    <a href="{{ route('backend.textes.edit', ['texte' => $texte->id]) }}" style="color: black;">
                                                         <i class="mdi mdi-pencil menu-icon"></i>
                                                     </a>
                                                 </td>
-                                                <td>
-                                                    <a href="" style="color: black;" data-toggle="modal" data-target="#exampleModalCenter{{$noticia->id}}">
-                                                        <i class="mdi mdi-close-circle menu-icon"></i>
-                                                    </a>
-                                                </td>
                                             </tr>
-                                            <div class="modal fade" id="exampleModalCenter{{$noticia->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLongTitle">Eliminar?</h5>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                    <div class="modal-body">
-                                                        Segur que vols Eliminar: {{ $noticia->nom }}
-                                                    </div>
-                                                        <div class="modal-footer">
-                                                            <form class="pull-right" action="{{ route('backend.noticies.destroy', ['noticia' => $noticia->id]) }}" method="POST">
-                                                                @csrf
-                                                                @method('DELETE')
-                                                                <input type="submit" value="Eliminar" class="btn btn-danger">
-                                                            </form>
-                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel·lar</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         @endforeach
                                     </tbody>
                                 </table>

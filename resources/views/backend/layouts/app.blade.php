@@ -100,17 +100,17 @@
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="collapse" href="#general-pages-2" <?php echo (strpos($_SERVER['REQUEST_URI'] ,"textes") !== false) ? 'aria-expanded="true"' : 'aria-expanded="false"'; ?> aria-controls="general-pages-2">
                             <i class="mdi mdi-pencil menu-icon"></i>
-                            <span class="menu-title">Texto portada</span>
+                            <span class="menu-title">Textos portada</span>
                             <i class="menu-arrow"></i>
                         </a>
                         <div <?php echo (strpos($_SERVER['REQUEST_URI'] ,"textes") !== false) ? 'class="collapse show"' : 'class="collapse"'; ?> id="general-pages-2">
-                            <ul class="nav flex-column sub-menu">
+                            {{-- <ul class="nav flex-column sub-menu">
                                 <li class="nav-item"> 
                                     <a class="nav-link {{ (request()->is('backend/textes/create')) ? 'active' : '' }}" href="{{ route('backend.textes.create') }}">
                                         Insertar
                                     </a>
                                 </li>
-                            </ul>
+                            </ul> --}}
                             <ul class="nav flex-column sub-menu">
                                 <li class="nav-item"> 
                                     <a class="nav-link {{ ( (request()->is('backend/textes')) ||  (request()->is('backend/textes/*/edit'))) ? 'active' : '' }}" href="{{ route('backend.textes.index') }}">

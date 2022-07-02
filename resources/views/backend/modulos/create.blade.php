@@ -120,7 +120,7 @@
                                     <div class="col-lg-12">
                                         <div class="card">
                                             <div class="card-body">
-                                                <h4 style="color:red">Subir imagenes en formato: jpg, png o gif</h4>
+                                                <h4 style="color:red">Subir imágenes en formato: jpg, png o gif</h4>
                                                 <br>
                                                 <div class="form-row">
                                                     <div class="form-group col-md-12">
@@ -128,7 +128,7 @@
                                                             <label>Imagen 1</label>
                                                             <input name="imatge1" type="file" class="file-upload-default">
                                                             <div class="input-group col-xs-12">
-                                                                <input name="imatge1" type="text" class="form-control @error('imatge1') is-invalid @enderror file-upload-info" readonly="readonly" placeholder="Imagen 1" value="{{ old('imatge1') }}">
+                                                                <input name="imatge1" type="text" class="form-control @error('imatge1') is-invalid @enderror file-upload-info" readonly="readonly" placeholder="Imagen 1" value="">
                                                                 <span class="input-group-append">
                                                                     <button class="file-upload-browse btn btn-primary" type="button">Buscar foto</button>
                                                                 </span>
@@ -137,14 +137,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                             <div class="card-body">
+                                            <div class="card-body">
                                                 <div class="form-row">
                                                     <div class="form-group col-md-12">
                                                         <div class="form-group">
                                                             <label>Imagen 2</label>
                                                             <input name="imatge2" type="file" class="file-upload-default">
                                                             <div class="input-group col-xs-12">
-                                                                <input name="imatge2" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 2" value="{{ old('imatge2') }}">
+                                                                <input name="imatge2" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 2" value="">
                                                                 <span class="input-group-append">
                                                                     <button class="file-upload-browse btn btn-primary" type="button">Buscar foto</button>
                                                                 </span>
@@ -160,7 +160,7 @@
                                                             <label>Imagen 3</label>
                                                             <input name="imatge3" type="file" class="file-upload-default">
                                                             <div class="input-group col-xs-12">
-                                                                <input name="imatge3" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 3" value="{{ old('imatge3') }}">
+                                                                <input name="imatge3" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 3" value="">
                                                                 <span class="input-group-append">
                                                                     <button class="file-upload-browse btn btn-primary" type="button">Buscar foto</button>
                                                                 </span>
@@ -176,7 +176,7 @@
                                                             <label>Imagen 4</label>
                                                             <input name="imatge4" type="file" class="file-upload-default">
                                                             <div class="input-group col-xs-12">
-                                                                <input name="imatge4" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 4" value="{{ old('imatge4') }}">
+                                                                <input name="imatge4" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 4" value="">
                                                                 <span class="input-group-append">
                                                                     <button class="file-upload-browse btn btn-primary" type="button">Buscar foto</button>
                                                                 </span>
@@ -192,7 +192,7 @@
                                                             <label>Imagen 5</label>
                                                             <input name="imatge5" type="file" class="file-upload-default">
                                                             <div class="input-group col-xs-12">
-                                                                <input name="imatge5" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 5" value="{{ old('imatge5') }}">
+                                                                <input name="imatge5" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 5" value="">
                                                                 <span class="input-group-append">
                                                                     <button class="file-upload-browse btn btn-primary" type="button">Buscar foto</button>
                                                                 </span>
@@ -208,7 +208,7 @@
                                                             <label>Imagen 6</label>
                                                             <input name="imatge6" type="file" class="file-upload-default">
                                                             <div class="input-group col-xs-12">
-                                                                <input name="imatge6" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 6" value="{{ old('imatge6') }}">
+                                                                <input name="imatge6" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 6" value="">
                                                                 <span class="input-group-append">
                                                                     <button class="file-upload-browse btn btn-primary" type="button">Buscar foto</button>
                                                                 </span>
@@ -224,7 +224,7 @@
                                                             <label>Imagen 7</label>
                                                             <input name="imatge7" type="file" class="file-upload-default">
                                                             <div class="input-group col-xs-12">
-                                                                <input name="imatge7" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 7" value="{{ old('imatge7') }}">
+                                                                <input name="imatge7" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 7" value="">
                                                                 <span class="input-group-append">
                                                                     <button class="file-upload-browse btn btn-primary" type="button">Buscar foto</button>
                                                                 </span>
@@ -240,7 +240,7 @@
                                                             <label>Imagen 8</label>
                                                             <input name="imatge8" type="file" class="file-upload-default">
                                                             <div class="input-group col-xs-12">
-                                                                <input name="imatge8" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 8" value="{{ old('imatge8') }}">
+                                                                <input name="imatge8" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 8" value="">
                                                                 <span class="input-group-append">
                                                                     <button class="file-upload-browse btn btn-primary" type="button">Buscar foto</button>
                                                                 </span>
@@ -256,7 +256,7 @@
                                                             <label>Imagen 9</label>
                                                             <input name="imatge9" type="file" class="file-upload-default">
                                                             <div class="input-group col-xs-12">
-                                                                <input name="imatge9" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 9" value="{{ old('imatge9') }}">
+                                                                <input name="imatge9" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 9" value="">
                                                                 <span class="input-group-append">
                                                                     <button class="file-upload-browse btn btn-primary" type="button">Buscar foto</button>
                                                                 </span>
@@ -272,7 +272,7 @@
                                                             <label>Imagen 10</label>
                                                             <input name="imatge10" type="file" class="file-upload-default">
                                                             <div class="input-group col-xs-12">
-                                                                <input name="imatge10" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 10" value="{{ old('imatge10') }}">
+                                                                <input name="imatge10" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 10" value="">
                                                                 <span class="input-group-append">
                                                                     <button class="file-upload-browse btn btn-primary" type="button">Buscar foto</button>
                                                                 </span>
@@ -288,7 +288,7 @@
                                                             <label>Imagen 11</label>
                                                             <input name="imatge11" type="file" class="file-upload-default">
                                                             <div class="input-group col-xs-12">
-                                                                <input name="imatge11" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 11" value="{{ old('imatge11') }}">
+                                                                <input name="imatge11" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 11" value="">
                                                                 <span class="input-group-append">
                                                                     <button class="file-upload-browse btn btn-primary" type="button">Buscar foto</button>
                                                                 </span>
@@ -304,7 +304,7 @@
                                                             <label>Imagen 12</label>
                                                             <input name="imatge12" type="file" class="file-upload-default">
                                                             <div class="input-group col-xs-12">
-                                                                <input name="imatge12" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 12" value="{{ old('imatge12') }}">
+                                                                <input name="imatge12" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 12" value="">
                                                                 <span class="input-group-append">
                                                                     <button class="file-upload-browse btn btn-primary" type="button">Buscar foto</button>
                                                                 </span>
@@ -320,7 +320,7 @@
                                                             <label>Imagen 13</label>
                                                             <input name="imatge13" type="file" class="file-upload-default">
                                                             <div class="input-group col-xs-12">
-                                                                <input name="imatge13" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 13" value="{{ old('imatge13') }}">
+                                                                <input name="imatge13" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 13" value="">
                                                                 <span class="input-group-append">
                                                                     <button class="file-upload-browse btn btn-primary" type="button">Buscar foto</button>
                                                                 </span>
@@ -336,7 +336,7 @@
                                                             <label>Imagen 14</label>
                                                             <input name="imatge14" type="file" class="file-upload-default">
                                                             <div class="input-group col-xs-12">
-                                                                <input name="imatge14" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 14" value="{{ old('imatge14') }}">
+                                                                <input name="imatge14" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 14" value="">
                                                                 <span class="input-group-append">
                                                                     <button class="file-upload-browse btn btn-primary" type="button">Buscar foto</button>
                                                                 </span>
@@ -352,7 +352,7 @@
                                                             <label>Imagen 15</label>
                                                             <input name="imatge15" type="file" class="file-upload-default">
                                                             <div class="input-group col-xs-12">
-                                                                <input name="imatge15" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 15" value="{{ old('imatge15') }}">
+                                                                <input name="imatge15" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 15" value="">
                                                                 <span class="input-group-append">
                                                                     <button class="file-upload-browse btn btn-primary" type="button">Buscar foto</button>
                                                                 </span>
@@ -368,7 +368,7 @@
                                                             <label>Imagen 16</label>
                                                             <input name="imatge16" type="file" class="file-upload-default">
                                                             <div class="input-group col-xs-12">
-                                                                <input name="imatge16" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 16" value="{{ old('imatge16') }}">
+                                                                <input name="imatge16" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 16" value="">
                                                                 <span class="input-group-append">
                                                                     <button class="file-upload-browse btn btn-primary" type="button">Buscar foto</button>
                                                                 </span>
@@ -384,7 +384,7 @@
                                                             <label>Imagen 17</label>
                                                             <input name="imatge17" type="file" class="file-upload-default">
                                                             <div class="input-group col-xs-12">
-                                                                <input name="imatge17" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 17" value="{{ old('imatge17') }}">
+                                                                <input name="imatge17" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 17" value="">
                                                                 <span class="input-group-append">
                                                                     <button class="file-upload-browse btn btn-primary" type="button">Buscar foto</button>
                                                                 </span>
@@ -400,7 +400,7 @@
                                                             <label>Imagen 18</label>
                                                             <input name="imatge18" type="file" class="file-upload-default">
                                                             <div class="input-group col-xs-12">
-                                                                <input name="imatge18" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 18" value="{{ old('imatge18') }}">
+                                                                <input name="imatge18" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 18" value="">
                                                                 <span class="input-group-append">
                                                                     <button class="file-upload-browse btn btn-primary" type="button">Buscar foto</button>
                                                                 </span>
@@ -416,7 +416,7 @@
                                                             <label>Imagen 19</label>
                                                             <input name="imatge19" type="file" class="file-upload-default">
                                                             <div class="input-group col-xs-12">
-                                                                <input name="imatge19" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 19" value="{{ old('imatge19') }}">
+                                                                <input name="imatge19" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 19" value="">
                                                                 <span class="input-group-append">
                                                                     <button class="file-upload-browse btn btn-primary" type="button">Buscar foto</button>
                                                                 </span>
@@ -432,7 +432,7 @@
                                                             <label>Imagen 20</label>
                                                             <input name="imatge20" type="file" class="file-upload-default">
                                                             <div class="input-group col-xs-12">
-                                                                <input name="imatge20" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 20" value="{{ old('imatge20') }}">
+                                                                <input name="imatge20" type="text" class="form-control file-upload-info" readonly="readonly" placeholder="Imagen 20" value="">
                                                                 <span class="input-group-append">
                                                                     <button class="file-upload-browse btn btn-primary" type="button">Buscar foto</button>
                                                                 </span>

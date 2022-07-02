@@ -31,7 +31,7 @@
                                                     <i class="mdi mdi-pencil"></i>
                                                 </div>
                                                 <div class="text-white">
-                                                    <p class="font-weight-medium mt-md-2 mt-xl-0 text-md-center text-xl-left" style="font-size: 1.5rem;">Texto portada</p>
+                                                    <p class="font-weight-medium mt-md-2 mt-xl-0 text-md-center text-xl-left" style="font-size: 1.5rem;">Textos portada</p>
                                                 </div>
                                             </div>
                                         </div>
