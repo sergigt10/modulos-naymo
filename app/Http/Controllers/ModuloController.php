@@ -79,122 +79,205 @@ class ModuloController extends Controller
             'ordre' => ''
         ]);/* Max foto 10 MB */
 
+        /* Transformar JPG i WEBP */
         $ruta_foto_1 = $request['imatge1']->store('backend/modulos', 'public');
-
-        $imatge1 = Image::make( storage_path("app/public/{$ruta_foto_1}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-        $imatge1->save();
+        $senseExtensio = substr($ruta_foto_1, 0, strrpos($ruta_foto_1, '.'));
+        /* JPG */
+        $imatge1 = Image::make( $request['imatge1'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge1->save( storage_path("app/public/{$ruta_foto_1}"), 80 );
+        /* WEBP */
+        $imatge1WEBP = Image::make( $request['imatge1'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+        $imatge1WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
+        
         if($request['imatge2']) {
             $ruta_foto_2 = $request['imatge2']->store('backend/modulos', 'public');
-
-            $imatge2 = Image::make( storage_path("app/public/{$ruta_foto_2}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge2->save();
+            $senseExtensio = substr($ruta_foto_2, 0, strrpos($ruta_foto_2, '.'));
+            /* JPG */
+            $imatge2 = Image::make( $request['imatge2'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge2->save( storage_path("app/public/{$ruta_foto_2}"), 80 );
+            /* WEBP */
+            $imatge2WEBP = Image::make( $request['imatge2'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge2WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
         }
         if($request['imatge3']) {
             $ruta_foto_3 = $request['imatge3']->store('backend/modulos', 'public');
-            $imatge3 = Image::make( storage_path("app/public/{$ruta_foto_3}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge3->save();
+            $senseExtensio = substr($ruta_foto_3, 0, strrpos($ruta_foto_3, '.'));
+            /* JPG */
+            $imatge3 = Image::make( $request['imatge3'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge3->save( storage_path("app/public/{$ruta_foto_3}"), 80 );
+            /* WEBP */
+            $imatge3WEBP = Image::make( $request['imatge3'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge3WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
         }
         if($request['imatge4']) {
             $ruta_foto_4 = $request['imatge4']->store('backend/modulos', 'public');
-            
-            $imatge4 = Image::make( storage_path("app/public/{$ruta_foto_4}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge4->save();
+            $senseExtensio = substr($ruta_foto_4, 0, strrpos($ruta_foto_4, '.'));
+            /* JPG */
+            $imatge4 = Image::make( $request['imatge4'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge4->save( storage_path("app/public/{$ruta_foto_4}"), 80 );
+            /* WEBP */
+            $imatge4WEBP = Image::make( $request['imatge4'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge4WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
         }
         if($request['imatge5']) {
             $ruta_foto_5 = $request['imatge5']->store('backend/modulos', 'public');
-            
-            $imatge5 = Image::make( storage_path("app/public/{$ruta_foto_5}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge5->save();
+            $senseExtensio = substr($ruta_foto_5, 0, strrpos($ruta_foto_5, '.'));
+            /* JPG */
+            $imatge5 = Image::make( $request['imatge5'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge5->save( storage_path("app/public/{$ruta_foto_5}"), 80 );
+            /* WEBP */
+            $imatge5WEBP = Image::make( $request['imatge5'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge5WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
         }
         if($request['imatge6']) {
             $ruta_foto_6 = $request['imatge6']->store('backend/modulos', 'public');
-
-            $imatge6 = Image::make( storage_path("app/public/{$ruta_foto_6}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge6->save();
+            $senseExtensio = substr($ruta_foto_6, 0, strrpos($ruta_foto_6, '.'));
+            /* JPG */
+            $imatge6 = Image::make( $request['imatge6'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge6->save( storage_path("app/public/{$ruta_foto_6}"), 80 );
+            /* WEBP */
+            $imatge6WEBP = Image::make( $request['imatge6'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge6WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
         }
         if($request['imatge7']) {
             $ruta_foto_7 = $request['imatge7']->store('backend/modulos', 'public');
-
-            $imatge7 = Image::make( storage_path("app/public/{$ruta_foto_7}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge7->save();
+            $senseExtensio = substr($ruta_foto_7, 0, strrpos($ruta_foto_7, '.'));
+            /* JPG */
+            $imatge7 = Image::make( $request['imatge7'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge7->save( storage_path("app/public/{$ruta_foto_7}"), 80 );
+            /* WEBP */
+            $imatge7WEBP = Image::make( $request['imatge7'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge7WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
         }
         if($request['imatge8']) {
             $ruta_foto_8 = $request['imatge8']->store('backend/modulos', 'public');
-
-            $imatge8 = Image::make( storage_path("app/public/{$ruta_foto_8}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge8->save();
+            $senseExtensio = substr($ruta_foto_8, 0, strrpos($ruta_foto_8, '.'));
+            /* JPG */
+            $imatge8 = Image::make( $request['imatge8'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge8->save( storage_path("app/public/{$ruta_foto_8}"), 80 );
+            /* WEBP */
+            $imatge8WEBP = Image::make( $request['imatge8'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge8WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
         }
         if($request['imatge9']) {
             $ruta_foto_9 = $request['imatge9']->store('backend/modulos', 'public');
-
-            $imatge9 = Image::make( storage_path("app/public/{$ruta_foto_9}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge9->save();
+            $senseExtensio = substr($ruta_foto_9, 0, strrpos($ruta_foto_9, '.'));
+            /* JPG */
+            $imatge9 = Image::make( $request['imatge9'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge9->save( storage_path("app/public/{$ruta_foto_9}"), 80 );
+            /* WEBP */
+            $imatge9WEBP = Image::make( $request['imatge9'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge9WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
         }
         if($request['imatge10']) {
             $ruta_foto_10 = $request['imatge10']->store('backend/modulos', 'public');
-
-            $imatge10 = Image::make( storage_path("app/public/{$ruta_foto_10}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge10->save();
+            $senseExtensio = substr($ruta_foto_10, 0, strrpos($ruta_foto_10, '.'));
+            /* JPG */
+            $imatge10 = Image::make( $request['imatge10'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge10->save( storage_path("app/public/{$ruta_foto_10}"), 80 );
+            /* WEBP */
+            $imatge10WEBP = Image::make( $request['imatge10'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge10WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
         }
         if($request['imatge11']) {
             $ruta_foto_11 = $request['imatge11']->store('backend/modulos', 'public');
-
-            $imatge11 = Image::make( storage_path("app/public/{$ruta_foto_11}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge11->save();
+            $senseExtensio = substr($ruta_foto_11, 0, strrpos($ruta_foto_11, '.'));
+            /* JPG */
+            $imatge11 = Image::make( $request['imatge11'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge11->save( storage_path("app/public/{$ruta_foto_11}"), 80 );
+            /* WEBP */
+            $imatge11WEBP = Image::make( $request['imatge11'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge11WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
         }
         if($request['imatge12']) {
             $ruta_foto_12 = $request['imatge12']->store('backend/modulos', 'public');
-
-            $imatge12 = Image::make( storage_path("app/public/{$ruta_foto_12}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge12->save();
+            $senseExtensio = substr($ruta_foto_12, 0, strrpos($ruta_foto_12, '.'));
+            /* JPG */
+            $imatge12 = Image::make( $request['imatge12'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge12->save( storage_path("app/public/{$ruta_foto_12}"), 80 );
+            /* WEBP */
+            $imatge12WEBP = Image::make( $request['imatge12'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge12WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
         }
         if($request['imatge13']) {
             $ruta_foto_13 = $request['imatge13']->store('backend/modulos', 'public');
-
-            $imatge13 = Image::make( storage_path("app/public/{$ruta_foto_13}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge13->save();
+            $senseExtensio = substr($ruta_foto_13, 0, strrpos($ruta_foto_13, '.'));
+            /* JPG */
+            $imatge13 = Image::make( $request['imatge13'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge13->save( storage_path("app/public/{$ruta_foto_13}"), 80 );
+            /* WEBP */
+            $imatge13WEBP = Image::make( $request['imatge13'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge13WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
         }
         if($request['imatge14']) {
             $ruta_foto_14 = $request['imatge14']->store('backend/modulos', 'public');
-
-            $imatge14 = Image::make( storage_path("app/public/{$ruta_foto_14}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge14->save();
+            $senseExtensio = substr($ruta_foto_14, 0, strrpos($ruta_foto_14, '.'));
+            /* JPG */
+            $imatge14 = Image::make( $request['imatge14'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge14->save( storage_path("app/public/{$ruta_foto_14}"), 80 );
+            /* WEBP */
+            $imatge14WEBP = Image::make( $request['imatge14'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge14WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
         }
         if($request['imatge15']) {
             $ruta_foto_15 = $request['imatge15']->store('backend/modulos', 'public');
-
-            $imatge15 = Image::make( storage_path("app/public/{$ruta_foto_15}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge15->save();
+            $senseExtensio = substr($ruta_foto_15, 0, strrpos($ruta_foto_15, '.'));
+            /* JPG */
+            $imatge15 = Image::make( $request['imatge15'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge15->save( storage_path("app/public/{$ruta_foto_15}"), 80 );
+            /* WEBP */
+            $imatge15WEBP = Image::make( $request['imatge15'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge15WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
         }
         if($request['imatge16']) {
             $ruta_foto_16 = $request['imatge16']->store('backend/modulos', 'public');
-
-            $imatge16 = Image::make( storage_path("app/public/{$ruta_foto_16}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge16->save();
+            $senseExtensio = substr($ruta_foto_16, 0, strrpos($ruta_foto_16, '.'));
+            /* JPG */
+            $imatge16 = Image::make( $request['imatge16'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge16->save( storage_path("app/public/{$ruta_foto_16}"), 80 );
+            /* WEBP */
+            $imatge16WEBP = Image::make( $request['imatge16'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge16WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
         }
         if($request['imatge17']) {
             $ruta_foto_17 = $request['imatge17']->store('backend/modulos', 'public');
-
-            $imatge17 = Image::make( storage_path("app/public/{$ruta_foto_17}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge17->save();
+            $senseExtensio = substr($ruta_foto_17, 0, strrpos($ruta_foto_17, '.'));
+            /* JPG */
+            $imatge17 = Image::make( $request['imatge17'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge17->save( storage_path("app/public/{$ruta_foto_17}"), 80 );
+            /* WEBP */
+            $imatge17WEBP = Image::make( $request['imatge17'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge17WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
         }
         if($request['imatge18']) {
             $ruta_foto_18 = $request['imatge18']->store('backend/modulos', 'public');
-
-            $imatge18 = Image::make( storage_path("app/public/{$ruta_foto_18}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge18->save();
+            $senseExtensio = substr($ruta_foto_18, 0, strrpos($ruta_foto_18, '.'));
+            /* JPG */
+            $imatge18 = Image::make( $request['imatge18'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge18->save( storage_path("app/public/{$ruta_foto_18}"), 80 );
+            /* WEBP */
+            $imatge18WEBP = Image::make( $request['imatge18'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge18WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
         }
         if($request['imatge19']) {
             $ruta_foto_19 = $request['imatge19']->store('backend/modulos', 'public');
-
-            $imatge19 = Image::make( storage_path("app/public/{$ruta_foto_19}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge19->save();
+            $senseExtensio = substr($ruta_foto_19, 0, strrpos($ruta_foto_19, '.'));
+            /* JPG */
+            $imatge19 = Image::make( $request['imatge19'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge19->save( storage_path("app/public/{$ruta_foto_19}"), 80 );
+            /* WEBP */
+            $imatge19WEBP = Image::make( $request['imatge19'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge19WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
         }
         if($request['imatge20']) {
             $ruta_foto_20 = $request['imatge20']->store('backend/modulos', 'public');
-
-            $imatge20 = Image::make( storage_path("app/public/{$ruta_foto_20}") )->resize(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge20->save();
+            $senseExtensio = substr($ruta_foto_20, 0, strrpos($ruta_foto_20, '.'));
+            /* JPG */
+            $imatge20 = Image::make( $request['imatge20'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge20->save( storage_path("app/public/{$ruta_foto_20}"), 80 );
+            /* WEBP */
+            $imatge20WEBP = Image::make( $request['imatge20'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge20WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
         }
 
         $modulo = new Modulo($data);
@@ -368,10 +451,15 @@ class ModuloController extends Controller
         // Si el usuario sube una nueva imagen
         if($request['imatge1']) {
 
+            /* Transformar JPG i WEBP */
             $ruta_foto_1 = $request['imatge1']->store('backend/modulos', 'public');
-
-            $imatge1 = Image::make( storage_path("app/public/{$ruta_foto_1}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge1->save();
+            $senseExtensio = substr($ruta_foto_1, 0, strrpos($ruta_foto_1, '.'));
+            /* JPG */
+            $imatge1 = Image::make( $request['imatge1'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge1->save( storage_path("app/public/{$ruta_foto_1}"), 80 );
+            /* WEBP */
+            $imatge1WEBP = Image::make( $request['imatge1'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge1WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
 
             // Eliminamos la imagen anterior
             if (File::exists(storage_path("app/public/$modulo->imatge1"))) {
@@ -382,10 +470,15 @@ class ModuloController extends Controller
         }
         if($request['imatge2']) {
 
+            /* Transformar JPG i WEBP */
             $ruta_foto_2 = $request['imatge2']->store('backend/modulos', 'public');
-
-            $imatge2 = Image::make( storage_path("app/public/{$ruta_foto_2}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge2->save();
+            $senseExtensio = substr($ruta_foto_2, 0, strrpos($ruta_foto_2, '.'));
+            /* JPG */
+            $imatge2 = Image::make( $request['imatge2'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge2->save( storage_path("app/public/{$ruta_foto_2}"), 80 );
+            /* WEBP */
+            $imatge2WEBP = Image::make( $request['imatge2'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge2WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
 
             // Eliminamos la imagen anterior
             if (File::exists(storage_path("app/public/$modulo->imatge2"))) {
@@ -396,10 +489,15 @@ class ModuloController extends Controller
         }
         if($request['imatge3']) {
 
+            /* Transformar JPG i WEBP */
             $ruta_foto_3 = $request['imatge3']->store('backend/modulos', 'public');
-
-            $imatge3 = Image::make( storage_path("app/public/{$ruta_foto_3}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge3->save();
+            $senseExtensio = substr($ruta_foto_3, 0, strrpos($ruta_foto_3, '.'));
+            /* JPG */
+            $imatge3 = Image::make( $request['imatge3'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge3->save( storage_path("app/public/{$ruta_foto_3}"), 80 );
+            /* WEBP */
+            $imatge3WEBP = Image::make( $request['imatge3'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge3WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
 
             // Eliminamos la imagen anterior
             if (File::exists(storage_path("app/public/$modulo->imatge3"))) {
@@ -410,10 +508,15 @@ class ModuloController extends Controller
         }
         if($request['imatge4']) {
 
+            /* Transformar JPG i WEBP */
             $ruta_foto_4 = $request['imatge4']->store('backend/modulos', 'public');
-
-            $imatge4 = Image::make( storage_path("app/public/{$ruta_foto_4}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge4->save();
+            $senseExtensio = substr($ruta_foto_4, 0, strrpos($ruta_foto_4, '.'));
+            /* JPG */
+            $imatge4 = Image::make( $request['imatge4'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge4->save( storage_path("app/public/{$ruta_foto_4}"), 80 );
+            /* WEBP */
+            $imatge4WEBP = Image::make( $request['imatge4'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge4WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
 
             // Eliminamos la imagen anterior
             if (File::exists(storage_path("app/public/$modulo->imatge4"))) {
@@ -424,10 +527,15 @@ class ModuloController extends Controller
         }
         if($request['imatge5']) {
 
+            /* Transformar JPG i WEBP */
             $ruta_foto_5 = $request['imatge5']->store('backend/modulos', 'public');
-
-            $imatge5 = Image::make( storage_path("app/public/{$ruta_foto_5}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge5->save();
+            $senseExtensio = substr($ruta_foto_5, 0, strrpos($ruta_foto_5, '.'));
+            /* JPG */
+            $imatge5 = Image::make( $request['imatge5'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge5->save( storage_path("app/public/{$ruta_foto_5}"), 80 );
+            /* WEBP */
+            $imatge5WEBP = Image::make( $request['imatge5'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge5WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
 
             // Eliminamos la imagen anterior
             if (File::exists(storage_path("app/public/$modulo->imatge5"))) {
@@ -438,10 +546,15 @@ class ModuloController extends Controller
         }
         if($request['imatge6']) {
 
+            /* Transformar JPG i WEBP */
             $ruta_foto_6 = $request['imatge6']->store('backend/modulos', 'public');
-
-            $imatge6 = Image::make( storage_path("app/public/{$ruta_foto_6}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge6->save();
+            $senseExtensio = substr($ruta_foto_6, 0, strrpos($ruta_foto_6, '.'));
+            /* JPG */
+            $imatge6 = Image::make( $request['imatge6'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge6->save( storage_path("app/public/{$ruta_foto_6}"), 80 );
+            /* WEBP */
+            $imatge6WEBP = Image::make( $request['imatge6'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge6WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
 
             // Eliminamos la imagen anterior
             if (File::exists(storage_path("app/public/$modulo->imatge6"))) {
@@ -452,10 +565,15 @@ class ModuloController extends Controller
         }
         if($request['imatge7']) {
 
+            /* Transformar JPG i WEBP */
             $ruta_foto_7 = $request['imatge7']->store('backend/modulos', 'public');
-
-            $imatge7 = Image::make( storage_path("app/public/{$ruta_foto_7}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge7->save();
+            $senseExtensio = substr($ruta_foto_7, 0, strrpos($ruta_foto_7, '.'));
+            /* JPG */
+            $imatge7 = Image::make( $request['imatge7'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge7->save( storage_path("app/public/{$ruta_foto_7}"), 80 );
+            /* WEBP */
+            $imatge7WEBP = Image::make( $request['imatge7'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge7WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
 
             // Eliminamos la imagen anterior
             if (File::exists(storage_path("app/public/$modulo->imatge7"))) {
@@ -466,10 +584,15 @@ class ModuloController extends Controller
         }
         if($request['imatge8']) {
 
+            /* Transformar JPG i WEBP */
             $ruta_foto_8 = $request['imatge8']->store('backend/modulos', 'public');
-
-            $imatge8 = Image::make( storage_path("app/public/{$ruta_foto_8}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge8->save();
+            $senseExtensio = substr($ruta_foto_8, 0, strrpos($ruta_foto_8, '.'));
+            /* JPG */
+            $imatge8 = Image::make( $request['imatge8'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge8->save( storage_path("app/public/{$ruta_foto_8}"), 80 );
+            /* WEBP */
+            $imatge8WEBP = Image::make( $request['imatge8'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge8WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
 
             // Eliminamos la imagen anterior
             if (File::exists(storage_path("app/public/$modulo->imatge8"))) {
@@ -480,10 +603,15 @@ class ModuloController extends Controller
         }
         if($request['imatge9']) {
 
+            /* Transformar JPG i WEBP */
             $ruta_foto_9 = $request['imatge9']->store('backend/modulos', 'public');
-
-            $imatge9 = Image::make( storage_path("app/public/{$ruta_foto_9}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge9->save();
+            $senseExtensio = substr($ruta_foto_9, 0, strrpos($ruta_foto_9, '.'));
+            /* JPG */
+            $imatge9 = Image::make( $request['imatge9'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge9->save( storage_path("app/public/{$ruta_foto_9}"), 80 );
+            /* WEBP */
+            $imatge9WEBP = Image::make( $request['imatge9'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge9WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
 
             // Eliminamos la imagen anterior
             if (File::exists(storage_path("app/public/$modulo->imatge9"))) {
@@ -494,10 +622,15 @@ class ModuloController extends Controller
         }
         if($request['imatge10']) {
 
+            /* Transformar JPG i WEBP */
             $ruta_foto_10 = $request['imatge10']->store('backend/modulos', 'public');
-
-            $imatge10 = Image::make( storage_path("app/public/{$ruta_foto_10}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge10->save();
+            $senseExtensio = substr($ruta_foto_10, 0, strrpos($ruta_foto_10, '.'));
+            /* JPG */
+            $imatge10 = Image::make( $request['imatge10'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge10->save( storage_path("app/public/{$ruta_foto_10}"), 80 );
+            /* WEBP */
+            $imatge10WEBP = Image::make( $request['imatge10'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge10WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
 
             // Eliminamos la imagen anterior
             if (File::exists(storage_path("app/public/$modulo->imatge10"))) {
@@ -508,10 +641,15 @@ class ModuloController extends Controller
         }
         if($request['imatge11']) {
 
+            /* Transformar JPG i WEBP */
             $ruta_foto_11 = $request['imatge11']->store('backend/modulos', 'public');
-
-            $imatge11 = Image::make( storage_path("app/public/{$ruta_foto_11}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge11->save();
+            $senseExtensio = substr($ruta_foto_11, 0, strrpos($ruta_foto_11, '.'));
+            /* JPG */
+            $imatge11 = Image::make( $request['imatge11'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge11->save( storage_path("app/public/{$ruta_foto_11}"), 80 );
+            /* WEBP */
+            $imatge11WEBP = Image::make( $request['imatge11'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge11WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
 
             // Eliminamos la imagen anterior
             if (File::exists(storage_path("app/public/$modulo->imatge11"))) {
@@ -522,10 +660,15 @@ class ModuloController extends Controller
         }
         if($request['imatge12']) {
 
+            /* Transformar JPG i WEBP */
             $ruta_foto_12 = $request['imatge12']->store('backend/modulos', 'public');
-
-            $imatge12 = Image::make( storage_path("app/public/{$ruta_foto_12}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge12->save();
+            $senseExtensio = substr($ruta_foto_12, 0, strrpos($ruta_foto_12, '.'));
+            /* JPG */
+            $imatge12 = Image::make( $request['imatge12'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge12->save( storage_path("app/public/{$ruta_foto_12}"), 80 );
+            /* WEBP */
+            $imatge12WEBP = Image::make( $request['imatge12'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge12WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
 
             // Eliminamos la imagen anterior
             if (File::exists(storage_path("app/public/$modulo->imatge12"))) {
@@ -536,10 +679,15 @@ class ModuloController extends Controller
         }
         if($request['imatge13']) {
 
+            /* Transformar JPG i WEBP */
             $ruta_foto_13 = $request['imatge13']->store('backend/modulos', 'public');
-
-            $imatge13 = Image::make( storage_path("app/public/{$ruta_foto_13}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge13->save();
+            $senseExtensio = substr($ruta_foto_13, 0, strrpos($ruta_foto_13, '.'));
+            /* JPG */
+            $imatge13 = Image::make( $request['imatge13'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge13->save( storage_path("app/public/{$ruta_foto_13}"), 80 );
+            /* WEBP */
+            $imatge13WEBP = Image::make( $request['imatge13'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge13WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
 
             // Eliminamos la imagen anterior
             if (File::exists(storage_path("app/public/$modulo->imatge13"))) {
@@ -550,10 +698,15 @@ class ModuloController extends Controller
         }
         if($request['imatge14']) {
 
+            /* Transformar JPG i WEBP */
             $ruta_foto_14 = $request['imatge14']->store('backend/modulos', 'public');
-
-            $imatge14 = Image::make( storage_path("app/public/{$ruta_foto_14}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge14->save();
+            $senseExtensio = substr($ruta_foto_14, 0, strrpos($ruta_foto_14, '.'));
+            /* JPG */
+            $imatge14 = Image::make( $request['imatge14'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge14->save( storage_path("app/public/{$ruta_foto_14}"), 80 );
+            /* WEBP */
+            $imatge14WEBP = Image::make( $request['imatge14'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge14WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
 
             // Eliminamos la imagen anterior
             if (File::exists(storage_path("app/public/$modulo->imatge14"))) {
@@ -564,10 +717,15 @@ class ModuloController extends Controller
         }
         if($request['imatge15']) {
 
+            /* Transformar JPG i WEBP */
             $ruta_foto_15 = $request['imatge15']->store('backend/modulos', 'public');
-
-            $imatge15 = Image::make( storage_path("app/public/{$ruta_foto_15}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge15->save();
+            $senseExtensio = substr($ruta_foto_15, 0, strrpos($ruta_foto_15, '.'));
+            /* JPG */
+            $imatge15 = Image::make( $request['imatge15'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge15->save( storage_path("app/public/{$ruta_foto_15}"), 80 );
+            /* WEBP */
+            $imatge15WEBP = Image::make( $request['imatge15'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge15WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
 
             // Eliminamos la imagen anterior
             if (File::exists(storage_path("app/public/$modulo->imatge15"))) {
@@ -578,10 +736,15 @@ class ModuloController extends Controller
         }
         if($request['imatge16']) {
 
+            /* Transformar JPG i WEBP */
             $ruta_foto_16 = $request['imatge16']->store('backend/modulos', 'public');
-
-            $imatge16 = Image::make( storage_path("app/public/{$ruta_foto_16}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge16->save();
+            $senseExtensio = substr($ruta_foto_16, 0, strrpos($ruta_foto_16, '.'));
+            /* JPG */
+            $imatge16 = Image::make( $request['imatge16'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge16->save( storage_path("app/public/{$ruta_foto_16}"), 80 );
+            /* WEBP */
+            $imatge16WEBP = Image::make( $request['imatge16'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge16WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
 
             // Eliminamos la imagen anterior
             if (File::exists(storage_path("app/public/$modulo->imatge16"))) {
@@ -592,10 +755,15 @@ class ModuloController extends Controller
         }
         if($request['imatge17']) {
 
+            /* Transformar JPG i WEBP */
             $ruta_foto_17 = $request['imatge17']->store('backend/modulos', 'public');
-
-            $imatge17 = Image::make( storage_path("app/public/{$ruta_foto_17}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge17->save();
+            $senseExtensio = substr($ruta_foto_17, 0, strrpos($ruta_foto_17, '.'));
+            /* JPG */
+            $imatge17 = Image::make( $request['imatge17'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge17->save( storage_path("app/public/{$ruta_foto_17}"), 80 );
+            /* WEBP */
+            $imatge17WEBP = Image::make( $request['imatge17'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge17WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
 
             // Eliminamos la imagen anterior
             if (File::exists(storage_path("app/public/$modulo->imatge17"))) {
@@ -606,10 +774,15 @@ class ModuloController extends Controller
         }
         if($request['imatge18']) {
 
+            /* Transformar JPG i WEBP */
             $ruta_foto_18 = $request['imatge18']->store('backend/modulos', 'public');
-
-            $imatge18 = Image::make( storage_path("app/public/{$ruta_foto_18}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge18->save();
+            $senseExtensio = substr($ruta_foto_18, 0, strrpos($ruta_foto_18, '.'));
+            /* JPG */
+            $imatge18 = Image::make( $request['imatge18'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge18->save( storage_path("app/public/{$ruta_foto_18}"), 80 );
+            /* WEBP */
+            $imatge18WEBP = Image::make( $request['imatge18'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge18WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
 
             // Eliminamos la imagen anterior
             if (File::exists(storage_path("app/public/$modulo->imatge18"))) {
@@ -620,10 +793,15 @@ class ModuloController extends Controller
         }
         if($request['imatge19']) {
 
+            /* Transformar JPG i WEBP */
             $ruta_foto_19 = $request['imatge19']->store('backend/modulos', 'public');
-
-            $imatge19 = Image::make( storage_path("app/public/{$ruta_foto_19}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge19->save();
+            $senseExtensio = substr($ruta_foto_19, 0, strrpos($ruta_foto_19, '.'));
+            /* JPG */
+            $imatge19 = Image::make( $request['imatge19'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge19->save( storage_path("app/public/{$ruta_foto_19}"), 80 );
+            /* WEBP */
+            $imatge19WEBP = Image::make( $request['imatge19'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge19WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
 
             // Eliminamos la imagen anterior
             if (File::exists(storage_path("app/public/$modulo->imatge19"))) {
@@ -634,10 +812,15 @@ class ModuloController extends Controller
         }
         if($request['imatge20']) {
 
+            /* Transformar JPG i WEBP */
             $ruta_foto_20 = $request['imatge20']->store('backend/modulos', 'public');
-
-            $imatge20 = Image::make( storage_path("app/public/{$ruta_foto_20}") )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
-            $imatge20->save();
+            $senseExtensio = substr($ruta_foto_20, 0, strrpos($ruta_foto_20, '.'));
+            /* JPG */
+            $imatge20 = Image::make( $request['imatge20'] )->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge20->save( storage_path("app/public/{$ruta_foto_20}"), 80 );
+            /* WEBP */
+            $imatge20WEBP = Image::make( $request['imatge20'] )->encode('webp', 80)->fit(1200, 550, function($constraint){$constraint->aspectRatio();});
+            $imatge20WEBP->save( storage_path("app/public/{$senseExtensio}.webp") );
 
             // Eliminamos la imagen anterior
             if (File::exists(storage_path("app/public/$modulo->imatge20"))) {
