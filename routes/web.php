@@ -4,7 +4,12 @@ use Illuminate\Support\Facades\Route;
 
 /** FRONTEND **/
 
-/** FRONTEND **/
+/* Inici */
+Route::get('/', 'HomeFrontendController@index')->name('frontend.home.index');
+/* Empresa */
+Route::get('/empresa', 'HomeFrontendController@about')->name('frontend.about.index');
+
+/** END FRONTEND **/
 
 /** BACKEND **/
 Auth::routes([
@@ -30,7 +35,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::put('backend/textes/{texte}', 'TexteController@update')->name('backend.textes.update');
     Route::delete('backend/textes/{texte}', 'TexteController@destroy')->name('backend.textes.destroy');
 });
-/** BACKEND **/
+/** END BACKEND **/
 
 
 
