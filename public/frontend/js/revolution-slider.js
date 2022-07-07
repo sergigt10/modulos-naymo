@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     $('.carousel').carousel({
-        interval: 10000
+        // interval: 10000
     })
 
     var $number = $('.item').length;

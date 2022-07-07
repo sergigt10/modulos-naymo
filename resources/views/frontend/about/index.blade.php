@@ -6,8 +6,8 @@
         <div class="row-fluid no-padd">
             <div class="col-sm-12 no-padd">
                 <div class="container-fluid top-banner no-padd big enable_column light no-marg-bottom vindow-height">
-                    <span class="overlay"></span> <img src="{{ asset('frontend/img/empresa.jpg') }}" class="s-img-switch"
-                        alt="banner image">
+                    <span class="overlay"></span> 
+                    <img src="{{ asset('frontend/img/empresa.jpg') }}" class="s-img-switch" alt="Módulos Naymo">
                     <div class="content">
                         <div class="prague-svg-animation-text"></div>
                         <div class="subtitle">MÓDULOS NAYMO</div>

@@ -7,7 +7,7 @@
             <div class="col-xs-12 padd-only-xs">
                 <div class="container-fluid top-banner no-padd  big fullheight light">
                     <span class="overlay"></span>
-                    <img src="{{ asset('frontend/img/slide.jpg') }}" class="s-img-switch" alt="banner image">
+                    <img src="{{ asset('frontend/img/slide.jpg') }}" class="s-img-switch" alt="Módulos Naymo">
                     <div class="content">
                         <div class="prague-svg-animation-text"></div>
                         <h1 class="title">Fabricantes de Módulos</h1>

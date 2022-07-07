@@ -14,9 +14,6 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <!-- SEO -->
-    
-    <!-- Estils personalitzats -->
-    @yield('styles')
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700">
@@ -30,6 +27,9 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/unit-test.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css?v=3') }}">
+
+    <!-- Estils personalitzats -->
+    @yield('styles')
 
     <link rel="icon" type="image/png" href="{{ asset('frontend/img/favicon.png') }}"/>
 </head>
@@ -65,7 +65,7 @@
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom {{ (request()->is('casas-prefabricadas')) ? 'current-menu-ancestor' : '' }}">
                                     <a href="{{ route('frontend.about.index') }}">EMPRESA</a>
                                 </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom {{ (request()->is('mobil-home-*')) ? 'current-menu-ancestor' : '' }} menu-item-has-children">
                                     <a href="#">MOBILE HOME NUEVO</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page">

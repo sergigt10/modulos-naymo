@@ -3609,6 +3609,7 @@ a:hover, a:focus {
 
 .main-menu li:hover a, .main-menu li:focus a, .main-menu li.current-menu-item a, .main-menu li.current-menu-parent a, .main-menu li.current-menu-ancestor a {
   opacity: 1;
+  color: #e09410 !important;
 }
 
 .main-menu .sub-menu {
@@ -5240,7 +5241,7 @@ a:hover, a:focus {
 }
 
 .heading .content ul li:before {
-  content: '';
+  /* content: ''; */
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -17205,7 +17206,7 @@ span.wpcf7-not-valid-tip {
 }
 
 .glyphicon-chevron-right:before {
-  content: '';
+  content: '' !important;
   width: 22px;
   height: 22px;
   -webkit-transform: rotate(225deg);
@@ -17214,12 +17215,12 @@ span.wpcf7-not-valid-tip {
   border-bottom: 1px solid #fff;
   border-left: 1px solid #fff;
   line-height: 32px;
-  border-width: 0px 0px 1px 1px;
+  border-width: 0px 0px 5px 5px;
   position: absolute;
 }
 
 .glyphicon-chevron-left:before {
-  content: '';
+  content: '' !important;
   width: 22px;
   height: 22px;
   -webkit-transform: rotate(45deg);
@@ -17230,8 +17231,12 @@ span.wpcf7-not-valid-tip {
   border-bottom: 1px solid #fff;
   border-left: 1px solid #fff;
   line-height: 32px;
-  border-width: 0px 0px 1px 1px;
+  border-width: 0px 0px 5px 5px;
   position: absolute;
+}
+
+.carousel-control {
+  opacity: .8 !important;
 }
 
 
@@ -17489,7 +17494,7 @@ span.wpcf7-not-valid-tip {
 }
 
 .carousel-inner, .item {
-  height: 100vh !important ; 
+  /* height: 100vh !important ;  */
 }
 
 .page-ruler-guide-bottom-left {
