@@ -11,7 +11,7 @@
                     <div class="content">
                         <div class="prague-svg-animation-text"></div>
                         <div class="subtitle">MÓDULOS NAYMO</div>
-                        <h1 class="title">Empresa de casas prefabricadas</h1>
+                        <h1 class="title">Mobil Home gama media</h1>
                         <div class="banner-columns"></div>
                     </div>
                     <div class="top-banner-cursor"></div>
@@ -27,7 +27,38 @@
                     <div class="trans_figures enable_anima">
                     </div>
                     <div class="team-outer">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/3mmBUClutSA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="{{ asset('frontend/img/empresa.jpg') }}" alt="">
+        </div>
+        <div class="item">
+            <img src="{{ asset('frontend/img/empresa.jpg') }}" alt="">
+        </div>
+        <div class="item">
+            <img src="{{ asset('frontend/img/empresa.jpg') }}" alt="">
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
                     </div>
                 </div>
             </div>
@@ -45,4 +76,8 @@
         </div>
     </div>
     <!--/MAIN BODY-->
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
 @endsection

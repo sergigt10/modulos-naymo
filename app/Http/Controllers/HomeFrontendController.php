@@ -13,6 +13,6 @@ class HomeFrontendController extends Controller
 
     public function about()
     {
-        return view('frontend.home.index');
+        return view('frontend.about.index');
     }
 }

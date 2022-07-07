@@ -7,7 +7,9 @@ use Illuminate\Support\Facades\Route;
 /* Inici */
 Route::get('/', 'HomeFrontendController@index')->name('frontend.home.index');
 /* Empresa */
-Route::get('/empresa', 'HomeFrontendController@about')->name('frontend.about.index');
+Route::get('/casas-prefabricadas', 'HomeFrontendController@about')->name('frontend.about.index');
+/* Mobil Home Gama Media */
+Route::get('/mobil-home-gama-media', 'MobileHomeController@media')->name('frontend.mobile-home.media.index');
 
 /** END FRONTEND **/
 

@@ -47,8 +47,9 @@
     <header class="prague-header simple sticky-menu sticky-mobile-menu light ">
         <!--LOGO-->
         <div class="prague-logo">
-            <a href="index.html">
-                <img src="{{ asset('frontend/img/logo.png') }}" class="image_logo" alt="Módulos Naymo" /></a>
+            <a href="{{ route('frontend.home.index') }}">
+                <img src="{{ asset('frontend/img/logo.png') }}" class="image_logo" alt="Módulos Naymo" />
+            </a>
         </div>
         <!--/LOGO-->
         <div class="prague-header-wrapper">
@@ -58,22 +59,35 @@
                     <div class="prague-navigation-inner">
                         <nav>
                             <ul class="main-menu">
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children ">
-                                    <a href="index.html">INICIO</a>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom {{ (request()->is('/')) ? 'current-menu-ancestor' : '' }}">
+                                    <a href="{{ route('frontend.home.index') }}">INICIO</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom {{ (request()->is('casas-prefabricadas')) ? 'current-menu-ancestor' : '' }}">
+                                    <a href="{{ route('frontend.about.index') }}">EMPRESA</a>
                                 </li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-                                    <a href="#">EMPRESA</a>
-                                </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">MOBILE HOME NUEVO</a>
+                                    <a href="#">MOBILE HOME NUEVO</a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="work-list.html">Gamma media</a></li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="work-grid.html">Gamma alta</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a href="{{ route('frontend.mobile-home.media.index') }}">Gamma media</a>
+                                        </li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a href="#">Gamma alta</a>
+                                        </li>
                                     </ul>
                                 </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">MOBIL HOME OCACIÓN</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="shop.html">ACCESORIOS</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="blog.html">TRANSPORTE</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="blog.html">CONTACTO</a></li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                                    <a href="#">MOBIL HOME OCASIÓN</a>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="#">ACCESORIOS</a>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="#">TRANSPORTE</a>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="#">CONTACTO</a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -109,11 +123,11 @@
                         </p>
                     </div>
                 </div>
-                <div class="prague-footer-info-block col-md-3 col-sm-12">
+                <div class="prague-footer-info-block col-md-3 col-sm-12 margin-xs-50t">
                     <h6 class="footer-info-block-title">Últimas noticias</h6>
                      <!-- start feedwind code --> <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Cargando..." data-fw-param="155656/"></script> <!-- end feedwind code --> 
                 </div>
-                <div class="prague-footer-info-block col-md-3 col-sm-12">
+                <div class="prague-footer-info-block col-md-3 col-sm-12 margin-xs-50t">
                     <h6 class="footer-info-block-title">Financiación Cetelem</h6>
                     <script>
                         function calcpayments()
@@ -166,7 +180,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style="color:#FFF">Interéses:*</td>
+                                <td style="color:#FFF">Intereses:*</td>
                                 <td> 
                                     <input style="background-color:#25272E;border: 1pt solid #444; height: 23px; width: 85px;color: white;" type="irate" name="rate" required value="4,90%" disabled/>
                                 </td>
@@ -189,7 +203,7 @@
                         <p style="color:#FFF; font-size:12px">Vencimiento el 5 de cada mes. <br>Seguro plus: Cubre  fallecimiento, invalidez absoluta o temporal y desempleo.</p>
                     </form>
                 </div>
-                <div class="prague-footer-info-block col-md-3 col-sm-12">
+                <div class="prague-footer-info-block col-md-3 col-sm-12 margin-xs-50t">
                     <h6 class="footer-info-block-title">Contacto</h6>
                     <div class="footer-info-block-content">
                         <p><a href="tel:+34972115941">+34 972 115 941</a></p>
@@ -228,7 +242,7 @@
     <script src="{{ asset('frontend/js/foxlazy.min.js') }}"></script>
     <script src="{{ asset('frontend/js/all.js') }}"></script>
     <script src="{{ asset('frontend/js/jquery.magnific-popup.min.js') }}"></script>
-
+    
     @yield('scripts')
 
 </body>
