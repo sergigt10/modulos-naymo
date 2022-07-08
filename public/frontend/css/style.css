@@ -3609,7 +3609,6 @@ a:hover, a:focus {
 
 .main-menu li:hover a, .main-menu li:focus a, .main-menu li.current-menu-item a, .main-menu li.current-menu-parent a, .main-menu li.current-menu-ancestor a {
   opacity: 1;
-  color: #e09410 !important;
 }
 
 .main-menu .sub-menu {
@@ -5828,6 +5827,10 @@ a:hover, a:focus {
   height: 270px;
   max-width: 100%;
   border-radius: 50%;
+}
+
+.team-wrapper.circle .team-outer.modulos {
+  width: 100% !important;
 }
 
 .team-wrapper .trans_figures {

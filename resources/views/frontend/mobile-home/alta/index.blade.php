@@ -7,11 +7,11 @@
             <div class="col-sm-12 no-padd">
                 <div class="container-fluid top-banner no-padd big enable_column light no-marg-bottom vindow-height">
                     <span class="overlay"></span> 
-                    <img src="{{ asset('frontend/img/mobil-home-gama-media.jpg') }}" class="s-img-switch" alt="Módulos Naymo">
+                    <img src="{{ asset('frontend/img/mobil-home-gama-alta.jpg') }}" class="s-img-switch" alt="Módulos Naymo">
                     <div class="content">
                         <div class="prague-svg-animation-text"></div>
                         <div class="subtitle">MÓDULOS NAYMO</div>
-                        <h1 class="title">Mobil Home Gama Media</h1>
+                        <h1 class="title">Mobil Home Gama Alta</h1>
                         <div class="banner-columns"></div>
                     </div>
                     <div class="top-banner-cursor"></div>
@@ -31,102 +31,102 @@
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner">
                                 <div class="item active">
-                                    <img src='{{ asset("/storage/$gamaMedia->imatge1") }}' alt="Módulos Naymo">
+                                    <img src='{{ asset("/storage/$gamaAlta->imatge1") }}' alt="Módulos Naymo">
                                     <!-- <img src='{{ asset("frontend/img/empresa.jpg") }}' alt="Módulos Naymo"> -->
                                 </div>
-                                @if( $gamaMedia->imatge2 ) 
+                                @if( $gamaAlta->imatge2 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaMedia->imatge2") }}' alt="Módulos Naymo">
+                                        <img src='{{ asset("/storage/$gamaAlta->imatge2") }}' alt="Módulos Naymo">
                                     </div>
                                 @endif
-                                @if( $gamaMedia->imatge3 ) 
+                                @if( $gamaAlta->imatge3 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaMedia->imatge3") }}' alt="Módulos Naymo">
+                                        <img src='{{ asset("/storage/$gamaAlta->imatge3") }}' alt="Módulos Naymo">
                                     </div>
                                 @endif
-                                @if( $gamaMedia->imatge4 ) 
+                                @if( $gamaAlta->imatge4 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaMedia->imatge4") }}' alt="Módulos Naymo">
+                                        <img src='{{ asset("/storage/$gamaAlta->imatge4") }}' alt="Módulos Naymo">
                                     </div>
                                 @endif
-                                @if( $gamaMedia->imatge5 ) 
+                                @if( $gamaAlta->imatge5 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaMedia->imatge5") }}' alt="Módulos Naymo">
+                                        <img src='{{ asset("/storage/$gamaAlta->imatge5") }}' alt="Módulos Naymo">
                                     </div>
                                 @endif
-                                @if( $gamaMedia->imatge6 ) 
+                                @if( $gamaAlta->imatge6 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaMedia->imatge6") }}' alt="Módulos Naymo">
+                                        <img src='{{ asset("/storage/$gamaAlta->imatge6") }}' alt="Módulos Naymo">
                                     </div>
                                 @endif
-                                @if( $gamaMedia->imatge7 ) 
+                                @if( $gamaAlta->imatge7 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaMedia->imatge7") }}' alt="Módulos Naymo">
+                                        <img src='{{ asset("/storage/$gamaAlta->imatge7") }}' alt="Módulos Naymo">
                                     </div>
                                 @endif
-                                @if( $gamaMedia->imatge8 ) 
+                                @if( $gamaAlta->imatge8 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaMedia->imatge8") }}' alt="Módulos Naymo">
+                                        <img src='{{ asset("/storage/$gamaAlta->imatge8") }}' alt="Módulos Naymo">
                                     </div>
                                 @endif
-                                @if( $gamaMedia->imatge9 ) 
+                                @if( $gamaAlta->imatge9 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaMedia->imatge9") }}' alt="Módulos Naymo">
+                                        <img src='{{ asset("/storage/$gamaAlta->imatge9") }}' alt="Módulos Naymo">
                                     </div>
                                 @endif
-                                @if( $gamaMedia->imatge10 ) 
+                                @if( $gamaAlta->imatge10 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaMedia->imatge10") }}' alt="Módulos Naymo">
+                                        <img src='{{ asset("/storage/$gamaAlta->imatge10") }}' alt="Módulos Naymo">
                                     </div>
                                 @endif
-                                @if( $gamaMedia->imatge11 ) 
+                                @if( $gamaAlta->imatge11 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaMedia->imatge11") }}' alt="Módulos Naymo">
+                                        <img src='{{ asset("/storage/$gamaAlta->imatge11") }}' alt="Módulos Naymo">
                                     </div>
                                 @endif
-                                @if( $gamaMedia->imatge12 ) 
+                                @if( $gamaAlta->imatge12 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaMedia->imatge12") }}' alt="Módulos Naymo">
+                                        <img src='{{ asset("/storage/$gamaAlta->imatge12") }}' alt="Módulos Naymo">
                                     </div>
                                 @endif
-                                @if( $gamaMedia->imatge13 ) 
+                                @if( $gamaAlta->imatge13 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaMedia->imatge13") }}' alt="Módulos Naymo">
+                                        <img src='{{ asset("/storage/$gamaAlta->imatge13") }}' alt="Módulos Naymo">
                                     </div>
                                 @endif
-                                @if( $gamaMedia->imatge14 ) 
+                                @if( $gamaAlta->imatge14 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaMedia->imatge14") }}' alt="Módulos Naymo">
+                                        <img src='{{ asset("/storage/$gamaAlta->imatge14") }}' alt="Módulos Naymo">
                                     </div>
                                 @endif
-                                @if( $gamaMedia->imatge15 ) 
+                                @if( $gamaAlta->imatge15 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaMedia->imatge15") }}' alt="Módulos Naymo">
+                                        <img src='{{ asset("/storage/$gamaAlta->imatge15") }}' alt="Módulos Naymo">
                                     </div>
                                 @endif
-                                @if( $gamaMedia->imatge16 ) 
+                                @if( $gamaAlta->imatge16 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaMedia->imatge16") }}' alt="Módulos Naymo">
+                                        <img src='{{ asset("/storage/$gamaAlta->imatge16") }}' alt="Módulos Naymo">
                                     </div>
                                 @endif
-                                @if( $gamaMedia->imatge17 ) 
+                                @if( $gamaAlta->imatge17 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaMedia->imatge17") }}' alt="Módulos Naymo">
+                                        <img src='{{ asset("/storage/$gamaAlta->imatge17") }}' alt="Módulos Naymo">
                                     </div>
                                 @endif
-                                @if( $gamaMedia->imatge18 ) 
+                                @if( $gamaAlta->imatge18 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaMedia->imatge18") }}' alt="Módulos Naymo">
+                                        <img src='{{ asset("/storage/$gamaAlta->imatge18") }}' alt="Módulos Naymo">
                                     </div>
                                 @endif
-                                @if( $gamaMedia->imatge19 ) 
+                                @if( $gamaAlta->imatge19 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaMedia->imatge19") }}' alt="Módulos Naymo">
+                                        <img src='{{ asset("/storage/$gamaAlta->imatge19") }}' alt="Módulos Naymo">
                                     </div>
                                 @endif
-                                @if( $gamaMedia->imatge20 ) 
+                                @if( $gamaAlta->imatge20 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaMedia->imatge20") }}' alt="Módulos Naymo">
+                                        <img src='{{ asset("/storage/$gamaAlta->imatge20") }}' alt="Módulos Naymo">
                                     </div>
                                 @endif
                             </div>
@@ -150,38 +150,38 @@
                         <ul>
                             <li>
                                 <h5>Marca:</h5>
-                                {{ $gamaMedia->marca }}
+                                {{ $gamaAlta->marca }}
                             </li>
                             <li>
                                 <h5>Modelo:</h5>
-                                {{ $gamaMedia->modelo }}
+                                {{ $gamaAlta->modelo }}
                             </li>
                             <li>
                                 <h5>Medidas:</h5>
-                                {{ $gamaMedia->medida }}
+                                {{ $gamaAlta->medida }}
                             </li>
                             <li>
                                 <h5>Núm. habitaciones:</h5>
-                                {{ $gamaMedia->num_hab }}
+                                {{ $gamaAlta->num_hab }}
                             </li>
                             <li>
                                 <h5>Núm. plazas:</h5>
-                                {{ $gamaMedia->num_plazas }}
+                                {{ $gamaAlta->num_plazas }}
                             </li>
                             <li>
                                 <h5>Año:</h5>
-                                {{ $gamaMedia->ano }}
+                                {{ $gamaAlta->ano }}
                             </li>
                             <li>
                                 <h5>Precio:</h5>
-                                {{ $gamaMedia->precio }}
+                                {{ $gamaAlta->precio }}
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="col-sm-12">
-                {!! $gamaMedia->descripcio !!}
+                {!! $gamaAlta->descripcio !!}
             </div>
         </div>
     </div>

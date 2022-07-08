@@ -72,18 +72,18 @@
                                             <a href="{{ route('frontend.mobile-home.media.index') }}">Gamma media</a>
                                         </li>
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="#">Gamma alta</a>
+                                            <a href="{{ route('frontend.mobile-home.alta.index') }}">Gamma alta</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom">
                                     <a href="#">MOBIL HOME OCASIÓN</a>
                                 </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                    <a href="#">ACCESORIOS</a>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page {{ (request()->is('accesorios')) ? 'current-menu-ancestor' : '' }}">
+                                    <a href="{{ route('frontend.mobile-home.accesorios.index') }}">ACCESORIOS</a>
                                 </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                    <a href="#">TRANSPORTE</a>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page {{ (request()->is('transporte')) ? 'current-menu-ancestor' : '' }}">
+                                    <a href="{{ route('frontend.mobile-home.transporte.index') }}">TRANSPORTE</a>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
                                     <a href="#">CONTACTO</a>

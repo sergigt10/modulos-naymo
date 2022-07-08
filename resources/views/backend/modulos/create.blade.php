@@ -53,12 +53,14 @@
                                     <label for="exampleInputEmail3">Categoría:</label>
                                     <select id="categorias_id" name="categorias_id" class="form-control js-example-basic-single w-100">
                                         @foreach ($categorias as $categoria)
-                                            <option 
-                                                value="{{ $categoria->id }}"
-                                                {{ old('categorias_id') == $categoria->id ? 'selected' : '' }}
-                                            >
-                                                {{ $categoria->titol }}
-                                            </option>
+                                            @if ( $categoria->id == 1)
+                                                <option 
+                                                    value="{{ $categoria->id }}"
+                                                    {{ old('categorias_id') == $categoria->id ? 'selected' : '' }}
+                                                >
+                                                    {{ $categoria->titol }}
+                                                </option>
+                                            @endif
                                         @endforeach
                                     </select>
                                 </div>

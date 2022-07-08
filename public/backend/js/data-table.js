@@ -6,8 +6,8 @@
           [5, 10, 15, -1],
           [5, 10, 15, "Tots"]
         ],
-        "order": [[ 0, "asc" ]],
-        "iDisplayLength": 10,
+        "order": [[ 1, "asc" ]],
+        "iDisplayLength": 15,
         "language": {
           "processing": "Procesando...",
           "lengthMenu": "Mostrando _MENU_ registros",
