@@ -102,28 +102,30 @@
 
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
-                                        <label for="exampleInputEmail3">Precio:</label>
+                                        <label for="exampleInputEmail3">Precio (añadir €):</label>
                                         <input name="precio" type="text" class="form-control @error('precio') is-invalid @enderror" id="exampleInputEmail3" placeholder="Precio" value="{{ $modulo->precio }}">
                                     </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="exampleInputEmail3">Orden (ej: 1):</label>
-                                        <input name="ordre" type="text" class="form-control" id="exampleInputEmail3" placeholder="Orden" value="{{ $modulo->ordre }}">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="exampleInputEmail3">Portada:</label>
-                                        <select id="portada" name="portada" class="form-control w-100">
-                                            <option value="Si"
-                                                {{ $modulo->portada == "Si" ? 'selected' : '' }}
-                                            >
-                                                Si
-                                            </option>
-                                            <option value="No"
-                                                {{ $modulo->portada == "No" ? 'selected' : '' }}
-                                            >
-                                                No
-                                            </option>
-                                        </select>
-                                    </div>
+                                    @if ( $modulo->categorias_id == 1)
+                                        <div class="form-group col-md-4">
+                                            <label for="exampleInputEmail3">Orden (ej: 1):</label>
+                                            <input name="ordre" type="text" class="form-control" id="exampleInputEmail3" placeholder="Orden" value="{{ $modulo->ordre }}">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="exampleInputEmail3">Portada:</label>
+                                            <select id="portada" name="portada" class="form-control w-100">
+                                                <option value="Si"
+                                                    {{ $modulo->portada == "Si" ? 'selected' : '' }}
+                                                >
+                                                    Si
+                                                </option>
+                                                <option value="No"
+                                                    {{ $modulo->portada == "No" ? 'selected' : '' }}
+                                                >
+                                                    No
+                                                </option>
+                                            </select>
+                                        </div>
+                                    @endif
                                 </div>
                             @endif
 

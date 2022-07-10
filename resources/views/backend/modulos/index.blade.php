@@ -42,12 +42,12 @@
                                                 </td>
                                                 <td>
                                                     <a href="{{ route('backend.modulos.edit', ['modulo' => $modulo->id]) }}" style="color: black;">
-                                                        {{ $modulo->ordre }}
+                                                        {{ ( $modulo->ordre !== 100 ) ? $modulo->ordre : '---' }}
                                                     </a>
                                                 </td>
                                                 <td>
                                                     <a href="{{ route('backend.modulos.edit', ['modulo' => $modulo->id]) }}" style="color: black;">
-                                                        {{ $modulo->portada }}
+                                                        {{ ( $modulo->portada !== 'Nos' ) ? $modulo->portada : '---' }}
                                                     </a>
                                                 </td>
                                                 <td>

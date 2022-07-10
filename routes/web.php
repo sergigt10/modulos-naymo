@@ -9,13 +9,16 @@ Route::get('/', 'HomeFrontendController@index')->name('frontend.home.index');
 /* Empresa */
 Route::get('/casas-prefabricadas', 'HomeFrontendController@about')->name('frontend.about.index');
 /* Mobil Home Gama Media */
-Route::get('/mobil-home-gama-media', 'MobileHomeController@media')->name('frontend.mobile-home.media.index');
+Route::get('/mobile-home-gama-media', 'MobileHomeController@media')->name('frontend.mobile-home.media.index');
 /* Mobil Home Gama Alta */
-Route::get('/mobil-home-gama-alta', 'MobileHomeController@alta')->name('frontend.mobile-home.alta.index');
+Route::get('/mobile-home-gama-alta', 'MobileHomeController@alta')->name('frontend.mobile-home.alta.index');
 /* Transporte */
 Route::get('/transporte', 'MobileHomeController@transporte')->name('frontend.mobile-home.transporte.index');
-/* Transporte */
+/* Accesorios */
 Route::get('/accesorios', 'MobileHomeController@accesorios')->name('frontend.mobile-home.accesorios.index');
+/* Ocasión */
+Route::get('/mobil-home-ocasion', 'MobileHomeController@ocasion')->name('frontend.mobile-home.ocasion.index');
+Route::get('/mobil-home-ocasion/{ocasion}', 'MobileHomeController@ocasionShow')->name('frontend.mobile-home.ocasion.show');
 
 /** END FRONTEND **/
 

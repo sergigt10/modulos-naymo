@@ -48,7 +48,7 @@ class TexteController extends Controller
         $texte->save();
 
         // Redireccionar
-        return redirect()->action('TexteController@index')->with('estat', 'Guardado correctamente.');
+        return redirect()->action('TexteController@index')->with('estat', 'Guardado correctamente');
     }
 
     /**
@@ -89,11 +89,10 @@ class TexteController extends Controller
 
         // Asignar los valores
         $texte->descripcio = $data['descripcio'];
-
         $texte->save();
 
         // Redireccionar
-        return redirect()->action('TexteController@index')->with('estat', 'Modificada correctamente.');
+        return redirect()->action('TexteController@index')->with('estat', 'Modificado correctamente');
     }
 
     /**

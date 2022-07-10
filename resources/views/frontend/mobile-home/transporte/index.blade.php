@@ -20,23 +20,52 @@
         </div>
     </div>
 
-    <div class="container no-padd margin-lg-70b margin-xs-50b">
+    <div class="container no-padd margin-lg-135t margin-xs-100t margin-lg-135b margin-sm-100b">
         <div class="row-fluid no-padd">
-            <div class="col-sm-12 margin-lg-65t margin-sm-0t">
-                <div class="team-wrapper circle no-figure">
-                    <div class="trans_figures enable_anima">
-                    </div>
-                    <div class="team-outer modulos" style="text-align:center; height: 100%">
-                        <img src='{{ asset("/storage/$transporte->imatge1") }}' alt="Módulos Naymo">
+            <div class="vc_column_container col-sm-6 no-padd">
+                <div class="padd-right-only-lg">
+                    <div class="heading left dark no-padd-top">
+                        <div class="content align-left">
+                            {!! $transporte->descripcio !!}
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12">
-                {!! $transporte->descripcio !!}
+            <div class="vc_column_container col-sm-6 margin-xs-50t no-padd">
+                <div class="no-padd-inner">
+                    <div class="wpb_single_image wpb_content_element margin-bottom">
+                        <figure>
+                            <div class="vc_single_image-wrapper vc_box_border_grey">
+                                <img src='{{ asset("/storage/$transporte->imatge1") }}' alt="Módulos Naymo">
+                            </div>
+                        </figure>
+                    </div>
+
+                    @if( $transporte->imatge2 ) 
+                        <div class="wpb_single_image wpb_content_element margin-bottom">
+                            <figure>
+                                <div class="vc_single_image-wrapper vc_box_border_grey">
+                                    <img src='{{ asset("/storage/$transporte->imatge2") }}' alt="Módulos Naymo">
+                                </div>
+                            </figure>
+                        </div>
+                    @endif
+                    @if( $transporte->imatge3 ) 
+                        <div class="wpb_single_image wpb_content_element margin-bottom">
+                            <figure>
+                                <div class="vc_single_image-wrapper vc_box_border_grey">
+                                    <img src='{{ asset("/storage/$transporte->imatge3") }}' alt="Módulos Naymo">
+                                </div>
+                            </figure>
+                        </div>
+                    @endif
+                </div>
             </div>
         </div>
     </div>
     <!--/MAIN BODY-->
+
+    
 @endsection
 
 @section('scripts')

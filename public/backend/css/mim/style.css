@@ -11705,11 +11705,11 @@ h6,
   font-weight: bold;
 }
 
-p {
+/* p {
   font-size: 0.875rem;
   margin-bottom: .5rem;
   line-height: 1.5rem;
-}
+} */
 
 label {
   line-height: 1.3rem;

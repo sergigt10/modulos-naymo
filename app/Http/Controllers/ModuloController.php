@@ -304,7 +304,7 @@ class ModuloController extends Controller
         $modulo->save();
 
         // Redireccionar
-        return redirect()->action('ModuloController@index')->with('estat', 'Guardado correctamente.');
+        return redirect()->action('ModuloController@index')->with('estat', 'Guardado correctamente');
     }
 
     /**

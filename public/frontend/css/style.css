@@ -139,7 +139,7 @@ p {
   font-size: 16px;
   line-height: 32px;
   font-weight: 400;
-  color: #7e7d7d;
+  color: #000;
 }
 
 ul, ol, li {
@@ -3594,7 +3594,8 @@ a:hover, a:focus {
 
 .main-menu li a {
   display: inline-block;
-  font-size: 12px;
+  font-size: 13px;
+  text-shadow: 1px 1px #000;
   line-height: 18px;
   font-weight: 900;
   letter-spacing: 2px;
@@ -5336,7 +5337,7 @@ a:hover, a:focus {
 }
 
 .heading.dark .content {
-  color: #7e7d7d;
+  color: #000;
 }
 
 .heading.dark .content p {
@@ -7512,7 +7513,7 @@ a:hover, a:focus {
   display: block;
   overflow: hidden;
   cursor: pointer;
-  height: 240px;
+  /* height: 329px; */
 }
 
 .project-grid-wrapper .project-grid-item-img-link:hover .project-grid-item-img {
@@ -7527,7 +7528,8 @@ a:hover, a:focus {
 
 .project-grid-wrapper .project-grid-item-img {
   width: 100%;
-  height: calc(100% + 40px);
+  height: 329px;
+  /* calc(100% + 40px); */
   background-color: #f2f2f2;
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);

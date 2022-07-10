@@ -65,7 +65,7 @@
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom {{ (request()->is('casas-prefabricadas')) ? 'current-menu-ancestor' : '' }}">
                                     <a href="{{ route('frontend.about.index') }}">EMPRESA</a>
                                 </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom {{ (request()->is('mobil-home-*')) ? 'current-menu-ancestor' : '' }} menu-item-has-children">
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom {{ (request()->is('mobile-home-*')) ? 'current-menu-ancestor' : '' }} menu-item-has-children">
                                     <a href="#">MOBILE HOME NUEVO</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page">
@@ -76,8 +76,8 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                                    <a href="#">MOBIL HOME OCASIÓN</a>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom {{ (request()->is('mobil-home-*')) ? 'current-menu-ancestor' : '' }}">
+                                    <a href="{{ route('frontend.mobile-home.ocasion.index') }}">MOBIL HOME OCASIÓN</a>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page {{ (request()->is('accesorios')) ? 'current-menu-ancestor' : '' }}">
                                     <a href="{{ route('frontend.mobile-home.accesorios.index') }}">ACCESORIOS</a>

@@ -97,7 +97,7 @@
 
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
-                                        <label for="exampleInputEmail3">Precio:</label>
+                                        <label for="exampleInputEmail3">Precio (añadir €):</label>
                                         <input name="precio" type="text" class="form-control @error('precio') is-invalid @enderror" id="exampleInputEmail3" placeholder="Precio" value="{{ old('precio') }}">
                                     </div>
                                     <div class="form-group col-md-4">

@@ -4,7 +4,7 @@
   /*Summernote editor*/
   if ($("#summernoteExample").length) {
     $('#summernoteExample').summernote({
-      height: 350,
+      height: 500,
       tabsize: 2
     });
   }

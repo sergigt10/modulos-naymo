@@ -4,11 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Texte;
+use App\Models\Modulo;
+
 class HomeFrontendController extends Controller
 {
     public function index()
     {
-        return view('frontend.home.index');
+        $textes = Texte::first();
+        $ocasiones = Modulo::where('categorias_id', '=', '1')->orderBy('ordre')->get();
+        return view('frontend.home.index', compact('textes', 'ocasiones'));
     }
 
     public function about()
