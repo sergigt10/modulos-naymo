@@ -7,10 +7,10 @@
             <div class="col-xs-12 padd-only-xs">
                 <div class="container-fluid top-banner no-padd  big fullheight light">
                     <span class="overlay"></span>
-                    <img src="{{ asset('frontend/img/slide.jpg') }}" class="s-img-switch" alt="Módulos Naymo">
+                    <img src="{{ asset('frontend/img/slide.webp') }}" class="s-img-switch" alt="Módulos Naymo">
                     <div class="content">
                         <div class="prague-svg-animation-text"></div>
-                        <h1 class="title">Fabricantes de Módulos</h1>
+                        <h1 class="title">Fabricantes de casas modulares</h1>
                         <a href="{{ route('frontend.mobile-home.ocasion.index') }}" class="a-btn creative">
                             <span class="a-btn-line"></span>VER MÓDULOS
                         </a>
@@ -25,9 +25,9 @@
         <div class="row-fluid  margin-lg-55t margin-sm-20t">
             <div class="  col-sm-12 no-padd margin-xs-40t">
                 <div class="padd-only-xs">
-                    <div class="heading  left dark ">
+                    <div class="heading left dark">
                         <div class="subtitle">Exposición de mobile home de segunda mano</div>
-                        <h2 class="title">MOBILE HOME <span style="color: #FF9D36; font-size: 40px; line-height: 44px; font-weight: 700;">OCASIÓN</span></h2>
+                        <h2 class="title">MOBILE HOME <span style="color: #FF9D36;">OCASIÓN</span></h2>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
     </div>
     <!--MAIN BODY-->
     <div class="container-fluid no-padd">
-        <div class="row-fluid margin-lg-50t margin-sm-100t">
+        <div class="row-fluid margin-lg-50t margin-sm-30t">
             <div class="col-sm-12">
                 <div class="vc_column-inner ">
                     <div>
@@ -46,7 +46,13 @@
                                         <div class="project-grid-wrapper">
                                             <a class="project-grid-item-img-link" href="{{ route('frontend.mobile-home.ocasion.show', ['ocasion' => $ocasion->id]) }}" target="_self">
                                                 <div class="project-grid-item-img">
-                                                    <img src='{{ asset("/storage/$ocasion->imatge1") }}' class="s-img-switch wp-post-image" alt="Módulos Naymo" />
+                                                    <picture>
+                                                        @php 
+                                                            $senseExtencio = substr($ocasion->imatge1, 0, strrpos($ocasion->imatge1, '.'));
+                                                        @endphp
+                                                        <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                                        <img src='{{ asset("/storage/$ocasion->imatge1") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                                    </picture>
                                                 </div>
                                             </a>
                                             <div class="project-grid-item-content">
@@ -67,24 +73,22 @@
 
     <div class="container">
         <div class="row-fluid">
-            <br><br>
-            <div class="column col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-sm-20t padd-only-xs">
+            <div class="column col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-only-xs">
                 <div class="padd-only">
                     <div class="heading left dark">
                         {!! $textes->descripcio !!}
                     </div>
                 </div>
-                <br><br>
             </div>
         </div>
     </div>
 
     <div class="container no-padd">
-        <div class="row-fluid margin-md-0t margin-sm-20t">
+        <div class="row-fluid margin-md-0t">
             <div class="col-sm-12 col-lg-offset-0 col-lg-6 col-md-offset-0 col-md-6 col-sm-offset-0 col-xs-12 padd-only-xs">
                 <div class="heading left dark">
                     <div class="subtitle ">CONTACTO</div>
-                    <h2 class="title"><span style="color: #FF9D36; font-size: 40px; line-height: 44px; font-weight: 700;">Contáctenos</span> ahora y pídenos un presupuesto</h2>
+                    <h2 class="title"><span style="color: #FF9D36;">Contáctenos</span> ahora y pídenos un presupuesto</h2>
                     <div class="content">
                         <p>Si necesitas información sobre nuestros Módulos o tienes alguna duda, puedes llamarnos o dejarnos un mensaje. Le contestaremos a la mayor brevedad.
                         </p>
@@ -126,7 +130,7 @@
                 </div>
             </div>
             <div class="col-sm-12 col-lg-offset-0 col-lg-6 col-md-offset-0 col-md-6 col-sm-offset-0 col-xs-12 padd-only-xs">
-                <br><br>
+                <br>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11816.394110071746!2d2.1674146!3d42.233708!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcd0903893237a0e9!2sM%C3%B2duls%20Naymo!5e0!3m2!1ses!2ses!4v1655896198640!5m2!1ses!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
@@ -139,7 +143,7 @@
                 <div class="padd-only-xs">
                         <div class="heading  left dark">
                             <div class="subtitle ">Instagram</div>
-                            <h2 class="title">SIGUENOS! <span style="color: #FF9D36; font-size: 40px; line-height: 44px; font-weight: 700;">MÓDULOS NAYMO</span></h2>
+                            <h2 class="title">SIGUENOS! <span style="color: #FF9D36;">MÓDULOS NAYMO</span></h2>
                         </div>
                 </div>
             </div>

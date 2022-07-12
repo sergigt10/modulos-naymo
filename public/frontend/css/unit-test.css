@@ -200,7 +200,7 @@ sup {
 }
 
 img {
-	height: auto;
+	height: 100%;
 	max-width: 100%;
 	vertical-align: middle;
 }
@@ -431,7 +431,7 @@ figure {
 }
 
 embed, iframe, object, video {
-	margin-bottom: 25px;
+	/* margin-bottom: 25px; */
 	max-width: 100%;
 	vertical-align: middle;
 }

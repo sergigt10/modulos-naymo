@@ -7,7 +7,7 @@
             <div class="col-sm-12 no-padd">
                 <div class="container-fluid top-banner no-padd big enable_column light no-marg-bottom vindow-height">
                     <span class="overlay"></span> 
-                    <img src="{{ asset('frontend/img/mobil-home-gama-alta.jpg') }}" class="s-img-switch" alt="Módulos Naymo">
+                    <img src="{{ asset('frontend/img/mobil-home-ocasion.webp') }}" class="s-img-switch" alt="Módulos Naymo">
                     <div class="content">
                         <div class="prague-svg-animation-text"></div>
                         <div class="subtitle">MÓDULOS NAYMO</div>
@@ -20,7 +20,7 @@
         </div>
     </div>
 
-    <div class="container-fluid no-padd margin-lg-145t margin-lg-145b margin-sm-100t margin-sm-70b">
+    <div class="container-fluid no-padd margin-lg-100t margin-lg-145b margin-sm-0t margin-sm-50b">
         <div class="row-fluid margin-lg-50t margin-sm-100t">
             <div class="col-sm-12">
                 <div>
@@ -31,7 +31,13 @@
                                     <div class="project-grid-wrapper">
                                         <a class="project-grid-item-img-link" href="{{ route('frontend.mobile-home.ocasion.show', ['ocasion' => $ocasion->id]) }}" target="_self">
                                             <div class="project-grid-item-img">
-                                                <img src='{{ asset("/storage/$ocasion->imatge1") }}' class="s-img-switch wp-post-image" alt="Módulos Naymo" />
+                                                <picture>
+                                                    @php 
+                                                        $senseExtencio = substr($ocasion->imatge1, 0, strrpos($ocasion->imatge1, '.'));
+                                                    @endphp
+                                                    <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                                    <img src='{{ asset("/storage/$ocasion->imatge1") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                                </picture>
                                             </div>
                                         </a>
                                         <div class="project-grid-item-content">

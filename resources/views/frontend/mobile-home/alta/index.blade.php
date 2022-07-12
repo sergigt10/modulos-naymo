@@ -7,7 +7,7 @@
             <div class="col-sm-12 no-padd">
                 <div class="container-fluid top-banner no-padd big enable_column light no-marg-bottom vindow-height">
                     <span class="overlay"></span> 
-                    <img src="{{ asset('frontend/img/mobil-home-gama-alta.jpg') }}" class="s-img-switch" alt="Módulos Naymo">
+                    <img src="{{ asset('frontend/img/mobil-home-gama-alta.webp') }}" class="s-img-switch" alt="Módulos Naymo">
                     <div class="content">
                         <div class="prague-svg-animation-text"></div>
                         <div class="subtitle">MÓDULOS NAYMO</div>
@@ -22,7 +22,7 @@
 
     <div class="container no-padd margin-lg-70b margin-xs-50b">
         <div class="row-fluid no-padd">
-            <div class="col-sm-12 col-lg-10 margin-lg-65t margin-sm-0t">
+            <div class="col-sm-12 col-lg-10 margin-lg-65t margin-sm-65t">
                 <div class="team-wrapper circle no-figure">
                     <div class="trans_figures enable_anima">
                     </div>
@@ -31,102 +31,221 @@
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner">
                                 <div class="item active">
-                                    <img src='{{ asset("/storage/$gamaAlta->imatge1") }}' alt="Módulos Naymo">
-                                    <!-- <img src='{{ asset("frontend/img/empresa.jpg") }}' alt="Módulos Naymo"> -->
+                                    <picture>
+                                        @php 
+                                            $senseExtencio = substr($gamaAlta->imatge1, 0, strrpos($gamaAlta->imatge1, '.'));
+                                        @endphp
+                                        <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                        <img src='{{ asset("/storage/$gamaAlta->imatge1") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                    </picture>
                                 </div>
                                 @if( $gamaAlta->imatge2 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaAlta->imatge2") }}' alt="Módulos Naymo">
+                                        <picture>
+                                            @php 
+                                                $senseExtencio = substr($gamaAlta->imatge2, 0, strrpos($gamaAlta->imatge2, '.'));
+                                            @endphp
+                                            <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                            <img src='{{ asset("/storage/$gamaAlta->imatge2") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                        </picture>
                                     </div>
                                 @endif
                                 @if( $gamaAlta->imatge3 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaAlta->imatge3") }}' alt="Módulos Naymo">
+                                        <picture>
+                                            @php 
+                                                $senseExtencio = substr($gamaAlta->imatge3, 0, strrpos($gamaAlta->imatge3, '.'));
+                                            @endphp
+                                            <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                            <img src='{{ asset("/storage/$gamaAlta->imatge3") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                        </picture>
                                     </div>
                                 @endif
                                 @if( $gamaAlta->imatge4 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaAlta->imatge4") }}' alt="Módulos Naymo">
+                                        <picture>
+                                            @php 
+                                                $senseExtencio = substr($gamaAlta->imatge4, 0, strrpos($gamaAlta->imatge4, '.'));
+                                            @endphp
+                                            <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                            <img src='{{ asset("/storage/$gamaAlta->imatge4") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                        </picture>
                                     </div>
                                 @endif
                                 @if( $gamaAlta->imatge5 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaAlta->imatge5") }}' alt="Módulos Naymo">
+                                        <picture>
+                                            @php 
+                                                $senseExtencio = substr($gamaAlta->imatge5, 0, strrpos($gamaAlta->imatge5, '.'));
+                                            @endphp
+                                            <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                            <img src='{{ asset("/storage/$gamaAlta->imatge5") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                        </picture>
                                     </div>
                                 @endif
                                 @if( $gamaAlta->imatge6 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaAlta->imatge6") }}' alt="Módulos Naymo">
+                                        <picture>
+                                            @php 
+                                                $senseExtencio = substr($gamaAlta->imatge6, 0, strrpos($gamaAlta->imatge6, '.'));
+                                            @endphp
+                                            <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                            <img src='{{ asset("/storage/$gamaAlta->imatge6") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                        </picture>
                                     </div>
                                 @endif
                                 @if( $gamaAlta->imatge7 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaAlta->imatge7") }}' alt="Módulos Naymo">
+                                        <picture>
+                                            @php 
+                                                $senseExtencio = substr($gamaAlta->imatge7, 0, strrpos($gamaAlta->imatge7, '.'));
+                                            @endphp
+                                            <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                            <img src='{{ asset("/storage/$gamaAlta->imatge7") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                        </picture>
                                     </div>
                                 @endif
                                 @if( $gamaAlta->imatge8 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaAlta->imatge8") }}' alt="Módulos Naymo">
+                                        <picture>
+                                            @php 
+                                                $senseExtencio = substr($gamaAlta->imatge8, 0, strrpos($gamaAlta->imatge8, '.'));
+                                            @endphp
+                                            <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                            <img src='{{ asset("/storage/$gamaAlta->imatge8") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                        </picture>
                                     </div>
                                 @endif
                                 @if( $gamaAlta->imatge9 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaAlta->imatge9") }}' alt="Módulos Naymo">
+                                        <picture>
+                                            @php 
+                                                $senseExtencio = substr($gamaAlta->imatge9, 0, strrpos($gamaAlta->imatge9, '.'));
+                                            @endphp
+                                            <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                            <img src='{{ asset("/storage/$gamaAlta->imatge9") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                        </picture>
                                     </div>
                                 @endif
                                 @if( $gamaAlta->imatge10 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaAlta->imatge10") }}' alt="Módulos Naymo">
+                                        <picture>
+                                            @php 
+                                                $senseExtencio = substr($gamaAlta->imatge10, 0, strrpos($gamaAlta->imatge10, '.'));
+                                            @endphp
+                                            <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                            <img src='{{ asset("/storage/$gamaAlta->imatge10") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                        </picture>
                                     </div>
                                 @endif
                                 @if( $gamaAlta->imatge11 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaAlta->imatge11") }}' alt="Módulos Naymo">
+                                        <picture>
+                                            @php 
+                                                $senseExtencio = substr($gamaAlta->imatge11, 0, strrpos($gamaAlta->imatge11, '.'));
+                                            @endphp
+                                            <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                            <img src='{{ asset("/storage/$gamaAlta->imatge11") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                        </picture>
                                     </div>
                                 @endif
                                 @if( $gamaAlta->imatge12 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaAlta->imatge12") }}' alt="Módulos Naymo">
+                                        <picture>
+                                            @php 
+                                                $senseExtencio = substr($gamaAlta->imatge12, 0, strrpos($gamaAlta->imatge12, '.'));
+                                            @endphp
+                                            <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                            <img src='{{ asset("/storage/$gamaAlta->imatge12") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                        </picture>
                                     </div>
                                 @endif
                                 @if( $gamaAlta->imatge13 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaAlta->imatge13") }}' alt="Módulos Naymo">
+                                        <picture>
+                                            @php 
+                                                $senseExtencio = substr($gamaAlta->imatge13, 0, strrpos($gamaAlta->imatge13, '.'));
+                                            @endphp
+                                            <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                            <img src='{{ asset("/storage/$gamaAlta->imatge13") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                        </picture>
                                     </div>
                                 @endif
                                 @if( $gamaAlta->imatge14 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaAlta->imatge14") }}' alt="Módulos Naymo">
+                                        <picture>
+                                            @php 
+                                                $senseExtencio = substr($gamaAlta->imatge14, 0, strrpos($gamaAlta->imatge14, '.'));
+                                            @endphp
+                                            <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                            <img src='{{ asset("/storage/$gamaAlta->imatge14") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                        </picture>
                                     </div>
                                 @endif
                                 @if( $gamaAlta->imatge15 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaAlta->imatge15") }}' alt="Módulos Naymo">
+                                        <picture>
+                                            @php 
+                                                $senseExtencio = substr($gamaAlta->imatge15, 0, strrpos($gamaAlta->imatge15, '.'));
+                                            @endphp
+                                            <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                            <img src='{{ asset("/storage/$gamaAlta->imatge15") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                        </picture>
                                     </div>
                                 @endif
                                 @if( $gamaAlta->imatge16 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaAlta->imatge16") }}' alt="Módulos Naymo">
+                                        <picture>
+                                            @php 
+                                                $senseExtencio = substr($gamaAlta->imatge16, 0, strrpos($gamaAlta->imatge16, '.'));
+                                            @endphp
+                                            <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                            <img src='{{ asset("/storage/$gamaAlta->imatge16") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                        </picture>
                                     </div>
                                 @endif
                                 @if( $gamaAlta->imatge17 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaAlta->imatge17") }}' alt="Módulos Naymo">
+                                        <picture>
+                                            @php 
+                                                $senseExtencio = substr($gamaAlta->imatge17, 0, strrpos($gamaAlta->imatge17, '.'));
+                                            @endphp
+                                            <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                            <img src='{{ asset("/storage/$gamaAlta->imatge17") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                        </picture>
                                     </div>
                                 @endif
                                 @if( $gamaAlta->imatge18 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaAlta->imatge18") }}' alt="Módulos Naymo">
+                                        <picture>
+                                            @php 
+                                                $senseExtencio = substr($gamaAlta->imatge18, 0, strrpos($gamaAlta->imatge18, '.'));
+                                            @endphp
+                                            <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                            <img src='{{ asset("/storage/$gamaAlta->imatge18") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                        </picture>
                                     </div>
                                 @endif
                                 @if( $gamaAlta->imatge19 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaAlta->imatge19") }}' alt="Módulos Naymo">
+                                        <picture>
+                                            @php 
+                                                $senseExtencio = substr($gamaAlta->imatge19, 0, strrpos($gamaAlta->imatge19, '.'));
+                                            @endphp
+                                            <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                            <img src='{{ asset("/storage/$gamaAlta->imatge19") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                        </picture>
                                     </div>
                                 @endif
                                 @if( $gamaAlta->imatge20 ) 
                                     <div class="item">
-                                        <img src='{{ asset("/storage/$gamaAlta->imatge20") }}' alt="Módulos Naymo">
+                                        <picture>
+                                            @php 
+                                                $senseExtencio = substr($gamaAlta->imatge20, 0, strrpos($gamaAlta->imatge20, '.'));
+                                            @endphp
+                                            <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                            <img src='{{ asset("/storage/$gamaAlta->imatge20") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                        </picture>
                                     </div>
                                 @endif
                             </div>
@@ -143,10 +262,9 @@
                     </div>
                 </div>
             </div>
-            <div class="padd-only-xs col-sm-12 col-lg-2 margin-lg-0t margin-xs-100t">
+            <div class="padd-only-xs col-sm-12 col-lg-2 margin-lg-80t margin-xs-0t">
                 <div class="heading left dark">
-                    <div class="content" style="margin-top: 55px;">
-                        <br>
+                    <div class="content">
                         <ul>
                             <li>
                                 <h5>Marca:</h5>

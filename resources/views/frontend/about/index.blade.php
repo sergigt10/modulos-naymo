@@ -7,11 +7,11 @@
             <div class="col-sm-12 no-padd">
                 <div class="container-fluid top-banner no-padd big enable_column light no-marg-bottom vindow-height">
                     <span class="overlay"></span> 
-                    <img src="{{ asset('frontend/img/empresa.jpg') }}" class="s-img-switch" alt="Módulos Naymo">
+                    <img src="{{ asset('frontend/img/empresa.webp') }}" class="s-img-switch" alt="Módulos Naymo">
                     <div class="content">
                         <div class="prague-svg-animation-text"></div>
                         <div class="subtitle">MÓDULOS NAYMO</div>
-                        <h1 class="title">Empresa de casas prefabricadas</h1>
+                        <h1 class="title">Fabricación y Compra-Venta de Mobile Home</h1>
                         <div class="banner-columns"></div>
                     </div>
                     <div class="top-banner-cursor"></div>
@@ -33,7 +33,7 @@
             </div>
             <div class="padd-only-xs col-sm-12 col-lg-6 margin-lg-0t margin-xs-100t">
                 <div class="heading  left dark">
-                    <h2 class="title">Empresa de Mobile home <span style="color: #FF9D36; font-size: 40px; line-height: 44px; font-weight: 700;">nuevos y de ocasión</span></h2>
+                    <h2 class="title">Empresa de Mobile home <span style="color: #FF9D36;">nuevos y de ocasión</span></h2>
                     <div class="content" style="text-align: justify">
                         <p>Nuestra empresa se encuentra en N-260 Km121'5, Campdevànol (Girona).</p>
                         <p><b>Empresa dedicada a la compra y venta de mobile home nuevos y de ocasión y casas prefabricadas</b> para toda España. Hacemos presupuestos del coste de los mobile home tanto para particulares como a profesionales.</p>

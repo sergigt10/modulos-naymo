@@ -7,7 +7,10 @@
           [5, 10, 15, "Tots"]
         ],
         "order": [[ 1, "asc" ]],
-        "iDisplayLength": 15,
+        "columnDefs": [
+          { "type": "html-num", "targets": 1 }
+        ],
+        "iDisplayLength": 20,
         "language": {
           "processing": "Procesando...",
           "lengthMenu": "Mostrando _MENU_ registros",

@@ -51,25 +51,21 @@
                                 </textarea>
                             </div>
                             
-                            @if ( $modulo->categorias_id == 1)
-                                <div class="form-group">
-                                    <label for="exampleInputEmail3">Categoría:</label>
-                                    <select id="categorias_id" name="categorias_id" class="form-control js-example-basic-single w-100">
-                                        @foreach ($categorias as $categoria)
-                                            @if ( $categoria->id == 1)
-                                                <option 
-                                                    value="{{ $categoria->id }}"
-                                                    {{ $modulo->categorias_id == $categoria->id ? 'selected' : '' }}
-                                                >
-                                                    {{ $categoria->titol }}
-                                                </option>
-                                            @endif
-                                        @endforeach
-                                    </select>
-                                </div>
-                            @endif
-
-                            @if ( $modulo->categorias_id != 4 && $modulo->categorias_id != 5 )
+                            <div class="form-group not-available">
+                                <label for="exampleInputEmail3">Categoría:</label>
+                                <select id="categorias_id" name="categorias_id" class="form-control js-example-basic-single w-100">
+                                    @foreach ($categorias as $categoria)
+                                        <option 
+                                            value="{{ $categoria->id }}"
+                                            {{ $modulo->categorias_id == $categoria->id ? 'selected' : '' }}
+                                        >
+                                            {{ $categoria->titol }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            
+                            <div class="{{ ($modulo->categorias_id == 4 || $modulo->categorias_id == 5) ? 'not-available' : '' }}">
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <label for="exampleInputEmail3">Marca:</label>
@@ -105,30 +101,28 @@
                                         <label for="exampleInputEmail3">Precio (añadir €):</label>
                                         <input name="precio" type="text" class="form-control @error('precio') is-invalid @enderror" id="exampleInputEmail3" placeholder="Precio" value="{{ $modulo->precio }}">
                                     </div>
-                                    @if ( $modulo->categorias_id == 1)
-                                        <div class="form-group col-md-4">
-                                            <label for="exampleInputEmail3">Orden (ej: 1):</label>
-                                            <input name="ordre" type="text" class="form-control" id="exampleInputEmail3" placeholder="Orden" value="{{ $modulo->ordre }}">
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="exampleInputEmail3">Portada:</label>
-                                            <select id="portada" name="portada" class="form-control w-100">
-                                                <option value="Si"
-                                                    {{ $modulo->portada == "Si" ? 'selected' : '' }}
-                                                >
-                                                    Si
-                                                </option>
-                                                <option value="No"
-                                                    {{ $modulo->portada == "No" ? 'selected' : '' }}
-                                                >
-                                                    No
-                                                </option>
-                                            </select>
-                                        </div>
-                                    @endif
+                                    <div class="form-group col-md-4">
+                                        <label for="exampleInputEmail3">Orden (ej: 1):</label>
+                                        <input name="ordre" type="text" class="form-control" id="exampleInputEmail3" placeholder="Orden" value="{{ $modulo->ordre }}">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="exampleInputEmail3">Portada:</label>
+                                        <select id="portada" name="portada" class="form-control w-100">
+                                            <option value="Si"
+                                                {{ $modulo->portada == "Si" ? 'selected' : '' }}
+                                            >
+                                                Si
+                                            </option>
+                                            <option value="No"
+                                                {{ $modulo->portada == "No" ? 'selected' : '' }}
+                                            >
+                                                No
+                                            </option>
+                                        </select>
+                                    </div>
                                 </div>
-                            @endif
-
+                            </div>
+                            
                             <div class="row grid-margin">
                                 <div class="col-lg-12">
                                     <div class="card">

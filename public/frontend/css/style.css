@@ -2924,6 +2924,10 @@ a:hover, a:focus {
   -webkit-transition: visibility 0s;
   -o-transition: visibility 0s;
   transition: visibility 0s;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 400;
+  word-wrap: break-word;
 }
 
 .prague-loader .prague-loader-wrapper {
@@ -3047,7 +3051,7 @@ a:hover, a:focus {
 
 @media only screen and (max-width: 767px) {
   .prague-loader .prague-loader-bar {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
 
@@ -3970,16 +3974,16 @@ a:hover, a:focus {
     max-width: 970px;
   }
   .prague-header.light .prague-navigation {
-    background-color: white;
+    background-color: #000;
   }
   .prague-header.light .main-menu li a {
-    color: #111111;
+    color: #fff;
   }
   .prague-header.light .main-menu .sub-menu {
-    background-color: white;
+    background-color: #000;
   }
   .prague-header.light .main-menu .sub-menu li a {
-    color: #111111;
+    color: #fff;
   }
   .main-menu > li {
     display: block;
@@ -5448,7 +5452,7 @@ a:hover, a:focus {
     padding-right: 20px;
   }
   .heading .content ul li:before {
-    content: '';
+    /* content: ''; */
     position: static;
     top: 50%;
     left: auto;
@@ -5950,7 +5954,7 @@ a:hover, a:focus {
     height: 380px !important;
   }
   .team-wrapper.circle .team-outer {
-    height: 270px !important;
+    height: 140px !important;
     width: 100% !important;
   }
 }
@@ -5964,7 +5968,7 @@ a:hover, a:focus {
     padding-left: 50px;
   }
   .team-wrapper.circle .team-outer {
-    height: 240px !important;
+    height: 140px !important;
     width: 100% !important;
   }
 }
@@ -7516,11 +7520,11 @@ a:hover, a:focus {
   /* height: 329px; */
 }
 
-.project-grid-wrapper .project-grid-item-img-link:hover .project-grid-item-img {
+/* .project-grid-wrapper .project-grid-item-img-link:hover .project-grid-item-img {
   -webkit-transform: translateY(-40px);
       -ms-transform: translateY(-40px);
           transform: translateY(-40px);
-}
+} */
 
 .project-grid-wrapper .project-grid-item-img-link:hover .project-grid-item-img:after {
   opacity: 0.3;
@@ -7528,7 +7532,7 @@ a:hover, a:focus {
 
 .project-grid-wrapper .project-grid-item-img {
   width: 100%;
-  height: 329px;
+  /* height: 270px; */
   /* calc(100% + 40px); */
   background-color: #f2f2f2;
   -webkit-transform: translateY(0);
@@ -7579,7 +7583,7 @@ a:hover, a:focus {
 }
 
 .project-grid-wrapper .project-grid-item-title a:hover {
-  color: inherit;
+  color: #ff9d36;
 }
 
 .project-grid-wrapper .project-grid-item-title:hover {
@@ -16983,6 +16987,10 @@ span.wpcf7-not-valid-tip {
 
 .align-center {
   text-align: center;
+}
+
+.align-justify {
+  text-align: justify;
 }
 
 .margin-top {

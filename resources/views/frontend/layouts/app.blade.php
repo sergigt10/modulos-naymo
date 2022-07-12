@@ -48,7 +48,10 @@
         <!--LOGO-->
         <div class="prague-logo">
             <a href="{{ route('frontend.home.index') }}">
-                <img src="{{ asset('frontend/img/logo.png') }}" class="image_logo" alt="Módulos Naymo" />
+                <picture>
+                    <source srcset="{{ asset('frontend/img/logo.webp') }}" type="image/webp">
+                    <img src="{{ asset('frontend/img/logo.png') }}" class="image_logo" alt="Módulos Naymo">
+                </picture>
             </a>
         </div>
         <!--/LOGO-->
@@ -66,7 +69,7 @@
                                     <a href="{{ route('frontend.about.index') }}">EMPRESA</a>
                                 </li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom {{ (request()->is('mobile-home-*')) ? 'current-menu-ancestor' : '' }} menu-item-has-children">
-                                    <a href="#">MOBILE HOME NUEVO</a>
+                                    <a href="{{ route('frontend.mobile-home.alta.index') }}">MOBILE HOME NUEVO</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page">
                                             <a href="{{ route('frontend.mobile-home.media.index') }}">Gamma media</a>
@@ -85,8 +88,8 @@
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page {{ (request()->is('transporte')) ? 'current-menu-ancestor' : '' }}">
                                     <a href="{{ route('frontend.mobile-home.transporte.index') }}">TRANSPORTE</a>
                                 </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                    <a href="#">CONTACTO</a>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page {{ (request()->is('contacto-mobile-home')) ? 'current-menu-ancestor' : '' }}">
+                                    <a href="{{ route('frontend.contact.index') }}">CONTACTO</a>
                                 </li>
                             </ul>
                         </nav>
@@ -113,8 +116,11 @@
             <div class="footer-top-content">
                 <div class="prague-footer-main-block col-md-3 col-sm-12">
                     <div class="prague-logo">
-                        <a href="index.html">
-                            <img src="{{ asset('frontend/img/logo.png') }}" class="attachment-full size-full" alt="Módulos Naymo" /> 
+                        <a href="{ route('frontend.home.index') }}">
+                            <picture>
+                                <source srcset="{{ asset('frontend/img/logo.webp') }}" type="image/webp">
+                                <img src="{{ asset('frontend/img/logo.png') }}" class="attachment-full size-full" alt="Módulos Naymo">
+                            </picture>
                         </a>
                     </div>
                     <div class="footer-main-content">

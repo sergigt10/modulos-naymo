@@ -47,7 +47,7 @@
                                                 </td>
                                                 <td>
                                                     <a href="{{ route('backend.modulos.edit', ['modulo' => $modulo->id]) }}" style="color: black;">
-                                                        {{ ( $modulo->portada !== 'Nos' ) ? $modulo->portada : '---' }}
+                                                        {{ ( $modulo->portada !== 'No' ) ? $modulo->portada : '---' }}
                                                     </a>
                                                 </td>
                                                 <td>

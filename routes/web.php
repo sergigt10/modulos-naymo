@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeFrontendController@index')->name('frontend.home.index');
 /* Empresa */
 Route::get('/casas-prefabricadas', 'HomeFrontendController@about')->name('frontend.about.index');
+/* Empresa */
+Route::get('/contacto-mobile-home', 'HomeFrontendController@contact')->name('frontend.contact.index');
 /* Mobil Home Gama Media */
 Route::get('/mobile-home-gama-media', 'MobileHomeController@media')->name('frontend.mobile-home.media.index');
 /* Mobil Home Gama Alta */

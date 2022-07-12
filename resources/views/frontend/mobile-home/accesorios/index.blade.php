@@ -7,7 +7,7 @@
             <div class="col-sm-12 no-padd">
                 <div class="container-fluid top-banner no-padd big enable_column light no-marg-bottom vindow-height">
                     <span class="overlay"></span> 
-                    <img src="{{ asset('frontend/img/mobil-home-accesorios.jpg') }}" class="s-img-switch" alt="Módulos Naymo">
+                    <img src="{{ asset('frontend/img/mobil-home-accesorios.webp') }}" class="s-img-switch" alt="Módulos Naymo">
                     <div class="content">
                         <div class="prague-svg-animation-text"></div>
                         <div class="subtitle">MÓDULOS NAYMO</div>
@@ -20,7 +20,7 @@
         </div>
     </div>
 
-    <div class="container no-padd margin-lg-135t margin-xs-100t margin-lg-135b margin-sm-100b">
+    <div class="container no-padd margin-lg-135t margin-xs-50t margin-lg-135b margin-sm-100b">
         <div class="row-fluid no-padd">
             <div class="vc_column_container col-sm-6 no-padd">
                 <div class="padd-right-only-lg">
@@ -36,7 +36,13 @@
                     <div class="wpb_single_image wpb_content_element margin-bottom">
                         <figure>
                             <div class="vc_single_image-wrapper vc_box_border_grey">
-                                <img src='{{ asset("/storage/$accesorios->imatge1") }}' alt="Módulos Naymo">
+                                <picture>
+                                    @php 
+                                        $senseExtencio = substr($accesorios->imatge1, 0, strrpos($accesorios->imatge1, '.'));
+                                    @endphp
+                                    <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                    <img src='{{ asset("/storage/$accesorios->imatge1") }}' alt="Módulos Naymo" />
+                                </picture>
                             </div>
                         </figure>
                     </div>
@@ -45,7 +51,13 @@
                         <div class="wpb_single_image wpb_content_element margin-bottom">
                             <figure>
                                 <div class="vc_single_image-wrapper vc_box_border_grey">
-                                    <img src='{{ asset("/storage/$accesorios->imatge2") }}' alt="Módulos Naymo">
+                                    <picture>
+                                        @php 
+                                            $senseExtencio = substr($accesorios->imatge1, 0, strrpos($accesorios->imatge1, '.'));
+                                        @endphp
+                                        <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                        <img src='{{ asset("/storage/$accesorios->imatge1") }}' alt="Módulos Naymo" />
+                                    </picture>
                                 </div>
                             </figure>
                         </div>
@@ -54,7 +66,13 @@
                         <div class="wpb_single_image wpb_content_element margin-bottom">
                             <figure>
                                 <div class="vc_single_image-wrapper vc_box_border_grey">
-                                    <img src='{{ asset("/storage/$accesorios->imatge3") }}' alt="Módulos Naymo">
+                                    <picture>
+                                        @php 
+                                            $senseExtencio = substr($accesorios->imatge1, 0, strrpos($accesorios->imatge1, '.'));
+                                        @endphp
+                                        <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
+                                        <img src='{{ asset("/storage/$accesorios->imatge1") }}' alt="Módulos Naymo" />
+                                    </picture>
                                 </div>
                             </figure>
                         </div>
