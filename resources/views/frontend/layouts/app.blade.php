@@ -190,7 +190,7 @@
                             <tr>
                                 <td width="94" style="color:#FFF">Importe:*</td>
                                 <td width="165">
-                                    <input style="background-color:#25272E;border: 1pt solid #444; height: 23px; width: 110px; color: white;" type= "text" name="nprice" required/>
+                                    <input type="text" style="background-color:#25272E;border: 1pt solid #444; height: 23px; width: 110px; color: white;" type= "text" name="nprice" required/>
                                 </td>
                             </tr>
                             <tr>
@@ -212,7 +212,7 @@
                             <tr>
                                 <td style="color:#FFF">Intereses:*</td>
                                 <td> 
-                                    <input style="background-color:#25272E;border: 1pt solid #444; height: 23px; width: 85px;color: white;" type="irate" name="rate" required value="4,90%" disabled/>
+                                    <input type="text" style="background-color:#25272E;border: 1pt solid #444; height: 23px; width: 85px;color: white;" type="irate" name="rate" required value="4,90%" disabled/>
                                 </td>
                             </tr>
                             <tr>

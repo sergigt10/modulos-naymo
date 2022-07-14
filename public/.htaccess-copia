@@ -14,21 +14,10 @@
     Redirect 301 /mobil-home-gama-alta.php https://www.modulosnaymo.es/mobil-home-gama-alta
     Redirect 301 /mobil-home-ocacion.php https://www.modulosnaymo.es/mobile-home-ocasion
     Redirect 301 /accesorios.php https://www.modulosnaymo.es/accesorios-mobile-home
+    Redirect 301 /detalle-accesorios.php https://www.modulosnaymo.es/accesorios-mobile-home
     Redirect 301 /transporte-mobilehome.php https://www.modulosnaymo.es/transporte-mobile-home
-    Redirect 301 /detalle-accesorios.php?id=99 https://www.modulosnaymo.es/accesorios-mobile-home
     Redirect 301 /mobil-home-ocacion.php https://www.modulosnaymo.es/mobile-home-ocasion
-    Redirect 301 /detalle-mobil-home-ocasion.php?id=105 https://www.modulosnaymo.es/mobile-home-ocasion
-    Redirect 301 /detalle-mobil-home-ocasion.php?id=114 https://www.modulosnaymo.es/mobile-home-ocasion
-    Redirect 301 /detalle-mobil-home-ocasion.php?id=93 https://www.modulosnaymo.es/mobile-home-ocasion
-    Redirect 301 /detalle-mobil-home-ocasion.php?id=113 https://www.modulosnaymo.es/mobile-home-ocasion
-    Redirect 301 /detalle-mobil-home-ocasion.php?id=104 https://www.modulosnaymo.es/mobile-home-ocasion
-    Redirect 301 /detalle-mobil-home-ocasion.php?id=94 https://www.modulosnaymo.es/mobile-home-ocasion
-    Redirect 301 /detalle-mobil-home-ocasion.php?id=95 https://www.modulosnaymo.es/mobile-home-ocasion
-    Redirect 301 /detalle-mobil-home-ocasion.php?id=106 https://www.modulosnaymo.es/mobile-home-ocasion
-    Redirect 301 /detalle-mobil-home-ocasion.php?id=115 https://www.modulosnaymo.es/mobile-home-ocasion
-    Redirect 301 /detalle-mobil-home-ocasion.php?id=108 https://www.modulosnaymo.es/mobile-home-ocasion
-    Redirect 301 /detalle-mobil-home-ocasion.php?id=102 https://www.modulosnaymo.es/mobile-home-ocasion
-    Redirect 301 /detalle-mobil-home-ocasion.php?id=100 https://www.modulosnaymo.es/mobile-home-ocasion
+    Redirect 301 /detalle-mobil-home-ocasion.php https://www.modulosnaymo.es/mobile-home-ocasion
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .

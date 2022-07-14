@@ -7579,7 +7579,7 @@ a:hover, a:focus {
 .project-grid-wrapper .project-grid-item-title a {
   font-size: inherit;
   line-height: inherit;
-  font-weight: inherit;
+  font-weight: bold;
 }
 
 .project-grid-wrapper .project-grid-item-title a:hover {
@@ -17530,5 +17530,17 @@ span.wpcf7-not-valid-tip {
 @media screen and (max-width: 320px) {
   .align-left {
     text-align: left !important;
+  }
+}
+
+.mobile-home-chrome {
+  float: left;
+  width: 24.8%;
+  margin: 2px;
+}
+
+@media (max-width: 991px) {
+  .mobile-home-chrome{
+      width: 100%;
   }
 }

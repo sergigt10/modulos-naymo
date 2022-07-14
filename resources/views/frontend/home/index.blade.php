@@ -41,7 +41,7 @@
                     <div>
                         <div class="row prague_grid prague_count_col4 prague_gap_col15 js-load-more-block no-footer-content prague-load-wrapper" data-columns="prague_count_col4" data-gap="prague_gap_col15">
                             @foreach ($ocasiones as $ocasion)
-                                <div class="portfolio-item-wrapp portfolio-item-paralax js-filter-simple-block p_f_d7a8462 p_f_ddba60a p_f_aebfe46 ">
+                                <div class="mobile-home-chrome">
                                     <div class="portfolio-item">
                                         <div class="project-grid-wrapper">
                                             <a class="project-grid-item-img-link" href="{{ route('frontend.mobile-home.ocasion.show', ['ocasion' => $ocasion->id]) }}" target="_self">
