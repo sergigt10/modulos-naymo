@@ -3,7 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Módulos Naymo</title>
+
+    <!-- SEO -->
+    {!! SEO::generate() !!}
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no" />
 
@@ -32,6 +35,27 @@
     @yield('styles')
 
     <link rel="icon" type="image/png" href="{{ asset('frontend/img/favicon.png') }}"/>
+
+    <meta name="theme-color" content="#000">
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-35878447-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TXCJSHN');
+    </script>
+    <!-- End Google Tag Manager -->
 </head>
 <body>
     <!--PRELOADER-->
@@ -50,7 +74,7 @@
             <a href="{{ route('frontend.home.index') }}">
                 <picture>
                     <source srcset="{{ asset('frontend/img/logo.webp') }}" type="image/webp">
-                    <img src="{{ asset('frontend/img/logo.png') }}" class="image_logo" alt="Módulos Naymo">
+                    <img src="{{ asset('frontend/img/logo.png') }}" class="image_logo" alt="Módulos Naymo Mobil Home">
                 </picture>
             </a>
         </div>
@@ -65,28 +89,28 @@
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom {{ (request()->is('/')) ? 'current-menu-ancestor' : '' }}">
                                     <a href="{{ route('frontend.home.index') }}">INICIO</a>
                                 </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom {{ (request()->is('casas-prefabricadas')) ? 'current-menu-ancestor' : '' }}">
-                                    <a href="{{ route('frontend.about.index') }}">EMPRESA</a>
-                                </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom {{ (request()->is('mobile-home-*')) ? 'current-menu-ancestor' : '' }} menu-item-has-children">
-                                    <a href="{{ route('frontend.mobile-home.alta.index') }}">MOBILE HOME NUEVO</a>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom {{ (request()->is('mobil-home-*')) ? 'current-menu-ancestor' : '' }} menu-item-has-children">
+                                    <a href="{{ route('frontend.mobile-home.alta.index') }}">MOBIL HOME NUEVO</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="{{ route('frontend.mobile-home.media.index') }}">Gamma media</a>
+                                            <a href="{{ route('frontend.mobile-home.media.index') }}">Gama media</a>
                                         </li>
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="{{ route('frontend.mobile-home.alta.index') }}">Gamma alta</a>
+                                            <a href="{{ route('frontend.mobile-home.alta.index') }}">Gama alta</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom {{ (request()->is('mobil-home-*')) ? 'current-menu-ancestor' : '' }}">
-                                    <a href="{{ route('frontend.mobile-home.ocasion.index') }}">MOBIL HOME OCASIÓN</a>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom {{ (request()->is('mobile-home-*')) ? 'current-menu-ancestor' : '' }}">
+                                    <a href="{{ route('frontend.mobile-home.ocasion.index') }}">MOBILE HOME OCASIÓN</a>
                                 </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page {{ (request()->is('accesorios')) ? 'current-menu-ancestor' : '' }}">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page {{ (request()->is('accesorios-mobile-home')) ? 'current-menu-ancestor' : '' }}">
                                     <a href="{{ route('frontend.mobile-home.accesorios.index') }}">ACCESORIOS</a>
                                 </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page {{ (request()->is('transporte')) ? 'current-menu-ancestor' : '' }}">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page {{ (request()->is('transporte-mobile-home')) ? 'current-menu-ancestor' : '' }}">
                                     <a href="{{ route('frontend.mobile-home.transporte.index') }}">TRANSPORTE</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom {{ (request()->is('casas-prefabricadas')) ? 'current-menu-ancestor' : '' }}">
+                                    <a href="{{ route('frontend.about.index') }}">EMPRESA</a>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page {{ (request()->is('contacto-mobile-home')) ? 'current-menu-ancestor' : '' }}">
                                     <a href="{{ route('frontend.contact.index') }}">CONTACTO</a>
@@ -119,7 +143,7 @@
                         <a href="{ route('frontend.home.index') }}">
                             <picture>
                                 <source srcset="{{ asset('frontend/img/logo.webp') }}" type="image/webp">
-                                <img src="{{ asset('frontend/img/logo.png') }}" class="attachment-full size-full" alt="Módulos Naymo">
+                                <img src="{{ asset('frontend/img/logo.png') }}" class="attachment-full size-full" alt="Módulos Naymo Mobil Home">
                             </picture>
                         </a>
                     </div>
@@ -204,7 +228,7 @@
                             </tr>
                         </table>
                         <b style="color:#FFF">Cuota mensual a pagar:</b>
-                        <div style="color:#E09410; font-size:22px; font-weight:bold" id="monthlypayment"></div>
+                        <div style="color:#FF9D36; font-size:22px; font-weight:bold" id="monthlypayment"></div>
                         <br>
                         <p style="color:#FFF; font-size:12px">Vencimiento el 5 de cada mes. <br>Seguro plus: Cubre  fallecimiento, invalidez absoluta o temporal y desempleo.</p>
                     </form>
@@ -231,6 +255,11 @@
                         <li>
                             <a target="_blank" href="https://www.instagram.com/modulosnaymo/">
                                 <i aria-hidden="true" class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.facebook.com/modulosnaymo/">
+                                <i aria-hidden="true" class="fa fa-facebook"></i>
                             </a>
                         </li>
                     </ul>

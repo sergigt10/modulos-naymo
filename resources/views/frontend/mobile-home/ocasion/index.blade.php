@@ -7,11 +7,11 @@
             <div class="col-sm-12 no-padd">
                 <div class="container-fluid top-banner no-padd big enable_column light no-marg-bottom vindow-height">
                     <span class="overlay"></span> 
-                    <img src="{{ asset('frontend/img/mobil-home-ocasion.webp') }}" class="s-img-switch" alt="Módulos Naymo">
+                    <img src="{{ asset('frontend/img/mobil-home-ocasion.webp') }}" class="s-img-switch" alt="Módulos Naymo Mobil Home">
                     <div class="content">
                         <div class="prague-svg-animation-text"></div>
                         <div class="subtitle">MÓDULOS NAYMO</div>
-                        <h1 class="title">Mobil Home Ocasión</h1>
+                        <h1 class="title">Mobile Home Ocasión</h1>
                         <div class="banner-columns"></div>
                     </div>
                     <div class="top-banner-cursor"></div>
@@ -20,7 +20,7 @@
         </div>
     </div>
 
-    <div class="container-fluid no-padd margin-lg-100t margin-lg-145b margin-sm-0t margin-sm-50b">
+    <div class="container-fluid no-padd margin-lg-50t margin-lg-145b margin-sm-0t margin-sm-50b">
         <div class="row-fluid margin-lg-50t margin-sm-100t">
             <div class="col-sm-12">
                 <div>
@@ -36,7 +36,7 @@
                                                         $senseExtencio = substr($ocasion->imatge1, 0, strrpos($ocasion->imatge1, '.'));
                                                     @endphp
                                                     <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                                    <img src='{{ asset("/storage/$ocasion->imatge1") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                                    <img src='{{ asset("/storage/$ocasion->imatge1") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
                                                 </picture>
                                             </div>
                                         </a>

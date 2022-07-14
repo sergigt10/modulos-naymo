@@ -7,7 +7,7 @@
             <div class="col-sm-12 no-padd">
                 <div class="container-fluid top-banner no-padd big enable_column light no-marg-bottom vindow-height">
                     <span class="overlay"></span> 
-                    <img src="{{ asset('frontend/img/mobil-home-accesorios.webp') }}" class="s-img-switch" alt="Módulos Naymo">
+                    <img src="{{ asset('frontend/img/mobil-home-accesorios.webp') }}" class="s-img-switch" alt="Módulos Naymo Mobil Home">
                     <div class="content">
                         <div class="prague-svg-animation-text"></div>
                         <div class="subtitle">MÓDULOS NAYMO</div>
@@ -41,7 +41,7 @@
                                         $senseExtencio = substr($accesorios->imatge1, 0, strrpos($accesorios->imatge1, '.'));
                                     @endphp
                                     <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                    <img src='{{ asset("/storage/$accesorios->imatge1") }}' alt="Módulos Naymo" />
+                                    <img src='{{ asset("/storage/$accesorios->imatge1") }}' alt="Módulos Naymo Mobil Home" />
                                 </picture>
                             </div>
                         </figure>
@@ -56,7 +56,7 @@
                                             $senseExtencio = substr($accesorios->imatge1, 0, strrpos($accesorios->imatge1, '.'));
                                         @endphp
                                         <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                        <img src='{{ asset("/storage/$accesorios->imatge1") }}' alt="Módulos Naymo" />
+                                        <img src='{{ asset("/storage/$accesorios->imatge1") }}' alt="Módulos Naymo Mobil Home" />
                                     </picture>
                                 </div>
                             </figure>
@@ -71,7 +71,7 @@
                                             $senseExtencio = substr($accesorios->imatge1, 0, strrpos($accesorios->imatge1, '.'));
                                         @endphp
                                         <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                        <img src='{{ asset("/storage/$accesorios->imatge1") }}' alt="Módulos Naymo" />
+                                        <img src='{{ asset("/storage/$accesorios->imatge1") }}' alt="Módulos Naymo Mobil Home" />
                                     </picture>
                                 </div>
                             </figure>

@@ -7,11 +7,11 @@
             <div class="col-sm-12 no-padd">
                 <div class="container-fluid top-banner no-padd big enable_column light no-marg-bottom vindow-height">
                     <span class="overlay"></span> 
-                    <img src="{{ asset('frontend/img/empresa.webp') }}" class="s-img-switch" alt="Módulos Naymo">
+                    <img src="{{ asset('frontend/img/empresa.webp') }}" class="s-img-switch" alt="Módulos Naymo Mobil Home">
                     <div class="content">
                         <div class="prague-svg-animation-text"></div>
                         <div class="subtitle">MÓDULOS NAYMO</div>
-                        <h1 class="title">Fabricación y Compra-Venta de Mobile Home</h1>
+                        <h1 class="title">Venta de Mobile Home</h1>
                         <div class="banner-columns"></div>
                     </div>
                     <div class="top-banner-cursor"></div>

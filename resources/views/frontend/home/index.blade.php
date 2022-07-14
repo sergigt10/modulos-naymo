@@ -7,7 +7,7 @@
             <div class="col-xs-12 padd-only-xs">
                 <div class="container-fluid top-banner no-padd  big fullheight light">
                     <span class="overlay"></span>
-                    <img src="{{ asset('frontend/img/slide.webp') }}" class="s-img-switch" alt="Módulos Naymo">
+                    <img src="{{ asset('frontend/img/slide.webp') }}" class="s-img-switch" alt="Módulos Naymo Mobil Home">
                     <div class="content">
                         <div class="prague-svg-animation-text"></div>
                         <h1 class="title">Fabricantes de casas modulares</h1>
@@ -51,7 +51,7 @@
                                                             $senseExtencio = substr($ocasion->imatge1, 0, strrpos($ocasion->imatge1, '.'));
                                                         @endphp
                                                         <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                                        <img src='{{ asset("/storage/$ocasion->imatge1") }}' class="wp-post-image" alt="Módulos Naymo" />
+                                                        <img src='{{ asset("/storage/$ocasion->imatge1") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
                                                     </picture>
                                                 </div>
                                             </a>

@@ -1,0 +1,46 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    RewriteCond %{HTTP_HOST} ^modulosnaymo.es
+    RewriteRule (.*) https://www.modulosnaymo.es/$1 [R=301,L]
+
+    Redirect 301 /empresa.html https://www.modulosnaymo.es/casas-prefabricadas
+    Redirect 301 /contacto-naymo1.html https://www.modulosnaymo.es/contacto-mobile-home
+    Redirect 301 /mobil-home-a-medida.php https://www.modulosnaymo.es/mobil-home-gama-media
+    Redirect 301 /mobil-home-gama-alta.php https://www.modulosnaymo.es/mobil-home-gama-alta
+    Redirect 301 /mobil-home-ocacion.php https://www.modulosnaymo.es/mobile-home-ocasion
+    Redirect 301 /accesorios.php https://www.modulosnaymo.es/accesorios-mobile-home
+    Redirect 301 /transporte-mobilehome.php https://www.modulosnaymo.es/transporte-mobile-home
+    Redirect 301 /detalle-accesorios.php?id=99 https://www.modulosnaymo.es/accesorios-mobile-home
+    Redirect 301 /mobil-home-ocacion.php https://www.modulosnaymo.es/mobile-home-ocasion
+    Redirect 301 /detalle-mobil-home-ocasion.php?id=105 https://www.modulosnaymo.es/mobile-home-ocasion
+    Redirect 301 /detalle-mobil-home-ocasion.php?id=114 https://www.modulosnaymo.es/mobile-home-ocasion
+    Redirect 301 /detalle-mobil-home-ocasion.php?id=93 https://www.modulosnaymo.es/mobile-home-ocasion
+    Redirect 301 /detalle-mobil-home-ocasion.php?id=113 https://www.modulosnaymo.es/mobile-home-ocasion
+    Redirect 301 /detalle-mobil-home-ocasion.php?id=104 https://www.modulosnaymo.es/mobile-home-ocasion
+    Redirect 301 /detalle-mobil-home-ocasion.php?id=94 https://www.modulosnaymo.es/mobile-home-ocasion
+    Redirect 301 /detalle-mobil-home-ocasion.php?id=95 https://www.modulosnaymo.es/mobile-home-ocasion
+    Redirect 301 /detalle-mobil-home-ocasion.php?id=106 https://www.modulosnaymo.es/mobile-home-ocasion
+    Redirect 301 /detalle-mobil-home-ocasion.php?id=115 https://www.modulosnaymo.es/mobile-home-ocasion
+    Redirect 301 /detalle-mobil-home-ocasion.php?id=108 https://www.modulosnaymo.es/mobile-home-ocasion
+    Redirect 301 /detalle-mobil-home-ocasion.php?id=102 https://www.modulosnaymo.es/mobile-home-ocasion
+    Redirect 301 /detalle-mobil-home-ocasion.php?id=100 https://www.modulosnaymo.es/mobile-home-ocasion
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

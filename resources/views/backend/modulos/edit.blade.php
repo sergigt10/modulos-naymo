@@ -144,7 +144,7 @@
                                                 </div>
                                                 <div class="form-group col-md-3">
                                                     <div class="form-check form-check-danger" style="float:right;">
-                                                        <img src='{{ asset("/storage/$modulo->imatge1") }}' alt="Módulos Naymo" with=200 height=92>
+                                                        <img src='{{ asset("/storage/$modulo->imatge1") }}' alt="Módulos Naymo Mobil Home" with=200 height=92>
                                                     </div>
                                                 </div>
                                             </div>
@@ -167,7 +167,7 @@
                                                             <input type="checkbox" class="form-check-input" name="del_img2" value="1">
                                                             ¿Eliminar imagen 2?
                                                             <br><br>
-                                                            <img src='{{ asset("/storage/$modulo->imatge2") }}' alt="Módulos Naymo" with=200 height=92>
+                                                            <img src='{{ asset("/storage/$modulo->imatge2") }}' alt="Módulos Naymo Mobil Home" with=200 height=92>
                                                         </div>
                                                     @endif
                                                 </div>
@@ -191,7 +191,7 @@
                                                             <input type="checkbox" class="form-check-input" name="del_img3" value="1">
                                                             ¿Eliminar imagen 3?
                                                             <br><br>
-                                                            <img src='{{ asset("/storage/$modulo->imatge3") }}' alt="Módulos Naymo" with=200 height=92>
+                                                            <img src='{{ asset("/storage/$modulo->imatge3") }}' alt="Módulos Naymo Mobil Home" with=200 height=92>
                                                         </div>
                                                     @endif
                                                 </div>
@@ -215,7 +215,7 @@
                                                             <input type="checkbox" class="form-check-input" name="del_img4" value="1">
                                                             ¿Eliminar imagen 4?
                                                             <br><br>
-                                                            <img src='{{ asset("/storage/$modulo->imatge4") }}' alt="Módulos Naymo" with=200 height=92>
+                                                            <img src='{{ asset("/storage/$modulo->imatge4") }}' alt="Módulos Naymo Mobil Home" with=200 height=92>
                                                         </div>
                                                     @endif
                                                 </div>
@@ -239,7 +239,7 @@
                                                             <input type="checkbox" class="form-check-input" name="del_img5" value="1">
                                                             ¿Eliminar imagen 5?
                                                             <br><br>
-                                                            <img src='{{ asset("/storage/$modulo->imatge5") }}' alt="Módulos Naymo" with=200 height=92>
+                                                            <img src='{{ asset("/storage/$modulo->imatge5") }}' alt="Módulos Naymo Mobil Home" with=200 height=92>
                                                         </div>
                                                     @endif
                                                 </div>
@@ -263,7 +263,7 @@
                                                             <input type="checkbox" class="form-check-input" name="del_img6" value="1">
                                                             ¿Eliminar imagen 6?
                                                             <br><br>
-                                                            <img src='{{ asset("/storage/$modulo->imatge6") }}' alt="Módulos Naymo" with=200 height=92>
+                                                            <img src='{{ asset("/storage/$modulo->imatge6") }}' alt="Módulos Naymo Mobil Home" with=200 height=92>
                                                         </div>
                                                     @endif
                                                 </div>
@@ -287,7 +287,7 @@
                                                             <input type="checkbox" class="form-check-input" name="del_img7" value="1">
                                                             ¿Eliminar imagen 7?
                                                             <br><br>
-                                                            <img src='{{ asset("/storage/$modulo->imatge7") }}' alt="Módulos Naymo" with=200 height=92>
+                                                            <img src='{{ asset("/storage/$modulo->imatge7") }}' alt="Módulos Naymo Mobil Home" with=200 height=92>
                                                         </div>
                                                     @endif
                                                 </div>
@@ -311,7 +311,7 @@
                                                             <input type="checkbox" class="form-check-input" name="del_img8" value="1">
                                                             ¿Eliminar imagen 8?
                                                             <br><br>
-                                                            <img src='{{ asset("/storage/$modulo->imatge8") }}' alt="Módulos Naymo" with=200 height=92>
+                                                            <img src='{{ asset("/storage/$modulo->imatge8") }}' alt="Módulos Naymo Mobil Home" with=200 height=92>
                                                         </div>
                                                     @endif
                                                 </div>
@@ -335,7 +335,7 @@
                                                             <input type="checkbox" class="form-check-input" name="del_img9" value="1">
                                                             ¿Eliminar imagen 9?
                                                             <br><br>
-                                                            <img src='{{ asset("/storage/$modulo->imatge9") }}' alt="Módulos Naymo" with=200 height=92>
+                                                            <img src='{{ asset("/storage/$modulo->imatge9") }}' alt="Módulos Naymo Mobil Home" with=200 height=92>
                                                         </div>
                                                     @endif
                                                 </div>
@@ -359,7 +359,7 @@
                                                             <input type="checkbox" class="form-check-input" name="del_img10" value="1">
                                                             ¿Eliminar imagen 10?
                                                             <br><br>
-                                                            <img src='{{ asset("/storage/$modulo->imatge10") }}' alt="Módulos Naymo" with=200 height=92>
+                                                            <img src='{{ asset("/storage/$modulo->imatge10") }}' alt="Módulos Naymo Mobil Home" with=200 height=92>
                                                         </div>
                                                     @endif
                                                 </div>
@@ -383,7 +383,7 @@
                                                             <input type="checkbox" class="form-check-input" name="del_img11" value="1">
                                                             ¿Eliminar imagen 11?
                                                             <br><br>
-                                                            <img src='{{ asset("/storage/$modulo->imatge11") }}' alt="Módulos Naymo" with=200 height=92>
+                                                            <img src='{{ asset("/storage/$modulo->imatge11") }}' alt="Módulos Naymo Mobil Home" with=200 height=92>
                                                         </div>
                                                     @endif
                                                 </div>
@@ -407,7 +407,7 @@
                                                             <input type="checkbox" class="form-check-input" name="del_img12" value="1">
                                                             ¿Eliminar imagen 12?
                                                             <br><br>
-                                                            <img src='{{ asset("/storage/$modulo->imatge12") }}' alt="Módulos Naymo" with=200 height=92>
+                                                            <img src='{{ asset("/storage/$modulo->imatge12") }}' alt="Módulos Naymo Mobil Home" with=200 height=92>
                                                         </div>
                                                     @endif
                                                 </div>
@@ -431,7 +431,7 @@
                                                             <input type="checkbox" class="form-check-input" name="del_img13" value="1">
                                                             ¿Eliminar imagen 13?
                                                             <br><br>
-                                                            <img src='{{ asset("/storage/$modulo->imatge13") }}' alt="Módulos Naymo" with=200 height=92>
+                                                            <img src='{{ asset("/storage/$modulo->imatge13") }}' alt="Módulos Naymo Mobil Home" with=200 height=92>
                                                         </div>
                                                     @endif
                                                 </div>
@@ -455,7 +455,7 @@
                                                             <input type="checkbox" class="form-check-input" name="del_img14" value="1">
                                                             ¿Eliminar imagen 14?
                                                             <br><br>
-                                                            <img src='{{ asset("/storage/$modulo->imatge14") }}' alt="Módulos Naymo" with=200 height=92>
+                                                            <img src='{{ asset("/storage/$modulo->imatge14") }}' alt="Módulos Naymo Mobil Home" with=200 height=92>
                                                         </div>
                                                     @endif
                                                 </div>
@@ -479,7 +479,7 @@
                                                             <input type="checkbox" class="form-check-input" name="del_img15" value="1">
                                                             ¿Eliminar imagen 15?
                                                             <br><br>
-                                                            <img src='{{ asset("/storage/$modulo->imatge15") }}' alt="Módulos Naymo" with=200 height=92>
+                                                            <img src='{{ asset("/storage/$modulo->imatge15") }}' alt="Módulos Naymo Mobil Home" with=200 height=92>
                                                         </div>
                                                     @endif
                                                 </div>
@@ -503,7 +503,7 @@
                                                             <input type="checkbox" class="form-check-input" name="del_img16" value="1">
                                                             ¿Eliminar imagen 16?
                                                             <br><br>
-                                                            <img src='{{ asset("/storage/$modulo->imatge16") }}' alt="Módulos Naymo" with=200 height=92>
+                                                            <img src='{{ asset("/storage/$modulo->imatge16") }}' alt="Módulos Naymo Mobil Home" with=200 height=92>
                                                         </div>
                                                     @endif
                                                 </div>
@@ -527,7 +527,7 @@
                                                             <input type="checkbox" class="form-check-input" name="del_img17" value="1">
                                                             ¿Eliminar imagen 17?
                                                             <br><br>
-                                                            <img src='{{ asset("/storage/$modulo->imatge17") }}' alt="Módulos Naymo" with=200 height=92>
+                                                            <img src='{{ asset("/storage/$modulo->imatge17") }}' alt="Módulos Naymo Mobil Home" with=200 height=92>
                                                         </div>
                                                     @endif
                                                 </div>
@@ -551,7 +551,7 @@
                                                             <input type="checkbox" class="form-check-input" name="del_img18" value="1">
                                                             ¿Eliminar imagen 18?
                                                             <br><br>
-                                                            <img src='{{ asset("/storage/$modulo->imatge18") }}' alt="Módulos Naymo" with=200 height=92>
+                                                            <img src='{{ asset("/storage/$modulo->imatge18") }}' alt="Módulos Naymo Mobil Home" with=200 height=92>
                                                         </div>
                                                     @endif
                                                 </div>
@@ -575,7 +575,7 @@
                                                             <input type="checkbox" class="form-check-input" name="del_img19" value="1">
                                                             ¿Eliminar imagen 19?
                                                             <br><br>
-                                                            <img src='{{ asset("/storage/$modulo->imatge19") }}' alt="Módulos Naymo" with=200 height=92>
+                                                            <img src='{{ asset("/storage/$modulo->imatge19") }}' alt="Módulos Naymo Mobil Home" with=200 height=92>
                                                         </div>
                                                     @endif
                                                 </div>
@@ -599,7 +599,7 @@
                                                             <input type="checkbox" class="form-check-input" name="del_img20" value="1">
                                                             ¿Eliminar imagen 20?
                                                             <br><br>
-                                                            <img src='{{ asset("/storage/$modulo->imatge20") }}' alt="Módulos Naymo" with=200 height=92>
+                                                            <img src='{{ asset("/storage/$modulo->imatge20") }}' alt="Módulos Naymo Mobil Home" with=200 height=92>
                                                         </div>
                                                     @endif
                                                 </div>

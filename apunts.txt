@@ -281,6 +281,20 @@ https://programmerclick.com/article/30571152395/
 # https://dumpcoder.com/symlink-laravel-storage-folder-on-shared-hosting/
 # https://www.youtube.com/watch?v=6g8G3YQtQt4
 # https://stackoverflow.com/questions/45825889/how-to-create-laravel-storage-symbolic-link-for-production-or-sub-domain-system
+# SQLSTATE[HY000] [1045] Access denied for user ' -> Mirar curso udemy laravel + react
+
+** Activar SSL **
+-----------------
+https://codea.app/blog/redireccionar-https-laravel
+
+** SEO **
+---------
+https://www.nigmacode.com/laravel/seo-en-laravel/
+https://github.com/artesaos/seotools
+
+** Sitemap **
+-------------
+# Mirar sateliteK
 
 
 
