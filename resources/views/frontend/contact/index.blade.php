@@ -16,11 +16,11 @@
                         <div class="banner-columns">
                             <div class="banner-col-item divider">
                                 <span class="title">Teléfono</span>
-                                <span class="subtitle"><a href="tel:+34972115941">+34 972 115 941</a></span>
+                                <span style="color: #fff"><a href="tel:+34972115941">+34 972 115 941</a></span>
                             </div>
                             <div class="banner-col-item divider">
                                 <span class="title">Correo electrónico</span>
-                                <span class="subtitle"><a href="mailto:modulosnaymo@gmail.com">modulosnaymo@gmail.com</a></span>
+                                <span style="color: #fff"><a href="mailto:modulosnaymo@gmail.com">modulosnaymo@gmail.com</a></span>
                             </div>
                         </div>
                     </div>

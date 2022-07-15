@@ -5,8 +5,11 @@
 
     RewriteEngine On
 
-    RewriteCond %{HTTP_HOST} ^modulosnaymo.es
-    RewriteRule (.*) https://www.modulosnaymo.es/$1 [R=301,L]
+    RewriteCond %{HTTP_HOST} ^modulosnaymo.es [NC]
+    RewriteRule ^(.*)$ https://www.modulosnaymo.es/$1 [L,R=301]
+
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
     Redirect 301 /empresa.html https://www.modulosnaymo.es/casas-prefabricadas
     Redirect 301 /contacto-naymo1.html https://www.modulosnaymo.es/contacto-mobile-home

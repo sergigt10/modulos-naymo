@@ -21,7 +21,7 @@
     </div>
 
     <div class="container-fluid no-padd margin-lg-50t margin-lg-145b margin-sm-0t margin-sm-50b">
-        <div class="row-fluid margin-lg-50t margin-sm-100t">
+        <div class="row-fluid margin-lg-50t margin-sm-50t">
             <div class="col-sm-12">
                 <div>
                     <div class="row prague_grid prague_count_col4 prague_gap_col15 js-load-more-block no-footer-content prague-load-wrapper" data-columns="prague_count_col4" data-gap="prague_gap_col15">
@@ -36,7 +36,7 @@
                                                         $senseExtencio = substr($ocasion->imatge1, 0, strrpos($ocasion->imatge1, '.'));
                                                     @endphp
                                                     <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                                    <img src='{{ asset("/storage/$ocasion->imatge1") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
+                                                    <img src='{{ asset("/storage/$ocasion->imatge1") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" height="100%" />
                                                 </picture>
                                             </div>
                                         </a>

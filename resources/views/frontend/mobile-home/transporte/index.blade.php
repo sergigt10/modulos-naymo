@@ -41,7 +41,7 @@
                                         $senseExtencio = substr($transporte->imatge1, 0, strrpos($transporte->imatge1, '.'));
                                     @endphp
                                     <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                    <img src='{{ asset("/storage/$transporte->imatge1") }}' alt="Módulos Naymo Mobil Home" />
+                                    <img src='{{ asset("/storage/$transporte->imatge1") }}' alt="Módulos Naymo Mobil Home" height="100%" />
                                 </picture>
                             </div>
                         </figure>
@@ -56,7 +56,7 @@
                                             $senseExtencio = substr($transporte->imatge2, 0, strrpos($transporte->imatge2, '.'));
                                         @endphp
                                         <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                        <img src='{{ asset("/storage/$transporte->imatge2") }}' alt="Módulos Naymo Mobil Home" />
+                                        <img src='{{ asset("/storage/$transporte->imatge2") }}' alt="Módulos Naymo Mobil Home" height="100%" />
                                     </picture>
                                 </div>
                             </figure>
@@ -71,7 +71,7 @@
                                             $senseExtencio = substr($transporte->imatge3, 0, strrpos($transporte->imatge3, '.'));
                                         @endphp
                                         <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                        <img src='{{ asset("/storage/$transporte->imatge3") }}' alt="Módulos Naymo Mobil Home" />
+                                        <img src='{{ asset("/storage/$transporte->imatge3") }}' alt="Módulos Naymo Mobil Home" height="100%" />
                                     </picture>
                                 </div>
                             </figure>

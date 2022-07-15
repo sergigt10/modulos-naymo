@@ -5130,8 +5130,9 @@ a:hover, a:focus {
     padding: 0 15px;
   }
   .top-banner.big .content, .top-banner.fullheight .content {
-    margin-top: 120px;
-    margin-bottom: 120px;
+    /* margin-top: 120px; */
+    margin-top: 44px;
+    margin-bottom: 20px;
   }
   .top-banner.big .top-banner-cursor, .top-banner.fullheight .top-banner-cursor {
     height: 120px;
@@ -5149,6 +5150,18 @@ a:hover, a:focus {
   }
   .top-banner.categories .top-banner-cursor {
     height: 0;
+  }
+  .top-banner .content .subtitle {
+    visibility: hidden;
+  }
+  .top-banner .content .title {
+    margin-top: 60px;
+  }
+  .top-banner {
+    min-height: 30vh !important;
+  }
+  .top-banner.enable_column .content {
+    margin-bottom: -24px !important;
   }
 }
 
@@ -5960,9 +5973,9 @@ a:hover, a:focus {
 }
 
 @media only screen and (max-width: 400px) {
-  .team-wrapper {
+  /* .team-wrapper {
     max-width: 290px;
-  }
+  } */
   .team-wrapper.circle {
     padding-top: 0px;
     padding-left: 50px;
@@ -6883,6 +6896,9 @@ a:hover, a:focus {
   .prague_count_col4 .portfolio-item-wrapp {
     width: 50% !important;
   }
+  .mobile-home-chrome {
+    width: 50% !important;
+  }
   .prague_count_col5 .portfolio-item-wrapp {
     width: 50% !important;
   }
@@ -6899,6 +6915,9 @@ a:hover, a:focus {
     width: 100% !important;
   }
   .prague_count_col4 .portfolio-item-wrapp, .prague_masonry.prague_count_col4 .portfolio-item-wrapp {
+    width: 100% !important;
+  }
+  .mobile-home-chrome {
     width: 100% !important;
   }
   .prague_count_col5 .portfolio-item-wrapp {
@@ -7607,7 +7626,7 @@ a:hover, a:focus {
 
 @media only screen and (max-width: 400px) {
   .project-grid-wrapper {
-    max-width: 290px;
+    /* max-width: 290px; */
     margin-left: auto;
     margin-right: auto;
   }
@@ -17454,13 +17473,13 @@ span.wpcf7-not-valid-tip {
     display: none;
   }
 
-  .glyphicon-chevron-right:before {
+  /* .glyphicon-chevron-right:before {
     display: none
   }
 
   .glyphicon-chevron-left:before {
     display: none;
-  }
+  } */
 }
 
 @media screen and (max-width: 768px) {
@@ -17535,12 +17554,12 @@ span.wpcf7-not-valid-tip {
 
 .mobile-home-chrome {
   float: left;
-  width: 24.8%;
+  width: 24.7%;
   margin: 2px;
 }
 
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .mobile-home-chrome{
       width: 100%;
   }
-}
+} */

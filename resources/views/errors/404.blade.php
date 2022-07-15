@@ -21,7 +21,7 @@
     </div>
 
     <div class="container-fluid no-padd margin-lg-50t margin-lg-145b margin-sm-0t margin-sm-50b">
-        <div class="row-fluid margin-lg-50t margin-sm-100t">
+        <div class="row-fluid margin-lg-50t margin-sm-50t">
             <div class="col-sm-12">
                 <div>
                     <h3 style="text-align: center">Página no disponible</h3>

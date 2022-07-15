@@ -21,7 +21,7 @@
     </div>
 
     <div class="container no-padd margin-lg-70b margin-xs-50b">
-        <div class="row-fluid  margin-lg-60t margin-sm-70t no-padd">
+        <div class="row-fluid  margin-lg-60t margin-sm-50t no-padd">
             <div class="col-sm-12 col-lg-6 margin-lg-65t margin-sm-0t">
                 <div class="team-wrapper circle no-figure">
                     <div class="trans_figures enable_anima">
@@ -31,7 +31,7 @@
                     </div>
                 </div>
             </div>
-            <div class="padd-only-xs col-sm-12 col-lg-6 margin-lg-0t margin-xs-100t">
+            <div class="padd-only-xs col-sm-12 col-lg-6 margin-lg-0t margin-xs-180t">
                 <div class="heading  left dark">
                     <h2 class="title">Empresa de Mobile home <span style="color: #FF9D36;">nuevos y de ocasión</span></h2>
                     <div class="content" style="text-align: justify">

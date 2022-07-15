@@ -42,7 +42,7 @@ return [
             'type'        => 'website',
             'site_name'   => 'Módulos Naymo',
             'locale'      => 'es_ES',
-            'images'      => ['https://www.modulosnaymo.es/frontend/img/slide.webp'],
+            'images'      => ['https://www.modulosnaymo.es/frontend/img/modulos-naymo-mobile-home.webp'],
         ],
     ],
     'twitter' => [
@@ -65,7 +65,7 @@ return [
             'description' => 'En módulos naymo somos expertos en la venta de casas prefabricadas de segunda mano y mobile home de ocasión.', // set false to total remove
             'url'         => 'https://www.modulosnaymo.es/', // Set to null or 'full' to use Url::full(), set to 'current' to use Url::current(), set false to total remove
             'type'        => 'WebPage',
-            'images'      => ['https://www.modulosnaymo.es/frontend/img/slide.webp'],
+            'images'      => ['https://www.modulosnaymo.es/frontend/img/modulos-naymo-mobile-home.webp'],
         ],
     ],
 ];

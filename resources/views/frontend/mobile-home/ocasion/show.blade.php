@@ -22,7 +22,7 @@
 
     <div class="container no-padd margin-lg-70b margin-xs-50b">
         <div class="row-fluid no-padd">
-            <div class="col-sm-12 col-lg-10 margin-lg-65t margin-sm-65t">
+            <div class="col-sm-12 col-lg-10 margin-lg-65t margin-sm-50t">
                 <div class="team-wrapper circle no-figure">
                     <div class="trans_figures enable_anima">
                     </div>
@@ -36,7 +36,7 @@
                                             $senseExtencio = substr($ocasion->imatge1, 0, strrpos($ocasion->imatge1, '.'));
                                         @endphp
                                         <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                        <img src='{{ asset("/storage/$ocasion->imatge1") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
+                                        <img src='{{ asset("/storage/$ocasion->imatge1") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" height="100%" />
                                     </picture>
                                 </div>
                                 @if( $ocasion->imatge2 ) 
@@ -46,7 +46,7 @@
                                                 $senseExtencio = substr($ocasion->imatge2, 0, strrpos($ocasion->imatge2, '.'));
                                             @endphp
                                             <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                            <img src='{{ asset("/storage/$ocasion->imatge2") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
+                                            <img src='{{ asset("/storage/$ocasion->imatge2") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" height="100%" />
                                         </picture>
                                     </div>
                                 @endif
@@ -57,7 +57,7 @@
                                                 $senseExtencio = substr($ocasion->imatge3, 0, strrpos($ocasion->imatge3, '.'));
                                             @endphp
                                             <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                            <img src='{{ asset("/storage/$ocasion->imatge3") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
+                                            <img src='{{ asset("/storage/$ocasion->imatge3") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" height="100%" />
                                         </picture>
                                     </div>
                                 @endif
@@ -68,7 +68,7 @@
                                                 $senseExtencio = substr($ocasion->imatge4, 0, strrpos($ocasion->imatge4, '.'));
                                             @endphp
                                             <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                            <img src='{{ asset("/storage/$ocasion->imatge4") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
+                                            <img src='{{ asset("/storage/$ocasion->imatge4") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" height="100%" />
                                         </picture>
                                     </div>
                                 @endif
@@ -79,7 +79,7 @@
                                                 $senseExtencio = substr($ocasion->imatge5, 0, strrpos($ocasion->imatge5, '.'));
                                             @endphp
                                             <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                            <img src='{{ asset("/storage/$ocasion->imatge5") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
+                                            <img src='{{ asset("/storage/$ocasion->imatge5") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" height="100%" />
                                         </picture>
                                     </div>
                                 @endif
@@ -90,7 +90,7 @@
                                                 $senseExtencio = substr($ocasion->imatge6, 0, strrpos($ocasion->imatge6, '.'));
                                             @endphp
                                             <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                            <img src='{{ asset("/storage/$ocasion->imatge6") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
+                                            <img src='{{ asset("/storage/$ocasion->imatge6") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" height="100%" />
                                         </picture>
                                     </div>
                                 @endif
@@ -101,7 +101,7 @@
                                                 $senseExtencio = substr($ocasion->imatge7, 0, strrpos($ocasion->imatge7, '.'));
                                             @endphp
                                             <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                            <img src='{{ asset("/storage/$ocasion->imatge7") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
+                                            <img src='{{ asset("/storage/$ocasion->imatge7") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" height="100%" />
                                         </picture>
                                     </div>
                                 @endif
@@ -112,7 +112,7 @@
                                                 $senseExtencio = substr($ocasion->imatge8, 0, strrpos($ocasion->imatge8, '.'));
                                             @endphp
                                             <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                            <img src='{{ asset("/storage/$ocasion->imatge8") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
+                                            <img src='{{ asset("/storage/$ocasion->imatge8") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" height="100%" />
                                         </picture>
                                     </div>
                                 @endif
@@ -123,7 +123,7 @@
                                                 $senseExtencio = substr($ocasion->imatge9, 0, strrpos($ocasion->imatge9, '.'));
                                             @endphp
                                             <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                            <img src='{{ asset("/storage/$ocasion->imatge9") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
+                                            <img src='{{ asset("/storage/$ocasion->imatge9") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" height="100%" />
                                         </picture>
                                     </div>
                                 @endif
@@ -134,7 +134,7 @@
                                                 $senseExtencio = substr($ocasion->imatge10, 0, strrpos($ocasion->imatge10, '.'));
                                             @endphp
                                             <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                            <img src='{{ asset("/storage/$ocasion->imatge10") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
+                                            <img src='{{ asset("/storage/$ocasion->imatge10") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" height="100%" />
                                         </picture>
                                     </div>
                                 @endif
@@ -145,7 +145,7 @@
                                                 $senseExtencio = substr($ocasion->imatge11, 0, strrpos($ocasion->imatge11, '.'));
                                             @endphp
                                             <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                            <img src='{{ asset("/storage/$ocasion->imatge11") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
+                                            <img src='{{ asset("/storage/$ocasion->imatge11") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" height="100%" />
                                         </picture>
                                     </div>
                                 @endif
@@ -156,7 +156,7 @@
                                                 $senseExtencio = substr($ocasion->imatge12, 0, strrpos($ocasion->imatge12, '.'));
                                             @endphp
                                             <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                            <img src='{{ asset("/storage/$ocasion->imatge12") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
+                                            <img src='{{ asset("/storage/$ocasion->imatge12") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" height="100%" />
                                         </picture>
                                     </div>
                                 @endif
@@ -167,7 +167,7 @@
                                                 $senseExtencio = substr($ocasion->imatge13, 0, strrpos($ocasion->imatge13, '.'));
                                             @endphp
                                             <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                            <img src='{{ asset("/storage/$ocasion->imatge13") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
+                                            <img src='{{ asset("/storage/$ocasion->imatge13") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" height="100%" />
                                         </picture>
                                     </div>
                                 @endif
@@ -178,7 +178,7 @@
                                                 $senseExtencio = substr($ocasion->imatge14, 0, strrpos($ocasion->imatge14, '.'));
                                             @endphp
                                             <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                            <img src='{{ asset("/storage/$ocasion->imatge14") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
+                                            <img src='{{ asset("/storage/$ocasion->imatge14") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" height="100%" />
                                         </picture>
                                     </div>
                                 @endif
@@ -189,7 +189,7 @@
                                                 $senseExtencio = substr($ocasion->imatge15, 0, strrpos($ocasion->imatge15, '.'));
                                             @endphp
                                             <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                            <img src='{{ asset("/storage/$ocasion->imatge15") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
+                                            <img src='{{ asset("/storage/$ocasion->imatge15") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" height="100%" />
                                         </picture>
                                     </div>
                                 @endif
@@ -200,7 +200,7 @@
                                                 $senseExtencio = substr($ocasion->imatge16, 0, strrpos($ocasion->imatge16, '.'));
                                             @endphp
                                             <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                            <img src='{{ asset("/storage/$ocasion->imatge16") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
+                                            <img src='{{ asset("/storage/$ocasion->imatge16") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" height="100%" />
                                         </picture>
                                     </div>
                                 @endif
@@ -211,7 +211,7 @@
                                                 $senseExtencio = substr($ocasion->imatge17, 0, strrpos($ocasion->imatge17, '.'));
                                             @endphp
                                             <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                            <img src='{{ asset("/storage/$ocasion->imatge17") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
+                                            <img src='{{ asset("/storage/$ocasion->imatge17") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" height="100%" />
                                         </picture>
                                     </div>
                                 @endif
@@ -222,7 +222,7 @@
                                                 $senseExtencio = substr($ocasion->imatge18, 0, strrpos($ocasion->imatge18, '.'));
                                             @endphp
                                             <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                            <img src='{{ asset("/storage/$ocasion->imatge18") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
+                                            <img src='{{ asset("/storage/$ocasion->imatge18") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" height="100%" />
                                         </picture>
                                     </div>
                                 @endif
@@ -233,7 +233,7 @@
                                                 $senseExtencio = substr($ocasion->imatge19, 0, strrpos($ocasion->imatge19, '.'));
                                             @endphp
                                             <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                            <img src='{{ asset("/storage/$ocasion->imatge19") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
+                                            <img src='{{ asset("/storage/$ocasion->imatge19") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" height="100%" />
                                         </picture>
                                     </div>
                                 @endif
@@ -244,7 +244,7 @@
                                                 $senseExtencio = substr($ocasion->imatge20, 0, strrpos($ocasion->imatge20, '.'));
                                             @endphp
                                             <source srcset='{{ asset("/storage/$senseExtencio") }}.webp' type="image/webp">
-                                            <img src='{{ asset("/storage/$ocasion->imatge20") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" />
+                                            <img src='{{ asset("/storage/$ocasion->imatge20") }}' class="wp-post-image" alt="Módulos Naymo Mobil Home" height="100%" />
                                         </picture>
                                     </div>
                                 @endif
@@ -262,7 +262,7 @@
                     </div>
                 </div>
             </div>
-            <div class="padd-only-xs col-sm-12 col-lg-2 margin-lg-50t margin-xs-0t">
+            <div class="padd-only-xs col-sm-12 col-lg-2 margin-lg-50t margin-xs-50t">
                 <div class="heading left dark">
                     <div class="content">
                         <ul>
