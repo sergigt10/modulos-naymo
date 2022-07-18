@@ -11,7 +11,7 @@
                     <div class="content">
                         <div class="prague-svg-animation-text"></div>
                         <div class="subtitle">MÓDULOS NAYMO</div>
-                        <h1 class="title">Accesorios</h1>
+                        <h1 class="title">Accesorios Mobile Home</h1>
                         <div class="banner-columns"></div>
                     </div>
                     <div class="top-banner-cursor"></div>

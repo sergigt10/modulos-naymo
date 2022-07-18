@@ -262,6 +262,11 @@
                                 <i aria-hidden="true" class="fa fa-facebook"></i>
                             </a>
                         </li>
+                        <li>
+                            <a target="_blank" href="https://www.youtube.com/channel/UCrvHArp8wMM6uqZQ8b1MXlw/videos">
+                                <i aria-hidden="true" class="fa fa-youtube"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
