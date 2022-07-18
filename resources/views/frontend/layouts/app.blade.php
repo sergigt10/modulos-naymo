@@ -90,7 +90,7 @@
                                     <a href="{{ route('frontend.home.index') }}">INICIO</a>
                                 </li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom {{ (request()->is('mobil-home-*')) ? 'current-menu-ancestor' : '' }} menu-item-has-children">
-                                    <a href="{{ route('frontend.mobile-home.alta.index') }}">MOBIL HOME NUEVO</a>
+                                    <a href="{{ route('frontend.mobile-home.media.index') }}">MOBIL HOME NUEVO</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page">
                                             <a href="{{ route('frontend.mobile-home.media.index') }}">Gama media</a>
@@ -277,7 +277,8 @@
     <script src="{{ asset('frontend/js/foxlazy.min.js') }}"></script>
     <script src="{{ asset('frontend/js/all.js') }}"></script>
     <script src="{{ asset('frontend/js/jquery.magnific-popup.min.js') }}"></script>
-    
+    <script src="{{ asset('frontend/js/disableCopy.js') }}"></script>
+
     @yield('scripts')
 
 </body>

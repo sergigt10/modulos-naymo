@@ -11,7 +11,7 @@ return [
         'defaults'       => [
             'title'        => false, // set false to total remove
             'titleBefore'  => false, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
-            'description'  => "Modulos Naymo 972 11 59 41, Venta de Mobil Home y Casas de Hormigón, Comprar Mobile Home de Segunda Mano y Mobil Home de Ocasión Online. Módulos Naymo.", // set false to total remove
+            'description'  => "Módulos Naymo 972 11 59 41, Venta de Mobil Home y Casas de Hormigón, Comprar Mobile Home de Segunda Mano y Mobil Home de Ocasión Online.", // set false to total remove
             'separator'    => ', ',
             'keywords'     => ['mobile home', 'mobil home', 'mobil home de segunda mano', 'mobile home segunda mano', 'casas prefabricadas de segunda mano', 'mobil home ocasion', 'venta de mobil home', 'modulos de segunda mano'],
             'canonical'    => false, // Set to null or 'full' to use Url::full(), set to 'current' to use Url::current(), set false to total remove
