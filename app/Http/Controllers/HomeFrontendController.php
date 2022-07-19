@@ -14,6 +14,7 @@ class HomeFrontendController extends Controller
     public function index()
     {
         SEOTools::setTitle('Venta de Mobile Home, Comprar Mobile Home de Ocasión');
+        SEOTools::setCanonical('https://www.modulosnaymo.es/');
 
         $textes = Texte::first();
         $ocasiones = Modulo::where([['categorias_id', '=', '1'], ['portada','=', 'Si']])->limit(16)->orderBy('ordre')->get();
@@ -23,6 +24,7 @@ class HomeFrontendController extends Controller
     public function about()
     {
         SEOTools::setTitle('Módulos Naymo, Mobile Home, Venta de Casas Prefabricadas');
+        SEOTools::setCanonical('https://www.modulosnaymo.es/casas-prefabricadas');
 
         return view('frontend.about.index');
     }
@@ -30,6 +32,7 @@ class HomeFrontendController extends Controller
     public function contact()
     {
         SEOTools::setTitle('Modulos Naymo, Mobile Home, Venta de Casas Prefabricadas');
+        SEOTools::setCanonical('https://www.modulosnaymo.es/contacto-mobile-home');
 
         return view('frontend.contact.index');
     }
